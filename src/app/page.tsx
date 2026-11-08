@@ -87,6 +87,11 @@ export default async function Home() {
               )}
             </div>
             {t.is_admin && (
+              <Link href="/admin" className="mt-4 block rounded-md bg-purple px-4 py-2.5 text-center text-[15px] font-semibold text-white">
+                Admin: teachers & reflections
+              </Link>
+            )}
+            {t.is_admin && (
               <form
                 action={toggleUnlockAll}
                 className="mt-4 flex items-center justify-between rounded-lg border border-dashed border-line-strong px-4 py-3"
