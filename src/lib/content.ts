@@ -37,7 +37,12 @@ export type Session = {
 export type Module = {
   id: string;
   title: T;
+  short?: T;
   subtitle: T;
+  audience?: T;
+  illo?: string;
+  /** Visible to every teacher without an assignment row. */
+  default?: boolean;
   sessions: { id: string; n: number; title: T; minutes: number }[];
 };
 
@@ -46,6 +51,13 @@ const ROOT = path.join(process.cwd(), "content");
 export async function loadModule(moduleId: string): Promise<Module> {
   const raw = await readFile(path.join(ROOT, moduleId, "module.json"), "utf8");
   return JSON.parse(raw) as Module;
+}
+
+export async function loadAllModules(): Promise<Module[]> {
+  const { readdir } = await import("node:fs/promises");
+  const dirs = (await readdir(ROOT, { withFileTypes: true })).filter((d) => d.isDirectory()).map((d) => d.name).sort();
+  const mods = await Promise.all(dirs.map((d) => loadModule(d).catch(() => null)));
+  return mods.filter((m): m is Module => !!m);
 }
 
 export async function loadSession(moduleId: string, sessionId: string): Promise<Session | null> {
