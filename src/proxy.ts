@@ -5,7 +5,7 @@ import { NextResponse, type NextRequest } from "next/server";
 export function proxy(request: NextRequest) {
   const hasCookie = request.cookies.has("btt_session");
   const { pathname } = request.nextUrl;
-  if (!hasCookie && pathname !== "/login" && !pathname.startsWith("/preview")) {
+  if (!hasCookie && pathname !== "/" && pathname !== "/login" && !pathname.startsWith("/preview")) {
     return NextResponse.redirect(new URL("/login", request.url));
   }
   if (hasCookie && pathname === "/login") {

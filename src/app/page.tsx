@@ -1,7 +1,8 @@
 import Link from "next/link";
 import AppBar from "@/components/AppBar";
 import Illo, { type IlloName } from "@/components/Illo";
-import { requireTeacher } from "@/lib/auth";
+import { currentTeacher } from "@/lib/auth";
+import Landing from "./Landing";
 import { loadAllModules, type Module } from "@/lib/content";
 import { assignedModuleIds, coinBalance, completedSessions, getProgress, levelFor, lifetimeCoins } from "@/lib/progress";
 import { completionDates, openSessionNumber, recordVisit } from "@/lib/rhythm";
@@ -16,7 +17,8 @@ type ModuleView = {
 };
 
 export default async function Home() {
-  const t = await requireTeacher();
+  const t = await currentTeacher();
+  if (!t) return <Landing modules={(await loadAllModules()).filter((m) => m.default)} />;
   const first = t.display_name.split(" ")[0];
 
   const [rhythm, allModules, assigned, coins, lifetime, unlockAll] = await Promise.all([
