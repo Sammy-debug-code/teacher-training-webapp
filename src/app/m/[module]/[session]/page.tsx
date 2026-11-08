@@ -5,6 +5,7 @@ import { loadSession } from "@/lib/content";
 import { completedSessions, ensureProgress } from "@/lib/progress";
 import { completionDates, istDate, openSessionNumber } from "@/lib/rhythm";
 import Player from "./Player";
+import { unlockAllActive } from "@/app/admin-actions";
 
 export default async function SessionPage({ params }: PageProps<"/m/[module]/[session]">) {
   const { module: moduleId, session: sessionId } = await params;
@@ -15,7 +16,8 @@ export default async function SessionPage({ params }: PageProps<"/m/[module]/[se
   await ensureProgress(t.id, moduleId);
   const [done, dates] = await Promise.all([completedSessions(t.id, moduleId), completionDates(t.id, moduleId)]);
   const open = openSessionNumber(dates, istDate());
-  if (session.n > open && !done.has(session.id)) redirect("/");
+  const unlockAll = await unlockAllActive(t.is_admin);
+  if (!unlockAll && session.n > open && !done.has(session.id)) redirect("/");
 
   return (
     <>

@@ -7,6 +7,7 @@ import { loadModule } from "@/lib/content";
 import { coinBalance, completedSessions, getProgress } from "@/lib/progress";
 import { completionDates, openSessionNumber, recordVisit } from "@/lib/rhythm";
 import { logoutAction } from "./login/actions";
+import { toggleUnlockAll, unlockAllActive } from "./admin-actions";
 
 const MODULE = "m1-handling-children";
 
@@ -24,8 +25,9 @@ export default async function Home() {
     completionDates(t.id, MODULE),
     coinBalance(t.id),
   ]);
-  const openN = openSessionNumber(dates, rhythm.today);
-  const next = mod.sessions.find((s) => s.n === openN && !done.has(s.id));
+  const unlockAll = await unlockAllActive(t.is_admin);
+  const openN = unlockAll ? mod.sessions.length : openSessionNumber(dates, rhythm.today);
+  const next = mod.sessions.find((s) => (unlockAll ? !done.has(s.id) : s.n === openN && !done.has(s.id)));
   const finishedToday = [...dates.values()].includes(rhythm.today);
   const allDone = done.size === mod.sessions.length;
 
@@ -120,12 +122,23 @@ export default async function Home() {
           </section>
         )}
 
+        {t.is_admin && (
+          <form action={toggleUnlockAll} className="flex items-center justify-between rounded-lg border border-dashed border-line-strong px-4 py-3">
+            <div>
+              <p className="text-[15px] font-semibold">Test mode: unlock all sessions</p>
+              <p className="text-sm text-muted">Admin only, this device only. {unlockAll ? "On" : "Off"}.</p>
+            </div>
+            <button className={`rounded-md px-3 py-1.5 text-[15px] font-semibold ${unlockAll ? "bg-marigold text-plum" : "bg-purple text-white"}`}>
+              {unlockAll ? "Turn off" : "Turn on"}
+            </button>
+          </form>
+        )}
         <section>
           <h3 className="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">All sessions</h3>
           <ol className="mt-2 divide-y divide-line rounded-lg border border-line bg-raised">
             {mod.sessions.map((s) => {
               const isDone = done.has(s.id);
-              const open = isDone || s.n === openN;
+              const open = isDone || s.n === openN || unlockAll;
               const row = (
                 <div className="flex items-center gap-3 px-4 py-3">
                   <span
