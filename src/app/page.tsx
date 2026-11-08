@@ -1,8 +1,11 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import AppBar from "@/components/AppBar";
+import Illo from "@/components/Illo";
 import { requireTeacher } from "@/lib/auth";
 import { loadModule } from "@/lib/content";
-import { coinBalance, completedSessions, ensureProgress } from "@/lib/progress";
+import { coinBalance, completedSessions, getProgress } from "@/lib/progress";
+import { completionDates, openSessionNumber, recordVisit } from "@/lib/rhythm";
 import { logoutAction } from "./login/actions";
 
 const MODULE = "m1-handling-children";
@@ -10,13 +13,21 @@ const MODULE = "m1-handling-children";
 export default async function Home() {
   const t = await requireTeacher();
   const first = t.display_name.split(" ")[0];
-  const [mod, progress, done, coins] = await Promise.all([
+
+  const progress = await getProgress(t.id, MODULE);
+  if (!progress) redirect("/start");
+
+  const rhythm = await recordVisit(t.id);
+  const [mod, done, dates, coins] = await Promise.all([
     loadModule(MODULE),
-    ensureProgress(t.id, MODULE),
     completedSessions(t.id, MODULE),
+    completionDates(t.id, MODULE),
     coinBalance(t.id),
   ]);
-  const next = mod.sessions.find((s) => !done.has(s.id) && s.n <= progress.unlocked_until);
+  const openN = openSessionNumber(dates, rhythm.today);
+  const next = mod.sessions.find((s) => s.n === openN && !done.has(s.id));
+  const finishedToday = [...dates.values()].includes(rhythm.today);
+  const allDone = done.size === mod.sessions.length;
 
   return (
     <>
@@ -28,61 +39,84 @@ export default async function Home() {
         }
       />
       <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-6 px-4 py-6">
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">
               {t.is_admin ? "Admin" : "Teacher"}
             </p>
             <h1 className="mt-1 font-serif text-[32px] font-medium leading-[40px] text-plum">Namaste, {first}</h1>
           </div>
-          <div className="rounded-lg bg-cream px-3 py-2 text-center">
-            <div className="text-[22px] font-bold leading-none text-sunrise-deep">{coins}</div>
-            <div className="text-[12px] font-semibold uppercase tracking-wider text-muted">coins</div>
+          <div className="flex gap-2">
+            <Stat value={coins} label="coins" />
+            <Stat value={rhythm.streak} label={rhythm.streak === 1 ? "day" : "days"} accent />
           </div>
         </div>
 
-        <section className="rounded-lg bg-plum p-5 text-white shadow-card">
-          <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-gold">Module 1</p>
-          <h2 className="mt-1 font-serif text-[24px] font-semibold leading-[30px]">{mod.title.en}</h2>
-          <p className="mt-1 text-sm text-white/80">{mod.subtitle.en}</p>
-          <div className="mt-4 flex gap-1">
-            {mod.sessions.map((s) => (
-              <span
-                key={s.id}
-                className={`h-1.5 flex-1 rounded-full ${done.has(s.id) ? "bg-marigold" : s.n <= progress.unlocked_until ? "bg-white/70" : "bg-white/20"}`}
-              />
-            ))}
+        {rhythm.missed && (
+          <section className="rounded-lg border-l-4 border-sunrise-deep bg-cream p-4">
+            <h2 className="font-semibold text-plum">You missed a school day</h2>
+            <p className="mt-1 text-[15px]">
+              {rhythm.missed.lost > 0
+                ? `Half your coins (${rhythm.missed.lost}) are gone and the streak starts again from today. It happens; the sessions are still here.`
+                : "The streak starts again from today. The sessions are still here."}
+            </p>
+          </section>
+        )}
+
+        <section className="overflow-hidden rounded-lg bg-plum text-white shadow-card">
+          <div className="p-5">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-gold">Module 1</p>
+            <h2 className="mt-1 font-serif text-[24px] font-semibold leading-[30px]">{mod.title.en}</h2>
+            <p className="mt-1 text-sm text-white/80">{mod.subtitle.en}</p>
+            <div className="mt-4 flex gap-1">
+              {mod.sessions.map((s) => (
+                <span
+                  key={s.id}
+                  className={`h-1.5 flex-1 rounded-full ${done.has(s.id) ? "bg-marigold" : s.n === openN ? "bg-white/80" : "bg-white/20"}`}
+                />
+              ))}
+            </div>
+            <p className="mt-2 text-sm text-white/80">
+              {done.size} of {mod.sessions.length} sessions done
+            </p>
           </div>
-          <p className="mt-2 text-sm text-white/80">
-            {done.size} of {mod.sessions.length} sessions done
-          </p>
         </section>
 
         {next ? (
-          <Link
-            href={`/m/${MODULE}/${next.id}`}
-            className="rounded-lg border border-line bg-raised p-5 shadow-card active:bg-mist"
-          >
-            <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-sunrise-deep">
-              {done.size === 0 ? "Start here" : "Ready for you"}
-            </p>
-            <h3 className="mt-1 font-serif text-[24px] font-semibold leading-[30px] text-plum">
-              Session {next.n}: {next.title.en}
-            </h3>
-            <p className="mt-1 text-sm text-muted">About {next.minutes} minutes</p>
-            <span className="mt-4 inline-block rounded-md bg-purple px-4 py-2 text-[15px] font-semibold text-white">
-              {done.size === 0 ? "Begin" : "Continue"}
-            </span>
+          <Link href={`/m/${MODULE}/${next.id}`} className="overflow-hidden rounded-lg border border-line bg-raised shadow-card active:bg-mist">
+            <Illo name={next.n === 1 ? "staffroom" : "classroom-disturb"} />
+            <div className="p-5">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-sunrise-deep">
+                {done.size === 0 ? "Start here" : "Today's session"}
+              </p>
+              <h3 className="mt-1 font-serif text-[24px] font-semibold leading-[30px] text-plum">
+                Session {next.n}: {next.title.en}
+              </h3>
+              <p className="mt-1 text-sm text-muted">About {next.minutes} minutes</p>
+              <span className="mt-4 inline-block rounded-md bg-purple px-4 py-2 text-[15px] font-semibold text-white">
+                {done.size === 0 ? "Begin" : "Continue"}
+              </span>
+            </div>
           </Link>
-        ) : done.size === mod.sessions.length ? (
-          <section className="rounded-lg bg-cream p-5">
-            <h3 className="font-serif text-[24px] font-semibold text-plum">Module complete</h3>
-            <p className="mt-1 text-muted">Well done. Module 2 is coming.</p>
+        ) : allDone ? (
+          <section className="overflow-hidden rounded-lg bg-cream">
+            <Illo name="coins" />
+            <div className="p-5">
+              <h3 className="font-serif text-[24px] font-semibold text-plum">Module complete</h3>
+              <p className="mt-1 text-muted">Well done. Module 2 is coming.</p>
+            </div>
           </section>
         ) : (
-          <section className="rounded-lg bg-cream p-5">
-            <h3 className="font-serif text-[24px] font-semibold text-plum">Next session opens soon</h3>
-            <p className="mt-1 text-muted">Come back tomorrow for your nugget and check-in.</p>
+          <section className="overflow-hidden rounded-lg bg-cream">
+            <Illo name="calendar" />
+            <div className="p-5">
+              <h3 className="font-serif text-[24px] font-semibold text-plum">
+                {finishedToday ? "Done for today" : "Next session opens tomorrow"}
+              </h3>
+              <p className="mt-1 text-muted">
+                Session {openN} opens tomorrow morning. Today, try the task from your last session in class — that is the real work.
+              </p>
+            </div>
           </section>
         )}
 
@@ -91,7 +125,7 @@ export default async function Home() {
           <ol className="mt-2 divide-y divide-line rounded-lg border border-line bg-raised">
             {mod.sessions.map((s) => {
               const isDone = done.has(s.id);
-              const open = s.n <= progress.unlocked_until;
+              const open = isDone || s.n === openN;
               const row = (
                 <div className="flex items-center gap-3 px-4 py-3">
                   <span
@@ -102,18 +136,23 @@ export default async function Home() {
                     {isDone ? "✓" : s.n}
                   </span>
                   <span className={`flex-1 text-[16px] ${open ? "text-ink" : "text-muted"}`}>{s.title.en}</span>
-                  <span className="text-sm text-muted">{s.minutes} min</span>
+                  <span className="text-sm text-muted">{isDone ? "Review" : open ? `${s.minutes} min` : "Locked"}</span>
                 </div>
               );
-              return (
-                <li key={s.id}>
-                  {open ? <Link href={`/m/${MODULE}/${s.id}`}>{row}</Link> : row}
-                </li>
-              );
+              return <li key={s.id}>{open ? <Link href={`/m/${MODULE}/${s.id}`}>{row}</Link> : row}</li>;
             })}
           </ol>
         </section>
       </main>
     </>
+  );
+}
+
+function Stat({ value, label, accent = false }: { value: number; label: string; accent?: boolean }) {
+  return (
+    <div className={`min-w-[64px] rounded-lg px-3 py-2 text-center ${accent ? "bg-mist" : "bg-cream"}`}>
+      <div className={`text-[22px] font-bold leading-none ${accent ? "text-purple" : "text-sunrise-deep"}`}>{value}</div>
+      <div className="text-[11px] font-semibold uppercase tracking-wider text-muted">{label}</div>
+    </div>
   );
 }

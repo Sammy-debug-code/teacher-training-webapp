@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Card, Option, Session, T } from "@/lib/content";
+import Illo, { type IlloName } from "@/components/Illo";
 import { logEvent, saveReflection, completeSession } from "@/app/m/actions";
 
 type Lang = "en" | "hi";
@@ -125,6 +126,7 @@ export default function Player({
       </div>
 
       <main className="flex flex-1 flex-col gap-6 px-4 pb-28 pt-4">
+        {card.image && <Illo name={card.image as IlloName} />}
         <CardView
           card={card}
           lang={lang}
@@ -196,7 +198,7 @@ function CardView({
     case "quote":
       return (
         <>
-          <div className="mt-6 rounded-lg bg-cream p-6">
+          <div className="rounded-lg bg-cream p-6">
             <div className="font-serif text-[40px] leading-none text-gold">“</div>
             <Txt t={card.text} lang={lang} className="-mt-3 font-serif text-[24px] font-medium leading-[32px] text-plum" />
             <Txt t={card.attribution} lang={lang} className="mt-4 text-sm text-muted" />

@@ -88,10 +88,10 @@ Derived values (coin balance, current streak) are computed from `coin_ledger` an
 
 ## 4. Coins and streaks — the rules
 
-- **Coins**: +10 for each card completed, +50 for finishing a session, +20 for a between-day check-in. Rewinding a scenario costs nothing; learning from a wrong choice is the point.
+- **Coins**: +10 for each card completed, +50 for finishing a session. Rewinding a scenario costs nothing; learning from a wrong choice is the point.
 - **Streak**: counts consecutive calendar days (Asia/Kolkata) with a visit. Sundays and rows in `holidays` never break it and do not need a visit.
 - **Missed day**: when a teacher opens the app after a missed working day, a `missed_day` entry of −50% of the current balance is written once, and a card explains it. The streak restarts at 1.
-- **Unlocks**: Session N+1 unlocks the day after Session N is completed, never the same day. Between-day content (one nugget + task check-in) appears on the day in between. This produces the 16-day rhythm.
+- **Unlocks**: one session per day. Session N+1 opens the calendar day after Session N is completed, never the same day. Eight sessions take eight school days (Sundays and holidays off). Each session from 2 onward opens with a one-card check-in on the previous task.
 - **Leaderboard**: optional, per section, top five only, by coin balance. Off by default until the pilot says otherwise.
 
 ## 5. Content format
@@ -136,7 +136,7 @@ Section variants: a card may carry `"section": "junior" | "senior"`; the player 
 | 1 | Login | `/login` | Username + PIN keypad. Error text in words. Remembers the device for 30 days. |
 | 2 | Home | `/` | Plum app bar with seal. Greeting, coin balance, streak flame, today's card: "Session 3 is ready" or "Today's nugget + check-in". Progress bar across 8 sessions. |
 | 3 | Session player | `/m/[module]/[session]` | One card at a time, full-screen, swipe/tap. Language tap top-right. Progress dots. Auto-saves position. |
-| 4 | Between-day | `/m/[module]/day/[n]` | One nugget, one check-in prompt, +20 coins. |
+| 4 | How this works | `/start` | Shown once before Session 1: one a day, the task, coins and streak, no lecture. |
 | 5 | Session complete | inside player | Coins earned, the classroom task restated, "See you day after tomorrow". |
 | 6 | My notebook | `/notebook` | The teacher's own reflections and tasks, by session. |
 | 7 | Missed-day card | inside Home | Shown once: what was lost, streak restarted, kind tone. |

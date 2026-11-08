@@ -13,7 +13,7 @@ export type Option = {
   rung?: number | null;
 };
 
-export type Card =
+export type Card = { image?: string } & (
   | { id: string; type: "scene"; eyebrow?: T; text: T; prompt?: T; image?: string }
   | { id: string; type: "quote"; text: T; attribution: T }
   | { id: string; type: "choice"; question: T; options: Option[]; /** 'ladder' choices feed the metrics; 'poll' and 'rating' are baselines */ kind?: "ladder" | "poll" | "rating" }
@@ -23,7 +23,8 @@ export type Card =
   | { id: string; type: "ladder"; title: T; rungs: { n: number; name: T; line: T }[]; highlight?: number }
   | { id: string; type: "reflection"; prompt: T; placeholder?: T; min_chars?: number }
   | { id: string; type: "task"; title: T; text: T }
-  | { id: string; type: "complete"; title: T; text: T };
+  | { id: string; type: "complete"; title: T; text: T }
+);
 
 export type Session = {
   id: string;

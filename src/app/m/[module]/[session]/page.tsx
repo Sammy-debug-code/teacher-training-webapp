@@ -3,6 +3,7 @@ import AppBar from "@/components/AppBar";
 import { requireTeacher } from "@/lib/auth";
 import { loadSession } from "@/lib/content";
 import { completedSessions, ensureProgress } from "@/lib/progress";
+import { completionDates, istDate, openSessionNumber } from "@/lib/rhythm";
 import Player from "./Player";
 
 export default async function SessionPage({ params }: PageProps<"/m/[module]/[session]">) {
@@ -11,9 +12,10 @@ export default async function SessionPage({ params }: PageProps<"/m/[module]/[se
   const session = await loadSession(moduleId, sessionId);
   if (!session) notFound();
 
-  const progress = await ensureProgress(t.id, moduleId);
-  if (session.n > progress.unlocked_until) redirect("/");
-  const done = await completedSessions(t.id, moduleId);
+  await ensureProgress(t.id, moduleId);
+  const [done, dates] = await Promise.all([completedSessions(t.id, moduleId), completionDates(t.id, moduleId)]);
+  const open = openSessionNumber(dates, istDate());
+  if (session.n > open && !done.has(session.id)) redirect("/");
 
   return (
     <>

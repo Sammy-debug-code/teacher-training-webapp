@@ -1,7 +1,9 @@
 {
   "id": "s1",
   "n": 1,
-  "title": { "en": "\"He knows I can't beat him\"" },
+  "title": {
+    "en": "\"He knows I can't beat him\""
+  },
   "minutes": 15,
   "cards": [
     {
@@ -11,27 +13,59 @@
         "en": "He knows I cannot beat him, I cannot scold him. So he takes advantage.",
         "hi": "वो जानता है कि मैं उसे मार नहीं सकती, डाँट नहीं सकती। इसलिए वो फ़ायदा उठाता है।"
       },
-      "attribution": { "en": "A Bethel teacher, in the staff room", "hi": "एक बेथेल शिक्षक, स्टाफ़ रूम में" }
+      "attribution": {
+        "en": "A Bethel teacher, in the staff room",
+        "hi": "एक बेथेल शिक्षक, स्टाफ़ रूम में"
+      },
+      "image": "staffroom"
     },
     {
       "id": "s1-felt",
       "type": "choice",
       "kind": "poll",
-      "question": { "en": "Have you felt this?", "hi": "क्या आपने भी ऐसा महसूस किया है?" },
+      "question": {
+        "en": "Have you felt this?",
+        "hi": "क्या आपने भी ऐसा महसूस किया है?"
+      },
       "options": [
-        { "key": "a", "text": { "en": "Yes, often", "hi": "हाँ, अक्सर" }, "rung": null },
-        { "key": "b", "text": { "en": "Sometimes", "hi": "कभी-कभी" }, "rung": null },
-        { "key": "c", "text": { "en": "Not really", "hi": "ज़्यादा नहीं" }, "rung": null }
+        {
+          "key": "a",
+          "text": {
+            "en": "Yes, often",
+            "hi": "हाँ, अक्सर"
+          },
+          "rung": null
+        },
+        {
+          "key": "b",
+          "text": {
+            "en": "Sometimes",
+            "hi": "कभी-कभी"
+          },
+          "rung": null
+        },
+        {
+          "key": "c",
+          "text": {
+            "en": "Not really",
+            "hi": "ज़्यादा नहीं"
+          },
+          "rung": null
+        }
       ]
     },
     {
       "id": "s1-why-module",
       "type": "nugget",
-      "title": { "en": "Why this training exists", "hi": "यह ट्रेनिंग क्यों है" },
+      "title": {
+        "en": "Why this training exists",
+        "hi": "यह ट्रेनिंग क्यों है"
+      },
       "text": {
-        "en": "The law took away the stick and the shout. Nobody gave us anything in their place. So most of us are left with one move for everything: complain to the parents, send the child to the office, make him write \"I will never do it again\" twenty times.\n\nThis training gives you the moves that sit between the stick and the office. Eight short sessions, fifteen minutes each, on your phone. Each ends with one small thing to try in your class before the next one.",
-        "hi": "क़ानून ने छड़ी और चिल्लाना हटा दिया। उसकी जगह हमें कुछ नहीं दिया गया। इसलिए हम में से ज़्यादातर के पास हर बात के लिए एक ही तरीका बचा है: माता-पिता से शिकायत, बच्चे को ऑफ़िस भेजना, या बीस बार लिखवाना \"मैं फिर कभी ऐसा नहीं करूँगा\"।\n\nयह ट्रेनिंग आपको वो तरीके देती है जो छड़ी और ऑफ़िस के बीच में हैं। आठ छोटे सेशन, पंद्रह-पंद्रह मिनट के, आपके फ़ोन पर। हर सेशन के अंत में एक छोटी सी चीज़ होगी जो आप अगले सेशन से पहले अपनी क्लास में आज़माएँगे।"
-      }
+        "en": "The law took away the stick and the shout. Nobody gave us anything in their place. So most of us are left with one move for everything: complain to the parents, send the child to the office, make him write \"I will never do it again\" twenty times.\n\nThis training gives you the moves that sit between the stick and the office. Eight short sessions, one each school day, fifteen minutes each, on your phone. Each ends with one small thing to try in your class before the next one.",
+        "hi": "क़ानून ने छड़ी और चिल्लाना हटा दिया। उसकी जगह हमें कुछ नहीं दिया गया। इसलिए हम में से ज़्यादातर के पास हर बात के लिए एक ही तरीका बचा है: माता-पिता से शिकायत, बच्चे को ऑफ़िस भेजना, या बीस बार लिखवाना \"मैं फिर कभी ऐसा नहीं करूँगा\"।\n\nयह ट्रेनिंग आपको वो तरीके देती है जो छड़ी और ऑफ़िस के बीच में हैं। आठ छोटे सेशन, हर स्कूल-दिन एक, पंद्रह-पंद्रह मिनट के, आपके फ़ोन पर। हर सेशन के अंत में एक छोटी सी चीज़ होगी जो आप अगले सेशन से पहले अपनी क्लास में आज़माएँगे।"
+      },
+      "image": "map"
     },
     {
       "id": "s1-usual",
@@ -42,50 +76,107 @@
         "hi": "सच बताइए, यह सिर्फ़ आप देखेंगे। जब कोई बच्चा क्लास में बार-बार परेशान करता है, तो आप आमतौर पर सबसे पहले क्या करते हैं?"
       },
       "options": [
-        { "key": "a", "text": { "en": "Raise my voice", "hi": "आवाज़ ऊँची करती/करता हूँ" }, "rung": null },
-        { "key": "b", "text": { "en": "Make the child stand, or stand outside", "hi": "बच्चे को खड़ा कर देती/देता हूँ, या बाहर" }, "rung": null },
-        { "key": "c", "text": { "en": "Send the child to the principal or office", "hi": "प्रिंसिपल या ऑफ़िस भेज देती/देता हूँ" }, "rung": null },
-        { "key": "d", "text": { "en": "Tell the parents", "hi": "माता-पिता को बताती/बताता हूँ" }, "rung": null },
-        { "key": "e", "text": { "en": "Something else", "hi": "कुछ और" }, "rung": null }
+        {
+          "key": "a",
+          "text": {
+            "en": "Raise my voice",
+            "hi": "आवाज़ ऊँची करती/करता हूँ"
+          },
+          "rung": null
+        },
+        {
+          "key": "b",
+          "text": {
+            "en": "Make the child stand, or stand outside",
+            "hi": "बच्चे को खड़ा कर देती/देता हूँ, या बाहर"
+          },
+          "rung": null
+        },
+        {
+          "key": "c",
+          "text": {
+            "en": "Send the child to the principal or office",
+            "hi": "प्रिंसिपल या ऑफ़िस भेज देती/देता हूँ"
+          },
+          "rung": null
+        },
+        {
+          "key": "d",
+          "text": {
+            "en": "Tell the parents",
+            "hi": "माता-पिता को बताती/बताता हूँ"
+          },
+          "rung": null
+        },
+        {
+          "key": "e",
+          "text": {
+            "en": "Something else",
+            "hi": "कुछ और"
+          },
+          "rung": null
+        }
       ]
     },
     {
       "id": "s1-scene",
       "type": "scene",
-      "eyebrow": { "en": "Class 3 · Monday · second period", "hi": "क्लास 3 · सोमवार · दूसरा पीरियड" },
+      "eyebrow": {
+        "en": "Class 3 · Monday · second period",
+        "hi": "क्लास 3 · सोमवार · दूसरा पीरियड"
+      },
       "text": {
         "en": "You are teaching subtraction on the board. Aarav, eight years old, has left his seat for the third time. Now he is pulling Sana's notebook and three children near him are giggling. You have already said \"Aarav, sit down\" twice. The class is watching to see what happens next.",
         "hi": "आप बोर्ड पर घटाना सिखा रहे हैं। आठ साल का आरव तीसरी बार अपनी सीट से उठ चुका है। अब वो सना की कॉपी खींच रहा है और उसके पास बैठे तीन बच्चे हँस रहे हैं। आप दो बार कह चुके हैं \"आरव, बैठ जाओ\"। पूरी क्लास देख रही है कि अब क्या होगा।"
       },
-      "prompt": { "en": "What do you do?", "hi": "आप क्या करेंगे?" }
+      "prompt": {
+        "en": "What do you do?",
+        "hi": "आप क्या करेंगे?"
+      },
+      "image": "classroom-disturb"
     },
     {
       "id": "s1-choice",
       "type": "choice",
       "kind": "ladder",
-      "question": { "en": "What do you do?", "hi": "आप क्या करेंगे?" },
+      "question": {
+        "en": "What do you do?",
+        "hi": "आप क्या करेंगे?"
+      },
       "options": [
         {
           "key": "a",
-          "text": { "en": "\"AARAV! Enough. Go and stand at the back for the rest of the period.\"", "hi": "\"आरव! बस। जाओ, पूरे पीरियड पीछे खड़े रहो।\"" },
+          "text": {
+            "en": "\"AARAV! Enough. Go and stand at the back for the rest of the period.\"",
+            "hi": "\"आरव! बस। जाओ, पूरे पीरियड पीछे खड़े रहो।\""
+          },
           "next": "s1-cons-a",
           "rung": 0
         },
         {
           "key": "b",
-          "text": { "en": "Send him to the principal's office with a monitor.", "hi": "मॉनिटर के साथ उसे प्रिंसिपल के ऑफ़िस भेज दें।" },
+          "text": {
+            "en": "Send him to the principal's office with a monitor.",
+            "hi": "मॉनिटर के साथ उसे प्रिंसिपल के ऑफ़िस भेज दें।"
+          },
           "next": "s1-cons-b",
           "rung": 5
         },
         {
           "key": "c",
-          "text": { "en": "Keep the class working on two sums. Walk to Aarav, crouch to his level, and say quietly: \"Aarav, seat. I'm coming to see your book in two minutes.\" Then actually go in two minutes.", "hi": "क्लास को दो सवाल दे दें। आरव के पास जाएँ, उसकी ऊँचाई तक झुकें, और धीरे से कहें: \"आरव, सीट पर। दो मिनट में तुम्हारी कॉपी देखने आ रही हूँ।\" और सच में दो मिनट में जाएँ।" },
+          "text": {
+            "en": "Keep the class working on two sums. Walk to Aarav, crouch to his level, and say quietly: \"Aarav, seat. I'm coming to see your book in two minutes.\" Then actually go in two minutes.",
+            "hi": "क्लास को दो सवाल दे दें। आरव के पास जाएँ, उसकी ऊँचाई तक झुकें, और धीरे से कहें: \"आरव, सीट पर। दो मिनट में तुम्हारी कॉपी देखने आ रही हूँ।\" और सच में दो मिनट में जाएँ।"
+          },
           "next": "s1-cons-c",
           "rung": 2
         },
         {
           "key": "d",
-          "text": { "en": "Ignore him and carry on with the board.", "hi": "उसे नज़रअंदाज़ करें और बोर्ड पर पढ़ाते रहें।" },
+          "text": {
+            "en": "Ignore him and carry on with the board.",
+            "hi": "उसे नज़रअंदाज़ करें और बोर्ड पर पढ़ाते रहें।"
+          },
           "next": "s1-cons-d",
           "rung": 0
         }
@@ -99,7 +190,8 @@
       "text": {
         "en": "Aarav walks to the back slowly, grinning. From there he waves at his friends every time you turn to the board. You have lost him for the period, and the class now has a show to watch instead of subtraction. Tomorrow he will do it again, because standing at the back was fun.",
         "hi": "आरव धीरे-धीरे पीछे जाता है, मुस्कुराते हुए। वहाँ से जब भी आप बोर्ड की तरफ़ मुड़ते हैं, वो दोस्तों को हाथ हिलाता है। इस पीरियड के लिए आपने उसे खो दिया, और क्लास के पास अब घटाने की जगह एक तमाशा है। कल वो फिर यही करेगा, क्योंकि पीछे खड़ा होना मज़ेदार था।"
-      }
+      },
+      "image": "back-of-class"
     },
     {
       "id": "s1-cons-b",
@@ -109,7 +201,8 @@
       "text": {
         "en": "The principal is in a meeting. Aarav sits on the bench outside the office for forty minutes, misses the whole lesson, and chats with the peon. His mother is phoned. At home there is a slap, or nothing at all. On Tuesday he is back in your class, and nothing between you and him has changed.",
         "hi": "प्रिंसिपल मीटिंग में हैं। आरव चालीस मिनट ऑफ़िस के बाहर बेंच पर बैठा रहता है, पूरा पाठ छूट जाता है, और चपरासी से बातें करता है। उसकी माँ को फ़ोन जाता है। घर पर या तो एक थप्पड़ पड़ता है, या कुछ भी नहीं। मंगलवार को वो फिर आपकी क्लास में है, और आपके और उसके बीच कुछ नहीं बदला।"
-      }
+      },
+      "image": "office-bench"
     },
     {
       "id": "s1-cons-c",
@@ -119,7 +212,8 @@
       "text": {
         "en": "Aarav sits. Nobody laughed, because nobody heard. Two minutes later you are at his desk as promised; he has written two lines. You say \"Good. Finish the third one,\" and move on. The class never stopped working. Total cost: twenty seconds and one kept promise.",
         "hi": "आरव बैठ जाता है। कोई नहीं हँसा, क्योंकि किसी ने सुना ही नहीं। दो मिनट बाद आप वादे के मुताबिक़ उसकी डेस्क पर हैं; उसने दो लाइनें लिखी हैं। आप कहते हैं \"अच्छा। तीसरी भी करो,\" और आगे बढ़ जाते हैं। क्लास ने काम करना कभी बंद नहीं किया। कुल ख़र्च: बीस सेकंड और एक निभाया हुआ वादा।"
-      }
+      },
+      "image": "crouch-desk"
     },
     {
       "id": "s1-cons-d",
@@ -129,40 +223,113 @@
       "text": {
         "en": "Within a minute two more children have left their seats. Ignoring is not the smallest move; it is no move, and the class reads it as permission.",
         "hi": "एक मिनट के अंदर दो और बच्चे सीट छोड़ चुके हैं। नज़रअंदाज़ करना सबसे छोटा क़दम नहीं है; यह कोई क़दम ही नहीं है, और क्लास इसे इजाज़त समझती है।"
-      }
+      },
+      "image": "seats-empty"
     },
     {
       "id": "s1-why",
       "type": "why",
-      "title": { "en": "What just happened", "hi": "अभी क्या हुआ" },
+      "title": {
+        "en": "What just happened",
+        "hi": "अभी क्या हुआ"
+      },
       "points": [
-        { "en": "You moved early and small, before you were angry.", "hi": "आप ग़ुस्सा होने से पहले, जल्दी और छोटा क़दम उठाया।" },
-        { "en": "You corrected him privately, so there was no audience and nothing to perform for.", "hi": "आपने उसे अकेले में टोका, तो कोई दर्शक नहीं था और दिखाने के लिए कुछ नहीं।" },
-        { "en": "You made a promise and kept it. That is how an eight-year-old learns that your words mean something.", "hi": "आपने वादा किया और निभाया। आठ साल का बच्चा ऐसे ही सीखता है कि आपकी बात का मतलब है।" },
-        { "en": "Shouting, the back of the class and the office are all bigger moves. Save them; most days you will not need them.", "hi": "चिल्लाना, क्लास के पीछे खड़ा करना और ऑफ़िस, सब बड़े क़दम हैं। इन्हें बचाकर रखिए; ज़्यादातर दिन इनकी ज़रूरत नहीं पड़ेगी।" }
+        {
+          "en": "You moved early and small, before you were angry.",
+          "hi": "आप ग़ुस्सा होने से पहले, जल्दी और छोटा क़दम उठाया।"
+        },
+        {
+          "en": "You corrected him privately, so there was no audience and nothing to perform for.",
+          "hi": "आपने उसे अकेले में टोका, तो कोई दर्शक नहीं था और दिखाने के लिए कुछ नहीं।"
+        },
+        {
+          "en": "You made a promise and kept it. That is how an eight-year-old learns that your words mean something.",
+          "hi": "आपने वादा किया और निभाया। आठ साल का बच्चा ऐसे ही सीखता है कि आपकी बात का मतलब है।"
+        },
+        {
+          "en": "Shouting, the back of the class and the office are all bigger moves. Save them; most days you will not need them.",
+          "hi": "चिल्लाना, क्लास के पीछे खड़ा करना और ऑफ़िस, सब बड़े क़दम हैं। इन्हें बचाकर रखिए; ज़्यादातर दिन इनकी ज़रूरत नहीं पड़ेगी।"
+        }
       ]
     },
     {
       "id": "s1-ladder",
       "type": "ladder",
-      "title": { "en": "The ladder", "hi": "सीढ़ी" },
+      "title": {
+        "en": "The ladder",
+        "hi": "सीढ़ी"
+      },
       "highlight": 2,
       "rungs": [
-        { "n": 1, "name": { "en": "Prevent", "hi": "रोकथाम" }, "line": { "en": "Routines, clear expectations, a lesson that starts fast", "hi": "दिनचर्या, साफ़ उम्मीदें, जल्दी शुरू होने वाला पाठ" } },
-        { "n": 2, "name": { "en": "Respond small", "hi": "छोटा जवाब" }, "line": { "en": "A look, a step closer, a quiet word, a choice", "hi": "एक नज़र, एक क़दम पास, एक धीमी बात, एक विकल्प" } },
-        { "n": 3, "name": { "en": "A consequence that teaches", "hi": "सिखाने वाला नतीजा" }, "line": { "en": "Related, calm, private, then move on", "hi": "जुड़ा हुआ, शांत, अकेले में, फिर आगे बढ़ो" } },
-        { "n": 4, "name": { "en": "Repair", "hi": "मरम्मत" }, "line": { "en": "A two-minute conversation afterwards", "hi": "बाद में दो मिनट की बातचीत" } },
-        { "n": 5, "name": { "en": "Escalate", "hi": "ऊपर भेजो" }, "line": { "en": "Principal or parents — for safety, and for patterns, not for one bad day", "hi": "प्रिंसिपल या माता-पिता — सुरक्षा के लिए, और बार-बार होने पर, एक बुरे दिन के लिए नहीं" } }
+        {
+          "n": 1,
+          "name": {
+            "en": "Prevent",
+            "hi": "रोकथाम"
+          },
+          "line": {
+            "en": "Routines, clear expectations, a lesson that starts fast",
+            "hi": "दिनचर्या, साफ़ उम्मीदें, जल्दी शुरू होने वाला पाठ"
+          }
+        },
+        {
+          "n": 2,
+          "name": {
+            "en": "Respond small",
+            "hi": "छोटा जवाब"
+          },
+          "line": {
+            "en": "A look, a step closer, a quiet word, a choice",
+            "hi": "एक नज़र, एक क़दम पास, एक धीमी बात, एक विकल्प"
+          }
+        },
+        {
+          "n": 3,
+          "name": {
+            "en": "A consequence that teaches",
+            "hi": "सिखाने वाला नतीजा"
+          },
+          "line": {
+            "en": "Related, calm, private, then move on",
+            "hi": "जुड़ा हुआ, शांत, अकेले में, फिर आगे बढ़ो"
+          }
+        },
+        {
+          "n": 4,
+          "name": {
+            "en": "Repair",
+            "hi": "मरम्मत"
+          },
+          "line": {
+            "en": "A two-minute conversation afterwards",
+            "hi": "बाद में दो मिनट की बातचीत"
+          }
+        },
+        {
+          "n": 5,
+          "name": {
+            "en": "Escalate",
+            "hi": "ऊपर भेजो"
+          },
+          "line": {
+            "en": "Principal or parents — for safety, and for patterns, not for one bad day",
+            "hi": "प्रिंसिपल या माता-पिता — सुरक्षा के लिए, और बार-बार होने पर, एक बुरे दिन के लिए नहीं"
+          }
+        }
       ]
     },
     {
       "id": "s1-ladder-nugget",
       "type": "nugget",
-      "title": { "en": "Most teachers only own rung 5", "hi": "ज़्यादातर शिक्षकों के पास सिर्फ़ पाँचवीं सीढ़ी है" },
+      "title": {
+        "en": "Most teachers only own rung 5",
+        "hi": "ज़्यादातर शिक्षकों के पास सिर्फ़ पाँचवीं सीढ़ी है"
+      },
       "text": {
         "en": "Think of the ladder as five tools. Right now most of us reach straight for the top one, the office or the parents, because it is the only one we were ever shown. The next seven sessions put the other four in your hands, one at a time.\n\nThe ladder is not soft. A teacher who uses rungs one to four well is stricter than one who shouts, because the children learn that every single time, something predictable happens.",
         "hi": "इस सीढ़ी को पाँच औज़ार समझिए। अभी हम में से ज़्यादातर सीधे सबसे ऊपर वाला उठाते हैं, ऑफ़िस या माता-पिता, क्योंकि हमें सिर्फ़ वही दिखाया गया था। अगले सात सेशन बाक़ी चार औज़ार एक-एक करके आपके हाथ में देंगे।\n\nयह सीढ़ी नरम नहीं है। जो शिक्षक पहली से चौथी सीढ़ी अच्छे से इस्तेमाल करता है, वो चिल्लाने वाले से ज़्यादा सख़्त है, क्योंकि बच्चे सीखते हैं कि हर बार कुछ न कुछ तय होकर होता है।"
-      }
+      },
+      "image": "ladder"
     },
     {
       "id": "s1-confidence",
@@ -173,11 +340,46 @@
         "hi": "अभी, बिना चिल्लाए या बच्चे को बाहर भेजे, शरारत संभालने में आप कितना आत्मविश्वास महसूस करते हैं?"
       },
       "options": [
-        { "key": "1", "text": { "en": "1 — Not at all", "hi": "1 — बिल्कुल नहीं" }, "rung": null },
-        { "key": "2", "text": { "en": "2", "hi": "2" }, "rung": null },
-        { "key": "3", "text": { "en": "3 — Somewhat", "hi": "3 — कुछ हद तक" }, "rung": null },
-        { "key": "4", "text": { "en": "4", "hi": "4" }, "rung": null },
-        { "key": "5", "text": { "en": "5 — Very", "hi": "5 — बहुत" }, "rung": null }
+        {
+          "key": "1",
+          "text": {
+            "en": "1 — Not at all",
+            "hi": "1 — बिल्कुल नहीं"
+          },
+          "rung": null
+        },
+        {
+          "key": "2",
+          "text": {
+            "en": "2",
+            "hi": "2"
+          },
+          "rung": null
+        },
+        {
+          "key": "3",
+          "text": {
+            "en": "3 — Somewhat",
+            "hi": "3 — कुछ हद तक"
+          },
+          "rung": null
+        },
+        {
+          "key": "4",
+          "text": {
+            "en": "4",
+            "hi": "4"
+          },
+          "rung": null
+        },
+        {
+          "key": "5",
+          "text": {
+            "en": "5 — Very",
+            "hi": "5 — बहुत"
+          },
+          "rung": null
+        }
       ]
     },
     {
@@ -187,26 +389,37 @@
         "en": "Think of last week. Write one moment when you felt stuck — you could not hit, could not shout, and did not know what else to do. Two or three lines are enough.",
         "hi": "पिछले हफ़्ते के बारे में सोचिए। एक ऐसा पल लिखिए जब आप फँस गए थे — न मार सकते थे, न चिल्ला सकते थे, और समझ नहीं आया कि और क्या करें। दो-तीन लाइनें काफ़ी हैं।"
       },
-      "placeholder": { "en": "On Thursday, during…", "hi": "गुरुवार को, जब…" },
+      "placeholder": {
+        "en": "On Thursday, during…",
+        "hi": "गुरुवार को, जब…"
+      },
       "min_chars": 20
     },
     {
       "id": "s1-task",
       "type": "task",
-      "title": { "en": "This week, in your class", "hi": "इस हफ़्ते, आपकी क्लास में" },
+      "title": {
+        "en": "This week, in your class",
+        "hi": "इस हफ़्ते, आपकी क्लास में"
+      },
       "text": {
-        "en": "Change nothing yet. Just notice. Each day, catch one moment where you felt stuck without the stick, and write it in one line in your notebook here. Three moments by the next session. The day after tomorrow, the app will ask you how it went.",
-        "hi": "अभी कुछ मत बदलिए। बस ध्यान दीजिए। हर दिन एक ऐसा पल पकड़िए जब आप बिना छड़ी के फँसे हुए महसूस करें, और यहाँ अपनी नोटबुक में एक लाइन में लिखिए। अगले सेशन तक तीन पल। परसों, ऐप आपसे पूछेगा कि कैसा रहा।"
-      }
+        "en": "Change nothing yet. Just notice. Today and tomorrow, catch one moment where you felt stuck without the stick, and write it in one line in your notebook here. Tomorrow's session starts by asking you about it.",
+        "hi": "अभी कुछ मत बदलिए। बस ध्यान दीजिए। आज और कल, एक ऐसा पल पकड़िए जब आप बिना छड़ी के फँसे हुए महसूस करें, और यहाँ अपनी नोटबुक में एक लाइन में लिखिए। कल का सेशन इसी के बारे में पूछकर शुरू होगा।"
+      },
+      "image": "notebook"
     },
     {
       "id": "s1-complete",
       "type": "complete",
-      "title": { "en": "Session 1 done", "hi": "सेशन 1 पूरा" },
+      "title": {
+        "en": "Session 1 done",
+        "hi": "सेशन 1 पूरा"
+      },
       "text": {
-        "en": "You now have the map. Session 2 opens the day after tomorrow: why the stick never did what we thought it did.",
-        "hi": "अब आपके पास नक़्शा है। सेशन 2 परसों खुलेगा: छड़ी ने कभी वो क्यों नहीं किया जो हम सोचते थे।"
-      }
+        "en": "You now have the map. Session 2 opens tomorrow morning: why the stick never did what we thought it did.",
+        "hi": "अब आपके पास नक़्शा है। सेशन 2 कल सुबह खुलेगा: छड़ी ने कभी वो क्यों नहीं किया जो हम सोचते थे।"
+      },
+      "image": "coins"
     }
   ]
 }

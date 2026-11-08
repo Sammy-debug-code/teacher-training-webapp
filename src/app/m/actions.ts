@@ -76,11 +76,6 @@ export async function completeSession(moduleId: string, sessionId: string): Prom
     { teacher_id: t.id, delta: COINS.session, reason: "session_bonus", ref: `${moduleId}/${sessionId}` },
   ]);
 
-  const p = await ensureProgress(t.id, moduleId);
-  const nextN = session.n + 1;
-  if (nextN > p.unlocked_until) {
-    // Unlock rhythm (next session the day after) lands with the streak work; for now unlock immediately.
-    await db().from("module_progress").update({ unlocked_until: nextN }).eq("teacher_id", t.id).eq("module_id", moduleId);
-  }
+  await ensureProgress(t.id, moduleId);
   return { coins };
 }
