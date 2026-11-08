@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import { requireAdmin } from "@/lib/auth";
 
-export const UNLOCK_COOKIE = "btt_unlock_all";
+const UNLOCK_COOKIE = "btt_unlock_all";
 
 /** Admin-only test switch: unlock every session on this device. */
 export async function toggleUnlockAll() {
