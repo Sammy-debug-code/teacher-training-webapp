@@ -1,0 +1,404 @@
+"use client";
+
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
+import type { Card, Option, Session, T } from "@/lib/content";
+import { logEvent, saveReflection, completeSession } from "@/app/m/actions";
+
+type Lang = "en" | "hi";
+
+function useLang(): [Lang, (l: Lang) => void] {
+  const [lang, setLangState] = useState<Lang>("en");
+  useEffect(() => {
+    try {
+      const v = localStorage.getItem("btt_lang");
+      if (v === "hi" || v === "en") setLangState(v);
+    } catch {}
+  }, []);
+  const setLang = (l: Lang) => {
+    setLangState(l);
+    try {
+      localStorage.setItem("btt_lang", l);
+    } catch {}
+  };
+  return [lang, setLang];
+}
+
+function Txt({ t, lang, className = "" }: { t: T; lang: Lang; className?: string }) {
+  const hi = lang === "hi" && t.hi;
+  const text = hi ? t.hi! : t.en;
+  const paras = text.split(/\n\n+/);
+  return (
+    <div className={`${hi ? "hi" : ""} ${className}`}>
+      {paras.map((p, i) => (
+        <p key={i} className={i > 0 ? "mt-3" : ""}>
+          {p}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+export default function Player({
+  moduleId,
+  session,
+  alreadyDone,
+  preview = false,
+}: {
+  moduleId: string;
+  session: Session;
+  alreadyDone: boolean;
+  /** Dev preview: no server calls at all. */
+  preview?: boolean;
+}) {
+  const cards = session.cards;
+  const index = useMemo(() => new Map(cards.map((c, i) => [c.id, i])), [cards]);
+  const [i, setI] = useState(0);
+  const [lang, setLang] = useLang();
+  const [attempts, setAttempts] = useState<Record<string, number>>({});
+  const [earned, setEarned] = useState<number | null>(null);
+  const viewed = useRef(new Set<string>());
+
+  const card = cards[i];
+  const hasHi = useMemo(() => cardHasHindi(card), [card]);
+
+  // Log each card view once per visit
+  useEffect(() => {
+    if (!card || viewed.current.has(card.id)) return;
+    viewed.current.add(card.id);
+    if (!preview) void logEvent(moduleId, session.id, card.id, "viewed");
+  }, [card, moduleId, session.id, preview]);
+
+  const goTo = useCallback(
+    (id?: string) => {
+      if (id && index.has(id)) setI(index.get(id)!);
+      else setI((x) => Math.min(x + 1, cards.length - 1));
+      window.scrollTo({ top: 0 });
+    },
+    [index, cards.length],
+  );
+
+  async function choose(c: Extract<Card, { type: "choice" }>, o: Option) {
+    const attempt = (attempts[c.id] ?? 0) + 1;
+    setAttempts((a) => ({ ...a, [c.id]: attempt }));
+    if (!preview) void logEvent(moduleId, session.id, c.id, "chose", { key: o.key, rung: o.rung ?? null, attempt, kind: c.kind ?? "ladder" });
+    goTo(o.next);
+  }
+
+  function rewind(c: Extract<Card, { type: "consequence" }>) {
+    if (!preview) void logEvent(moduleId, session.id, c.id, "rewound");
+    goTo(c.back_to);
+  }
+
+  useEffect(() => {
+    if (card?.type === "complete" && earned === null && !alreadyDone) {
+      completeSession(moduleId, session.id).then((r) => setEarned(r.coins));
+    }
+  }, [card, earned, alreadyDone, moduleId, session.id]);
+
+  // Progress: count only main-line cards (exclude consequence branches)
+  const mainline = cards.filter((c) => c.type !== "consequence");
+  const mainIdx = Math.max(0, mainline.findIndex((c) => c.id === card.id));
+  const pct = Math.round(((mainIdx + (card.type === "complete" ? 1 : 0)) / mainline.length) * 100);
+
+  return (
+    <div className="mx-auto flex w-full max-w-md flex-1 flex-col">
+      {/* top bar */}
+      <div className="sticky top-14 z-10 flex items-center gap-3 bg-surface px-4 py-2">
+        <Link href="/" aria-label="Back to home" className="text-sm text-muted">
+          ✕
+        </Link>
+        <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-mist">
+          <div className="h-full bg-purple transition-all" style={{ width: `${pct}%` }} />
+        </div>
+        <button
+          type="button"
+          onClick={() => setLang(lang === "en" ? "hi" : "en")}
+          disabled={!hasHi}
+          className={`rounded-sm border px-2 py-0.5 text-[13px] font-semibold ${
+            hasHi ? "border-line-strong text-accent" : "border-line text-muted/50"
+          }`}
+          aria-pressed={lang === "hi"}
+        >
+          {lang === "en" ? "हिंदी" : "EN"}
+        </button>
+      </div>
+
+      <main className="flex flex-1 flex-col gap-6 px-4 pb-28 pt-4">
+        <CardView
+          card={card}
+          lang={lang}
+          moduleId={moduleId}
+          sessionId={session.id}
+          preview={preview}
+          earned={earned}
+          alreadyDone={alreadyDone}
+          onChoose={choose}
+          onRewind={rewind}
+          onNext={() => goTo(card.type === "consequence" ? card.next : undefined)}
+        />
+      </main>
+    </div>
+  );
+}
+
+function cardHasHindi(card: Card | undefined): boolean {
+  if (!card) return false;
+  const walk = (v: unknown): boolean => {
+    if (!v || typeof v !== "object") return false;
+    if ("hi" in (v as object) && typeof (v as T).hi === "string") return true;
+    return Object.values(v as Record<string, unknown>).some(walk);
+  };
+  return walk(card);
+}
+
+function Primary({ children, onClick, disabled }: { children: React.ReactNode; onClick?: () => void; disabled?: boolean }) {
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-10 bg-gradient-to-t from-surface via-surface to-transparent px-4 pb-6 pt-8">
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={disabled}
+        className="mx-auto block h-12 w-full max-w-md rounded-md bg-purple text-[15px] font-semibold text-white disabled:opacity-40"
+      >
+        {children}
+      </button>
+    </div>
+  );
+}
+
+function CardView({
+  card,
+  lang,
+  moduleId,
+  sessionId,
+  preview,
+  earned,
+  alreadyDone,
+  onChoose,
+  onRewind,
+  onNext,
+}: {
+  card: Card;
+  lang: Lang;
+  moduleId: string;
+  sessionId: string;
+  preview: boolean;
+  earned: number | null;
+  alreadyDone: boolean;
+  onChoose: (c: Extract<Card, { type: "choice" }>, o: Option) => void;
+  onRewind: (c: Extract<Card, { type: "consequence" }>) => void;
+  onNext: () => void;
+}) {
+  const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
+
+  switch (card.type) {
+    case "quote":
+      return (
+        <>
+          <div className="mt-6 rounded-lg bg-cream p-6">
+            <div className="font-serif text-[40px] leading-none text-gold">“</div>
+            <Txt t={card.text} lang={lang} className="-mt-3 font-serif text-[24px] font-medium leading-[32px] text-plum" />
+            <Txt t={card.attribution} lang={lang} className="mt-4 text-sm text-muted" />
+          </div>
+          <Primary onClick={onNext}>{L("Continue", "आगे")}</Primary>
+        </>
+      );
+
+    case "scene":
+      return (
+        <>
+          {card.eyebrow && (
+            <Txt t={card.eyebrow} lang={lang} className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent" />
+          )}
+          <Txt t={card.text} lang={lang} className="text-[19px] leading-[30px]" />
+          {card.prompt && <Txt t={card.prompt} lang={lang} className="font-serif text-[24px] font-semibold text-plum" />}
+          <Primary onClick={onNext}>{L("See your options", "विकल्प देखें")}</Primary>
+        </>
+      );
+
+    case "choice":
+      return (
+        <>
+          <Txt t={card.question} lang={lang} className="font-serif text-[24px] font-semibold leading-[30px] text-plum" />
+          <div className="flex flex-col gap-3">
+            {card.options.map((o) => (
+              <button
+                key={o.key}
+                type="button"
+                onClick={() => onChoose(card, o)}
+                className="rounded-lg border border-line-strong bg-raised p-4 text-left text-[16px] leading-[24px] active:bg-mist"
+              >
+                <Txt t={o.text} lang={lang} />
+              </button>
+            ))}
+          </div>
+        </>
+      );
+
+    case "consequence":
+      return (
+        <>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">
+            {L("What happens next", "आगे क्या होता है")}
+          </p>
+          <Txt t={card.text} lang={lang} className="text-[19px] leading-[30px]" />
+          {card.outcome === "rewind" ? (
+            <Primary onClick={() => onRewind(card)}>{L("Rewind and try again", "वापस जाएँ, फिर कोशिश करें")}</Primary>
+          ) : (
+            <Primary onClick={onNext}>{L("Continue", "आगे")}</Primary>
+          )}
+        </>
+      );
+
+    case "why":
+      return (
+        <>
+          <Txt t={card.title} lang={lang} className="font-serif text-[24px] font-semibold text-plum" />
+          <ul className="flex flex-col gap-3">
+            {card.points.map((p, i) => (
+              <li key={i} className="flex gap-3">
+                <span className="mt-1 h-5 w-5 flex-none rounded-full bg-marigold text-center text-[13px] font-bold leading-5 text-plum">
+                  {i + 1}
+                </span>
+                <Txt t={p} lang={lang} />
+              </li>
+            ))}
+          </ul>
+          <Primary onClick={onNext}>{L("Continue", "आगे")}</Primary>
+        </>
+      );
+
+    case "nugget":
+      return (
+        <>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">{L("Read", "पढ़िए")}</p>
+          <Txt t={card.title} lang={lang} className="font-serif text-[24px] font-semibold leading-[30px] text-plum" />
+          <Txt t={card.text} lang={lang} className="text-[17px] leading-[28px]" />
+          {card.source && <p className="text-sm text-muted">{card.source}</p>}
+          <Primary onClick={onNext}>{L("Continue", "आगे")}</Primary>
+        </>
+      );
+
+    case "ladder":
+      return (
+        <>
+          <Txt t={card.title} lang={lang} className="font-serif text-[24px] font-semibold text-plum" />
+          <ol className="flex flex-col-reverse gap-2">
+            {card.rungs.map((r) => {
+              const hot = r.n === card.highlight;
+              return (
+                <li
+                  key={r.n}
+                  className={`flex gap-3 rounded-lg border p-3 ${hot ? "border-purple bg-mist" : "border-line bg-raised"}`}
+                >
+                  <span
+                    className={`h-8 w-8 flex-none rounded-full text-center text-[15px] font-bold leading-8 ${
+                      hot ? "bg-purple text-white" : "bg-cream text-plum"
+                    }`}
+                  >
+                    {r.n}
+                  </span>
+                  <div>
+                    <Txt t={r.name} lang={lang} className="font-semibold" />
+                    <Txt t={r.line} lang={lang} className="text-sm text-muted" />
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+          {card.highlight && (
+            <p className="text-sm text-muted">{L("Highlighted: the rung you just used.", "हाइलाइट: वो सीढ़ी जो आपने अभी इस्तेमाल की।")}</p>
+          )}
+          <Primary onClick={onNext}>{L("Continue", "आगे")}</Primary>
+        </>
+      );
+
+    case "reflection":
+      return <Reflection card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} />;
+
+    case "task":
+      return (
+        <>
+          <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-sunrise-deep">{L("Your task", "आपका काम")}</p>
+          <Txt t={card.title} lang={lang} className="font-serif text-[24px] font-semibold text-plum" />
+          <div className="rounded-lg border-l-4 border-marigold bg-cream p-4">
+            <Txt t={card.text} lang={lang} className="text-[17px] leading-[28px]" />
+          </div>
+          <Primary onClick={onNext}>{L("I'll do it", "मैं करूँगा/करूँगी")}</Primary>
+        </>
+      );
+
+    case "complete":
+      return (
+        <>
+          <div className="mt-6 flex flex-col items-center gap-4 text-center">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-marigold font-serif text-[32px] font-semibold text-plum">
+              ✓
+            </div>
+            <Txt t={card.title} lang={lang} className="font-serif text-[32px] font-medium text-plum" />
+            {alreadyDone ? (
+              <p className="text-muted">{L("You had already completed this session.", "आप यह सेशन पहले ही पूरा कर चुके हैं।")}</p>
+            ) : earned === null ? (
+              <p className="text-muted">{L("Counting your coins…", "आपके सिक्के गिने जा रहे हैं…")}</p>
+            ) : (
+              <p className="text-[19px]">
+                <span className="font-semibold text-sunrise-deep">+{earned}</span> {L("coins earned", "सिक्के मिले")}
+              </p>
+            )}
+            <Txt t={card.text} lang={lang} className="text-muted" />
+          </div>
+          <Link
+            href="/"
+            className="fixed inset-x-4 bottom-6 mx-auto block h-12 max-w-md rounded-md bg-purple text-center text-[15px] font-semibold leading-[48px] text-white"
+          >
+            {L("Back to home", "होम पर जाएँ")}
+          </Link>
+        </>
+      );
+  }
+}
+
+function Reflection({
+  card,
+  lang,
+  moduleId,
+  sessionId,
+  preview,
+  onNext,
+}: {
+  card: Extract<Card, { type: "reflection" }>;
+  lang: Lang;
+  moduleId: string;
+  sessionId: string;
+  preview: boolean;
+  onNext: () => void;
+}) {
+  const [text, setText] = useState("");
+  const [saving, setSaving] = useState(false);
+  const min = card.min_chars ?? 10;
+  const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
+  async function save() {
+    setSaving(true);
+    if (!preview) await saveReflection(moduleId, sessionId, card.id, text);
+    setSaving(false);
+    onNext();
+  }
+  return (
+    <>
+      <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">{L("Write", "लिखिए")}</p>
+      <Txt t={card.prompt} lang={lang} className="text-[19px] leading-[30px]" />
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder={lang === "hi" && card.placeholder?.hi ? card.placeholder.hi : card.placeholder?.en}
+        rows={5}
+        className="w-full rounded-md border border-line-strong bg-raised p-3 text-base"
+      />
+      <p className="text-sm text-muted">{L("Only you and Sam can read this.", "इसे सिर्फ़ आप और सैम पढ़ सकते हैं।")}</p>
+      <Primary onClick={save} disabled={saving || text.trim().length < min}>
+        {saving ? L("Saving…", "सेव हो रहा है…") : L("Save and continue", "सेव करें और आगे बढ़ें")}
+      </Primary>
+    </>
+  );
+}

@@ -1,0 +1,15 @@
+{
+  "id": "m1-handling-children",
+  "title": { "en": "Without the Stick", "hi": "बिना छड़ी के" },
+  "subtitle": { "en": "Handling children when you can't hit, shout or send them out", "hi": "जब मारना, चिल्लाना या बाहर भेजना नहीं है, तो बच्चों को कैसे संभालें" },
+  "sessions": [
+    { "id": "s1", "n": 1, "title": { "en": "\"He knows I can't beat him\"" }, "minutes": 15 },
+    { "id": "s2", "n": 2, "title": { "en": "Why the stick never worked" }, "minutes": 15 },
+    { "id": "s3", "n": 3, "title": { "en": "The missing middle: warm and strict" }, "minutes": 18 },
+    { "id": "s4", "n": 4, "title": { "en": "Prevent: the first ten minutes" }, "minutes": 18 },
+    { "id": "s5", "n": 5, "title": { "en": "Respond small: stealing the audience" }, "minutes": 20 },
+    { "id": "s6", "n": 6, "title": { "en": "Consequences that teach" }, "minutes": 18 },
+    { "id": "s7", "n": 7, "title": { "en": "Repair and relationship" }, "minutes": 15 },
+    { "id": "s8", "n": 8, "title": { "en": "Bethel's ladder" }, "minutes": 15 }
+  ]
+}
