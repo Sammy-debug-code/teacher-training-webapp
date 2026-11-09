@@ -1,0 +1,329 @@
+{
+  "id": "s5",
+  "n": 5,
+  "title": { "en": "Respond small: take away the audience" },
+  "minutes": 20,
+  "cards": [
+    {
+      "id": "s5-checkin",
+      "type": "reflection",
+      "prompt": {
+        "en": "Yesterday's task: teach one routine like a lesson. Which routine did you choose, and what happened the first time you used it?",
+        "hi": "कल का काम: एक दिनचर्या को पाठ की तरह सिखाना। आपने कौन सी चुनी, और पहली बार इस्तेमाल करने पर क्या हुआ?"
+      },
+      "starter": { "en": "I taught ", "hi": "मैंने सिखाई " },
+      "placeholder": { "en": "I taught the entering routine: bag down, sit, take out the copy. The first time, about half did it. The second time…", "hi": "मैंने अंदर आने की दिनचर्या सिखाई: बैग नीचे, बैठो, कॉपी निकालो। पहली बार क़रीब आधे ने किया। दूसरी बार…" },
+      "min_chars": 50
+    },
+    {
+      "id": "s5-intro",
+      "type": "nugget",
+      "image": "back-of-class",
+      "title": { "en": "When prevention was not enough", "hi": "जब रोकथाम काफ़ी नहीं थी" },
+      "text": {
+        "en": "Routines remove most trouble. Not all. A child will still talk, poke, wander, answer back. This session is about those moments: the thirty seconds after something goes wrong, while the whole class watches to see what you do.\n\nThe idea is simple and it is the opposite of what most of us were shown. Use the smallest move that works. Keep the lesson going. And never, if you can help it, give the child an audience.\n\nToday you will meet a scale of five moves, from a look to a quiet word, and practise picking the smallest one.",
+        "hi": "दिनचर्याएँ ज़्यादातर परेशानी हटा देती हैं। सारी नहीं। कोई बच्चा फिर भी बात करेगा, चिकोटी काटेगा, घूमेगा, पलटकर जवाब देगा। यह सेशन उन्हीं पलों के बारे में है: कुछ ग़लत होने के बाद के तीस सेकंड, जब पूरी क्लास देख रही है कि आप क्या करते हैं।\n\nविचार सीधा है और उसके उल्टा है जो हममें से ज़्यादातर को दिखाया गया। सबसे छोटा क़दम उठाइए जो काम करे। पाठ चलता रखिए। और जहाँ तक हो सके, बच्चे को कभी दर्शक मत दीजिए।\n\nआज आप पाँच क़दमों की सीढ़ी से मिलेंगे, एक नज़र से लेकर एक धीमी बात तक, और सबसे छोटा चुनने का अभ्यास करेंगे।"
+      }
+    },
+    {
+      "id": "s5-scale",
+      "type": "ladder",
+      "title": { "en": "The five smallest moves, smallest first", "hi": "पाँच सबसे छोटे क़दम, सबसे छोटा पहले" },
+      "rungs": [
+        { "n": 1, "name": { "en": "The look", "hi": "नज़र" }, "line": { "en": "Eye contact, held for two seconds, while you keep teaching", "hi": "दो सेकंड की नज़र, पढ़ाते-पढ़ाते" } },
+        { "n": 2, "name": { "en": "Walk closer", "hi": "पास जाएँ" }, "line": { "en": "Teach from beside their desk for a minute. Say nothing about it.", "hi": "एक मिनट उनकी डेस्क के पास से पढ़ाएँ। इस बारे में कुछ न कहें।" } },
+        { "n": 3, "name": { "en": "Remind the whole class", "hi": "पूरी क्लास को याद दिलाएँ" }, "line": { "en": "\"Everyone should be writing now.\" No name. The child hears it; nobody is singled out.", "hi": "\"अब सबको लिखना चाहिए।\" कोई नाम नहीं। बच्चा सुनता है; कोई अलग नहीं किया जाता।" } },
+        { "n": 4, "name": { "en": "The quiet word", "hi": "धीमी बात" }, "line": { "en": "Private, at their desk, while others work: \"Riya, pencil moving. Thanks.\" Walk away without waiting.", "hi": "अकेले में, उनकी डेस्क पर, जब बाक़ी काम कर रहे हों: \"रिया, पेंसिल चलाओ। शुक्रिया।\" बिना इंतज़ार किए चले जाएँ।" } },
+        { "n": 5, "name": { "en": "The named choice", "hi": "नाम लेकर विकल्प" }, "line": { "en": "Calm, short, still quiet: \"Riya, you can work here, or at the front desk with me. Choose.\"", "hi": "शांत, छोटा, अब भी धीमा: \"रिया, यहाँ काम कर सकती हो, या मेरे साथ आगे की डेस्क पर। चुनो।\"" } }
+      ]
+    },
+    {
+      "id": "s5-scale-note",
+      "type": "why",
+      "title": { "en": "Three things about the scale", "hi": "सीढ़ी के बारे में तीन बातें" },
+      "points": [
+        { "en": "Start at the bottom. Most problems stop at move 1 or 2. You will be surprised how rarely you need 4.", "hi": "नीचे से शुरू कीजिए। ज़्यादातर समस्याएँ क़दम 1 या 2 पर रुक जाती हैं। आप हैरान होंगे कि 4 की ज़रूरत कितनी कम पड़ती है।" },
+        { "en": "Every move is quiet. The moment the whole class hears you correct one child, that child has an audience, and some children will pay any price for one.", "hi": "हर क़दम धीमा है। जिस पल पूरी क्लास आपको एक बच्चे को टोकते सुनती है, उस बच्चे को दर्शक मिल जाते हैं, और कुछ बच्चे दर्शकों के लिए कोई भी क़ीमत देंगे।" },
+        { "en": "Say what to do, not what to stop. \"Pencil moving\" works. \"Stop talking\" starts an argument about whether he was talking.", "hi": "क्या करना है कहिए, क्या रोकना है नहीं। \"पेंसिल चलाओ\" काम करता है। \"बात बंद करो\" इस पर बहस शुरू कर देता है कि वो बात कर रहा था या नहीं।" }
+      ]
+    },
+    {
+      "id": "s5-scene1",
+      "type": "scene",
+      "image": "classroom-disturb",
+      "eyebrow": { "en": "Class 5 · English · you are reading aloud", "hi": "क्लास 5 · अंग्रेज़ी · आप ज़ोर से पढ़ रहे हैं" },
+      "text": {
+        "en": "You are reading a story to the class. Kabir, in the third row, whispers something to Dev and both of them grin. It is the first time today. Nobody else has noticed yet.",
+        "hi": "आप क्लास को कहानी पढ़कर सुना रहे हैं। तीसरी पंक्ति में कबीर देव से कुछ फुसफुसाता है और दोनों मुस्कुराते हैं। आज पहली बार। अभी किसी और ने ध्यान नहीं दिया।"
+      },
+      "prompt": { "en": "Smallest move that works?", "hi": "सबसे छोटा क़दम जो काम करे?" }
+    },
+    {
+      "id": "s5-choice1",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "Pick the smallest move that will work here.", "hi": "सबसे छोटा क़दम चुनिए जो यहाँ काम करेगा।" },
+      "options": [
+        { "key": "a", "text": { "en": "Keep reading. Look at Kabir for two seconds while you read the next line.", "hi": "पढ़ते रहें। अगली लाइन पढ़ते हुए दो सेकंड कबीर की ओर देखें।" }, "next": "s5-c1-a", "rung": 2 },
+        { "key": "b", "text": { "en": "Pause the story. \"Kabir, Dev, would you like to share the joke with all of us? No? Then let's all listen.\" Carry on reading.", "hi": "कहानी रोकें। \"कबीर, देव, मज़ाक हम सबके साथ बाँटोगे? नहीं? तो सब सुनें।\" पढ़ना जारी रखें।" }, "next": "s5-c1-b", "rung": 0 },
+        { "key": "c", "text": { "en": "Keep reading, walk to the third row, and finish the page standing beside Kabir's desk, as if that is simply where you happen to be reading from.", "hi": "पढ़ते रहें, तीसरी पंक्ति तक जाएँ, और पन्ना कबीर की डेस्क के पास खड़े होकर ख़त्म करें, जैसे आप यूँ ही वहाँ से पढ़ रहे हों।" }, "next": "s5-c1-c", "rung": 2 },
+        { "key": "d", "text": { "en": "Stop and ask Kabir to read the next paragraph aloud, so he has to pay attention and the others see what happens when you whisper in class.", "hi": "रुकें और कबीर से अगला पैराग्राफ़ ज़ोर से पढ़ने को कहें, ताकि उसे ध्यान देना पड़े और बाक़ी देखें कि क्लास में फुसफुसाने पर क्या होता है।" }, "next": "s5-c1-d", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s5-c1-a",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s5-c1-why",
+      "text": {
+        "en": "Kabir catches your eye, looks down, and the grin goes. The story never stopped. Nobody else knows anything happened. Cost: two seconds. This was a move-1 problem and you used move 1.",
+        "hi": "कबीर आपकी नज़र पकड़ता है, नीचे देखता है, और मुस्कान चली जाती है। कहानी कभी रुकी नहीं। किसी और को पता भी नहीं कि कुछ हुआ। ख़र्च: दो सेकंड। यह क़दम-1 की समस्या थी और आपने क़दम 1 इस्तेमाल किया।"
+      }
+    },
+    {
+      "id": "s5-c1-b",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice1",
+      "text": {
+        "en": "Thirty-five children turn to look at Kabir and Dev. Dev goes red. Kabir, who likes being looked at, says \"Nothing, Ma'am\" with a bigger grin, and two boys at the back laugh. You spent forty seconds and gave him exactly what the whisper was for. For a first whisper, this was a cannon for a mosquito.",
+        "hi": "पैंतीस बच्चे मुड़कर कबीर और देव को देखते हैं। देव लाल हो जाता है। कबीर, जिसे देखा जाना पसंद है, बड़ी मुस्कान के साथ कहता है \"कुछ नहीं, मैम\", और पीछे के दो लड़के हँसते हैं। आपने चालीस सेकंड ख़र्च किए और उसे ठीक वही दिया जिसके लिए फुसफुसाहट थी। पहली फुसफुसाहट के लिए, यह मच्छर पर तोप थी।"
+      }
+    },
+    {
+      "id": "s5-c1-c",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s5-c1-why",
+      "text": {
+        "en": "Also works, and nobody noticed anything. It is move 2, a size bigger than needed for a first whisper, but it costs nothing and you get to keep reading. Either 1 or 2 was right here; the point is that 0 words were spent on it.",
+        "hi": "यह भी काम करता है, और किसी ने कुछ नहीं देखा। यह क़दम 2 है, पहली फुसफुसाहट के लिए ज़रूरत से एक साइज़ बड़ा, पर इसकी कोई क़ीमत नहीं और आप पढ़ते रह सकते हैं। यहाँ 1 या 2 दोनों सही थे; बात यह है कि इस पर 0 शब्द ख़र्च हुए।"
+      }
+    },
+    {
+      "id": "s5-c1-d",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice1",
+      "text": {
+        "en": "Kabir reads badly on purpose, in a funny voice, and gets his laugh anyway. Now reading aloud is a punishment in your class, which is a loss for every child in it. You also stopped the story for a whisper.",
+        "hi": "कबीर जानबूझकर, मज़ाकिया आवाज़ में, ख़राब पढ़ता है, और फिर भी हँसी पा लेता है। अब आपकी क्लास में ज़ोर से पढ़ना एक सज़ा है, जो उसमें बैठे हर बच्चे का नुक़सान है। आपने एक फुसफुसाहट के लिए कहानी भी रोक दी।"
+      }
+    },
+    {
+      "id": "s5-c1-why",
+      "type": "why",
+      "title": { "en": "The audience is the prize", "hi": "दर्शक ही इनाम हैं" },
+      "points": [
+        { "en": "For many children, being looked at by thirty classmates is worth more than any punishment costs. Every public correction pays them.", "hi": "कई बच्चों के लिए तीस सहपाठियों का देखना किसी भी सज़ा की क़ीमत से ज़्यादा है। हर सार्वजनिक टोक उन्हें भुगतान करती है।" },
+        { "en": "A quiet move removes the prize. There is nothing to win from a look that nobody else saw.", "hi": "धीमा क़दम इनाम हटा देता है। ऐसी नज़र से जीतने को कुछ नहीं जो किसी और ने नहीं देखी।" },
+        { "en": "Keeping the lesson going is itself a message: this class is not stopping for you.", "hi": "पाठ चलता रखना ख़ुद एक संदेश है: यह क्लास तुम्हारे लिए नहीं रुकती।" }
+      ]
+    },
+    {
+      "id": "s5-nugget-voice",
+      "type": "nugget",
+      "title": { "en": "Strong voice is a quiet voice", "hi": "मज़बूत आवाज़ धीमी आवाज़ है" },
+      "text": {
+        "en": "Lemov filmed hundreds of teachers whose classes simply did what they asked. Almost none of them were loud. What they shared was this:\n\nThey used fewer words. \"Pencil moving\" instead of a paragraph about why we write in class.\n\nThey did not talk over noise. If the class was not listening, they stopped mid-sentence and waited, rather than getting louder.\n\nThey stood still when giving an instruction, square to the class, hands quiet. Moving around while correcting reads as nervous.\n\nAnd they got quieter, not louder, when it mattered. A whisper to a child who is misbehaving is far more unsettling than a shout, and nobody else hears it.",
+        "hi": "लेमोव ने सैकड़ों ऐसे शिक्षकों को फ़िल्माया जिनकी क्लास बस वही करती थी जो वे कहते थे। उनमें से लगभग कोई ज़ोर से नहीं बोलता था। उनमें यह साझा था:\n\nवे कम शब्द इस्तेमाल करते थे। \"पेंसिल चलाओ\", न कि एक पैराग्राफ़ इस पर कि हम क्लास में क्यों लिखते हैं।\n\nवे शोर के ऊपर नहीं बोलते थे। अगर क्लास नहीं सुन रही थी, तो वे वाक्य के बीच में रुककर इंतज़ार करते थे, ऊँची आवाज़ नहीं करते थे।\n\nनिर्देश देते समय वे स्थिर खड़े रहते थे, क्लास की ओर सीधे, हाथ शांत। टोकते समय इधर-उधर चलना घबराहट लगता है।\n\nऔर जब ज़रूरी होता था, वे और धीमे होते थे, ऊँचे नहीं। शरारत कर रहे बच्चे को फुसफुसाकर कहना चिल्लाने से कहीं ज़्यादा असर करता है, और कोई और नहीं सुनता।"
+      },
+      "source": "Lemov, Teach Like a Champion: Strong Voice"
+    },
+    {
+      "id": "s5-scene2",
+      "type": "scene",
+      "image": "seats-empty",
+      "eyebrow": { "en": "Class 3 · maths · the second time", "hi": "क्लास 3 · गणित · दूसरी बार" },
+      "text": {
+        "en": "Ten minutes ago you walked past Riya's desk and she started writing. Now she has stopped again, turned round, and is talking to the girl behind her. The girl behind is trying to work. You have already used move 2 on Riya today.",
+        "hi": "दस मिनट पहले आप रिया की डेस्क के पास से गुज़रे और उसने लिखना शुरू किया। अब वो फिर रुक गई है, पीछे मुड़ी है, और पीछे वाली लड़की से बात कर रही है। पीछे वाली लड़की काम करने की कोशिश कर रही है। आप आज रिया पर क़दम 2 इस्तेमाल कर चुके हैं।"
+      },
+      "prompt": { "en": "Next move?", "hi": "अगला क़दम?" }
+    },
+    {
+      "id": "s5-choice2",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "What do you do?", "hi": "आप क्या करते हैं?" },
+      "options": [
+        { "key": "a", "text": { "en": "Go to her desk, crouch, and in a warm, patient voice explain that you understand maths is hard, that talking is natural, that you were a chatterbox too, but that she really must try to focus because her exams are coming and you believe in her.", "hi": "उसकी डेस्क पर जाएँ, झुकें, और अपनेपन भरी धैर्य वाली आवाज़ में समझाएँ कि आप समझते हैं गणित कठिन है, बात करना स्वाभाविक है, आप भी बातूनी थे, पर उसे सच में ध्यान देना चाहिए क्योंकि परीक्षा आ रही है और आपको उस पर भरोसा है।" }, "next": "s5-c2-a", "rung": 0 },
+        { "key": "b", "text": { "en": "From the front, in a normal voice: \"Riya, face the board and finish question three, please.\"", "hi": "सामने से, सामान्य आवाज़ में: \"रिया, बोर्ड की ओर मुँह करो और तीसरा सवाल पूरा करो, प्लीज़।\"" }, "next": "s5-c2-b", "rung": 0 },
+        { "key": "c", "text": { "en": "At her desk, quietly, while the others work: \"Riya, turn round. Question three. Thanks.\" Walk away without waiting for a reply.", "hi": "उसकी डेस्क पर, धीरे से, जब बाक़ी काम कर रहे हों: \"रिया, मुड़ो। तीसरा सवाल। शुक्रिया।\" जवाब का इंतज़ार किए बिना चले जाएँ।" }, "next": "s5-c2-c", "rung": 4 },
+        { "key": "d", "text": { "en": "Move the girl behind her to another seat, since she is the one being disturbed, and let Riya sit alone where there is nobody to talk to.", "hi": "पीछे वाली लड़की को दूसरी सीट पर भेज दें, क्योंकि परेशान वही हो रही है, और रिया को अकेले बैठने दें जहाँ बात करने को कोई न हो।" }, "next": "s5-c2-d", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s5-c2-a",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice2",
+      "text": {
+        "en": "It sounds kind, and it is the soft mistake from Session 3. Ninety seconds of your attention is a reward for turning round, the girl behind now has nobody teaching her either, and Riya has learned that stopping work earns a heart-to-heart. Warm is right. Long is wrong.",
+        "hi": "यह दयालु लगता है, और यह सेशन 3 वाली नरम ग़लती है। आपके ध्यान के नब्बे सेकंड मुड़ने का इनाम हैं, पीछे वाली लड़की को अब भी कोई नहीं पढ़ा रहा, और रिया ने सीख लिया है कि काम रोकने से दिल की बात मिलती है। अपनापन सही है। लंबा ग़लत है।"
+      }
+    },
+    {
+      "id": "s5-c2-b",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice2",
+      "text": {
+        "en": "Polite, and the whole class heard it. Riya now has thirty people watching her decide whether to obey. For a child who does not mind attention, that is an invitation. The same words, said at her desk, would have been move 4 instead of a public one.",
+        "hi": "विनम्र, और पूरी क्लास ने सुना। अब तीस लोग रिया को देख रहे हैं कि वो मानेगी या नहीं। जिस बच्ची को ध्यान बुरा नहीं लगता, उसके लिए यह न्योता है। वही शब्द, उसकी डेस्क पर कहे होते, तो सार्वजनिक की जगह क़दम 4 होते।"
+      }
+    },
+    {
+      "id": "s5-c2-c",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s5-c2-why",
+      "image": "crouch-desk",
+      "text": {
+        "en": "Riya turns round. Maybe with a small sigh; let her have the sigh. Nobody else heard. You did not wait for her to answer, so there was nothing to argue with. Six words, move 4, lesson continues.",
+        "hi": "रिया मुड़ जाती है। शायद एक छोटी सी आह के साथ; उसे आह रहने दीजिए। किसी और ने नहीं सुना। आपने उसके जवाब का इंतज़ार नहीं किया, तो बहस करने को कुछ नहीं था। छह शब्द, क़दम 4, पाठ जारी।"
+      }
+    },
+    {
+      "id": "s5-c2-d",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice2",
+      "text": {
+        "en": "You just punished the girl who was working. She learns that sitting near Riya costs her, and Riya learns that she controls the seating plan. Move the child who caused it, if anyone, and only as a later step.",
+        "hi": "आपने अभी उस लड़की को सज़ा दी जो काम कर रही थी। वो सीखती है कि रिया के पास बैठना उसे महँगा पड़ता है, और रिया सीखती है कि सीटें वो तय करती है। अगर किसी को हटाना हो तो उसे जिसने किया, और वो भी बाद के क़दम के तौर पर।"
+      }
+    },
+    {
+      "id": "s5-c2-why",
+      "type": "why",
+      "title": { "en": "Why you walk away", "hi": "आप चले क्यों जाते हैं" },
+      "points": [
+        { "en": "If you stand and wait after a quiet word, you have started a staring contest, and now she must win it in front of her friend.", "hi": "अगर धीमी बात के बाद आप खड़े होकर इंतज़ार करते हैं, तो आपने आँखों की लड़ाई शुरू कर दी, और अब उसे अपनी दोस्त के सामने वो जीतनी है।" },
+        { "en": "Walking away says: I expect you to do it, and I have other things to do. It gives her a face-saving way to comply.", "hi": "चले जाना कहता है: मुझे उम्मीद है तुम करोगी, और मेरे पास और काम हैं। यह उसे इज़्ज़त बचाकर मानने का रास्ता देता है।" },
+        { "en": "Check back in a minute, from a distance, with move 1. If she is working, a small nod. That nod is worth more than the correction.", "hi": "एक मिनट में दूर से, क़दम 1 से, देखिए। अगर वो काम कर रही है, तो हल्का सा सिर हिलाइए। वो सिर हिलाना टोकने से ज़्यादा क़ीमती है।" }
+      ]
+    },
+    {
+      "id": "s5-scene3",
+      "type": "scene",
+      "image": "back-of-class",
+      "eyebrow": { "en": "Class 5 · the one who answers back", "hi": "क्लास 5 · जो पलटकर जवाब देता है" },
+      "text": {
+        "en": "You give Arjun a quiet word at his desk: \"Arjun, book open, page 12.\" He says, loud enough for the row to hear: \"Why only me? Rohit was also talking.\" Three children look up. This is the moment.",
+        "hi": "आप अर्जुन को उसकी डेस्क पर धीमी बात कहते हैं: \"अर्जुन, किताब खोलो, पेज 12।\" वो इतनी ज़ोर से कि पंक्ति सुने, कहता है: \"सिर्फ़ मैं क्यों? रोहित भी बात कर रहा था।\" तीन बच्चे ऊपर देखते हैं। यही वो पल है।"
+      },
+      "prompt": { "en": "What do you say?", "hi": "आप क्या कहते हैं?" }
+    },
+    {
+      "id": "s5-choice3",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "Your reply:", "hi": "आपका जवाब:" },
+      "options": [
+        { "key": "a", "text": { "en": "\"I did not see Rohit talking. I saw you. And I do not like your tone, Arjun. Is this how you speak to a teacher?\"", "hi": "\"मैंने रोहित को बात करते नहीं देखा। तुम्हें देखा। और मुझे तुम्हारा लहजा पसंद नहीं, अर्जुन। टीचर से ऐसे बात करते हैं?\"" }, "next": "s5-c3-a", "rung": 0 },
+        { "key": "b", "text": { "en": "\"Page 12, Arjun.\" Same quiet voice. Then walk away.", "hi": "\"पेज 12, अर्जुन।\" वही धीमी आवाज़। फिर चले जाएँ।" }, "next": "s5-c3-b", "rung": 4 },
+        { "key": "c", "text": { "en": "\"You're right, that's fair. Rohit, you too, page 12 please. Both of you, come on, let's go.\" Smile so it does not feel like a telling-off.", "hi": "\"तुम सही हो, यह उचित है। रोहित, तुम भी, पेज 12 प्लीज़। तुम दोनों, चलो, शुरू करो।\" मुस्कुराएँ ताकि डाँट न लगे।" }, "next": "s5-c3-c", "rung": 0 },
+        { "key": "d", "text": { "en": "Stop the class. \"Arjun has a complaint about fairness. Arjun, stand up and tell everyone what you think is unfair.\"", "hi": "क्लास रोकें। \"अर्जुन को न्याय की शिकायत है। अर्जुन, खड़े होकर सबको बताओ तुम्हें क्या अनुचित लगता है।\"" }, "next": "s5-c3-d", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s5-c3-a",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice3",
+      "text": {
+        "en": "Now it is an argument, and he has one: Rohit was talking. Three children have become fifteen. Whatever you say next, you are debating a ten-year-old about fairness in front of his friends, and the page is still closed.",
+        "hi": "अब यह बहस है, और उसके पास तर्क है: रोहित बात कर रहा था। तीन बच्चे पंद्रह हो गए। अब आप जो भी कहें, आप दस साल के बच्चे से उसके दोस्तों के सामने न्याय पर बहस कर रहे हैं, और पेज अब भी बंद है।"
+      }
+    },
+    {
+      "id": "s5-c3-b",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s5-c3-why",
+      "text": {
+        "en": "He opens the book. Maybe slowly. You did not take the bait, so there is no argument to have, and the three children go back to work because nothing is happening. Rohit, if he was talking, gets his own quiet word in a minute. Lemov calls this \"do not engage\": answer the behaviour, not the argument.",
+        "hi": "वो किताब खोलता है। शायद धीरे। आपने चारा नहीं लिया, तो कोई बहस है ही नहीं, और तीनों बच्चे वापस काम में लग जाते हैं क्योंकि कुछ हो ही नहीं रहा। रोहित, अगर बात कर रहा था, तो एक मिनट में उसे अपनी धीमी बात मिलेगी। लेमोव इसे \"do not engage\" कहते हैं: व्यवहार का जवाब दीजिए, बहस का नहीं।"
+      }
+    },
+    {
+      "id": "s5-c3-c",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice3",
+      "text": {
+        "en": "Friendly, and it hands Arjun the win: he answered back and the teacher backed down and brought Rohit in. Tomorrow every quiet word gets a \"why only me\". Deal with Rohit separately, by all means, but not because Arjun told you to.",
+        "hi": "दोस्ताना, और यह अर्जुन को जीत दे देता है: उसने पलटकर जवाब दिया और टीचर पीछे हट गई और रोहित को भी ले आई। कल हर धीमी बात पर \"सिर्फ़ मैं क्यों\" मिलेगा। रोहित से ज़रूर अलग से निपटिए, पर इसलिए नहीं कि अर्जुन ने कहा।"
+      }
+    },
+    {
+      "id": "s5-c3-d",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s5-choice3",
+      "text": {
+        "en": "You have built him a stage and invited the audience. Some teachers do this hoping he will feel embarrassed. Arjun will not. He will perform.",
+        "hi": "आपने उसके लिए मंच बनाया और दर्शकों को न्योता दिया। कुछ शिक्षक यह इस उम्मीद में करते हैं कि उसे शर्म आएगी। अर्जुन को नहीं आएगी। वो प्रदर्शन करेगा।"
+      }
+    },
+    {
+      "id": "s5-c3-why",
+      "type": "why",
+      "title": { "en": "Do not engage", "hi": "बहस में मत उतरिए" },
+      "points": [
+        { "en": "\"Why only me?\" is not a question. It is a hook. The only answer that wins is not to bite: repeat the instruction, same calm voice, fewer words.", "hi": "\"सिर्फ़ मैं क्यों?\" सवाल नहीं है। यह काँटा है। जीतने वाला एकमात्र जवाब है काँटा न निगलना: निर्देश दोहराइए, वही शांत आवाज़, कम शब्द।" },
+        { "en": "If he has a real point, it can be heard later, privately, when there is no audience and nothing to win. \"Come and see me at break\" is a complete sentence.", "hi": "अगर उसकी बात में दम है, तो उसे बाद में, अकेले में सुना जा सकता है, जब दर्शक न हों और जीतने को कुछ न हो। \"ब्रेक में मुझसे मिलना\" पूरा वाक्य है।" },
+        { "en": "Your calm is the message. The louder he gets, the quieter you get. Children find this unnerving and, in the end, reassuring.", "hi": "आपकी शांति ही संदेश है। वो जितना ज़ोर से बोले, आप उतने धीमे। बच्चों को यह बेचैन करता है और, अंत में, भरोसा देता है।" }
+      ]
+    },
+    {
+      "id": "s5-emotional",
+      "type": "nugget",
+      "image": "staffroom",
+      "title": { "en": "The hardest part is not the child", "hi": "सबसे कठिन हिस्सा बच्चा नहीं है" },
+      "text": {
+        "en": "Every teacher reading this knows the hardest moment is not finding the right words. It is the heat in your own chest when a ten-year-old answers back in front of the class. That heat is what makes us shout.\n\nTwo things help. First, decide now, calmly, what your sentence will be. \"Page 12, Arjun.\" Have it ready, so the heat does not get to choose. Second, give yourself one breath before you speak. One breath is enough to move from the part of you that wants to win to the part of you that is teaching.\n\nYou will still feel the heat. The children never need to see it.",
+        "hi": "यह पढ़ने वाला हर शिक्षक जानता है कि सबसे कठिन पल सही शब्द ढूँढना नहीं है। वो आपके अपने सीने की गर्मी है जब दस साल का बच्चा क्लास के सामने पलटकर जवाब देता है। वही गर्मी हमें चिल्लाने पर मजबूर करती है।\n\nदो चीज़ें मदद करती हैं। पहली, अभी, शांति से तय कर लीजिए कि आपका वाक्य क्या होगा। \"पेज 12, अर्जुन।\" इसे तैयार रखिए, ताकि गर्मी को चुनने का मौक़ा न मिले। दूसरी, बोलने से पहले ख़ुद को एक साँस दीजिए। एक साँस काफ़ी है आपके उस हिस्से से, जो जीतना चाहता है, उस हिस्से तक जाने के लिए जो पढ़ा रहा है।\n\nगर्मी फिर भी महसूस होगी। बच्चों को उसे कभी देखने की ज़रूरत नहीं।"
+      },
+      "source": "Lemov, Teach Like a Champion: Emotional Constancy"
+    },
+    {
+      "id": "s5-reflect",
+      "type": "reflection",
+      "prompt": {
+        "en": "Think of the one child in your class who most often answers back or performs for the others. Write the exact quiet sentence you will use on them tomorrow, and where you will be standing when you say it.",
+        "hi": "अपनी क्लास के उस एक बच्चे के बारे में सोचिए जो सबसे ज़्यादा पलटकर जवाब देता है या दूसरों के लिए प्रदर्शन करता है। वो धीमा वाक्य ठीक-ठीक लिखिए जो आप कल उस पर इस्तेमाल करेंगे, और उसे कहते समय आप कहाँ खड़े होंगे।"
+      },
+      "starter": { "en": "The child: ", "hi": "बच्चा: " },
+      "placeholder": { "en": "The child: Faizan, Class 4. My sentence: \"Faizan, copy open, question two. Thanks.\" I will be at his desk, not the front, and I will walk away after.", "hi": "बच्चा: फ़ैज़ान, क्लास 4। मेरा वाक्य: \"फ़ैज़ान, कॉपी खोलो, दूसरा सवाल। शुक्रिया।\" मैं उसकी डेस्क पर रहूँगी, आगे नहीं, और बाद में चली जाऊँगी।" },
+      "min_chars": 60
+    },
+    {
+      "id": "s5-message",
+      "type": "message",
+      "prompt": { "en": "Was any option here too easy to spot, or any situation unrealistic for Bethel? Tell us.", "hi": "क्या यहाँ कोई विकल्प पहचानना बहुत आसान था, या कोई स्थिति बेथेल के लिए असली नहीं लगी? बताइए।" },
+      "placeholder": { "en": "Optional", "hi": "वैकल्पिक" }
+    },
+    {
+      "id": "s5-task",
+      "type": "task",
+      "image": "notebook",
+      "title": { "en": "Tomorrow, for one full day", "hi": "कल, पूरे एक दिन" },
+      "text": {
+        "en": "Use only moves 1 to 4 for the whole day: the look, walking closer, the whole-class reminder, the quiet word. No public correction of any child by name, not once. Keep count of how many times you reached move 4, and whether you ever needed more. The next session starts with your count.",
+        "hi": "पूरे दिन सिर्फ़ क़दम 1 से 4 इस्तेमाल कीजिए: नज़र, पास जाना, पूरी क्लास को याद दिलाना, धीमी बात। किसी बच्चे को नाम लेकर सबके सामने टोकना नहीं, एक बार भी नहीं। गिनती रखिए कि आप कितनी बार क़दम 4 तक पहुँचे, और क्या कभी उससे ज़्यादा की ज़रूरत पड़ी। अगला सेशन आपकी गिनती से शुरू होगा।"
+      }
+    },
+    {
+      "id": "s5-complete",
+      "type": "complete",
+      "image": "coins",
+      "title": { "en": "Session 5 done", "hi": "सेशन 5 पूरा" },
+      "text": {
+        "en": "Tomorrow: consequences that teach. What to do when the small moves were not enough, without the office and without the apology letter.",
+        "hi": "कल: सिखाने वाले नतीजे। जब छोटे क़दम काफ़ी न हों तो क्या करें, बिना ऑफ़िस और बिना माफ़ीनामे के।"
+      }
+    }
+  ]
+}
