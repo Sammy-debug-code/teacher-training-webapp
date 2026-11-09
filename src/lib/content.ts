@@ -21,7 +21,8 @@ export type Card = { image?: string } & (
   | { id: string; type: "why"; title: T; points: T[] }
   | { id: string; type: "nugget"; title: T; text: T; source?: string }
   | { id: string; type: "ladder"; title: T; rungs: { n: number; name: T; line: T }[]; highlight?: number }
-  | { id: string; type: "reflection"; prompt: T; placeholder?: T; min_chars?: number }
+  | { id: string; type: "reflection"; prompt: T; starter?: T; placeholder?: T; min_chars?: number }
+  | { id: string; type: "message"; prompt: T; placeholder?: T }
   | { id: string; type: "task"; title: T; text: T }
   | { id: string; type: "complete"; title: T; text: T }
 );

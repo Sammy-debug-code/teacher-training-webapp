@@ -319,6 +319,9 @@ function CardView({
     case "reflection":
       return <Reflection card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} />;
 
+    case "message":
+      return <Message card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} />;
+
     case "task":
       return (
         <>
@@ -376,10 +379,11 @@ function Reflection({
   preview: boolean;
   onNext: () => void;
 }) {
-  const [text, setText] = useState("");
-  const [saving, setSaving] = useState(false);
-  const min = card.min_chars ?? 10;
   const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
+  const starter = (lang === "hi" && card.starter?.hi) || card.starter?.en || "";
+  const [text, setText] = useState(starter);
+  const [saving, setSaving] = useState(false);
+  const min = Math.max(card.min_chars ?? 40, starter.length + 15);
   async function save() {
     setSaving(true);
     if (!preview) await saveReflection(moduleId, sessionId, card.id, text);
@@ -388,18 +392,71 @@ function Reflection({
   }
   return (
     <>
-      <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">{L("Write", "लिखिए")}</p>
-      <Txt t={card.prompt} lang={lang} className="text-[19px] leading-[30px]" />
+      <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">{L("Your notebook", "आपकी नोटबुक")}</p>
+      <Txt t={card.prompt} lang={lang} className="font-serif text-[22px] font-semibold leading-[30px] text-plum" />
+      <p className="text-[15px] text-muted">
+        {L(
+          "Write about your class, not about this training. A few honest lines are enough.",
+          "अपनी क्लास के बारे में लिखिए, इस ट्रेनिंग के बारे में नहीं। दो-तीन सच्ची लाइनें काफ़ी हैं।",
+        )}
+      </p>
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder={lang === "hi" && card.placeholder?.hi ? card.placeholder.hi : card.placeholder?.en}
-        rows={5}
-        className="w-full rounded-md border border-line-strong bg-raised p-3 text-base"
+        rows={6}
+        className="w-full rounded-md border border-line-strong bg-cream p-3 text-base leading-relaxed"
       />
-      <p className="text-sm text-muted">{L("Only you and Sam can read this.", "इसे सिर्फ़ आप और सैम पढ़ सकते हैं।")}</p>
+      <p className="text-sm text-muted">
+        {L("Writing it down is what makes tomorrow's class different.", "लिखने से ही कल की क्लास अलग होती है।")}
+      </p>
       <Primary onClick={save} disabled={saving || text.trim().length < min}>
-        {saving ? L("Saving…", "सेव हो रहा है…") : L("Save and continue", "सेव करें और आगे बढ़ें")}
+        {saving ? L("Saving…", "सेव हो रहा है…") : L("Save to my notebook", "नोटबुक में सेव करें")}
+      </Primary>
+    </>
+  );
+}
+
+function Message({
+  card,
+  lang,
+  moduleId,
+  sessionId,
+  preview,
+  onNext,
+}: {
+  card: Extract<Card, { type: "message" }>;
+  lang: Lang;
+  moduleId: string;
+  sessionId: string;
+  preview: boolean;
+  onNext: () => void;
+}) {
+  const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
+  const [text, setText] = useState("");
+  const [saving, setSaving] = useState(false);
+  async function send() {
+    setSaving(true);
+    if (!preview && text.trim()) await saveReflection(moduleId, sessionId, card.id, text);
+    setSaving(false);
+    onNext();
+  }
+  return (
+    <>
+      <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-sunrise-deep">{L("Optional", "वैकल्पिक")}</p>
+      <Txt t={card.prompt} lang={lang} className="font-serif text-[22px] font-semibold leading-[30px] text-plum" />
+      <textarea
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder={lang === "hi" && card.placeholder?.hi ? card.placeholder.hi : card.placeholder?.en}
+        rows={4}
+        className="w-full rounded-md border border-line-strong bg-raised p-3 text-base leading-relaxed"
+      />
+      <p className="text-sm text-muted">
+        {L("Leave it empty to skip.", "छोड़ना हो तो ख़ाली रहने दें।")}
+      </p>
+      <Primary onClick={send} disabled={saving}>
+        {text.trim() ? L("Send and continue", "भेजें और आगे बढ़ें") : L("Skip", "छोड़ें")}
       </Primary>
     </>
   );

@@ -50,13 +50,15 @@ export default async function StartPage() {
                 <h2 className="font-serif text-[24px] font-semibold leading-[30px] text-plum">{it.title}</h2>
                 <p className="hi text-sm text-muted">{it.hi}</p>
                 <p className="mt-2">{it.text}</p>
+                {it.illo === "coins" && (
+                  <Link href="/coins" className="mt-2 inline-block text-[15px] font-semibold text-accent">
+                    What are coins for? →
+                  </Link>
+                )}
               </div>
             </li>
           ))}
         </ol>
-        <p className="text-sm text-muted">
-          What you write in your reflections is seen only by you and Sam. Nothing goes to the principal or to parents.
-        </p>
         <div className="fixed inset-x-0 bottom-0 bg-gradient-to-t from-surface via-surface to-transparent px-4 pb-6 pt-8">
           <Link
             href={`/m/${MODULE}/s1`}

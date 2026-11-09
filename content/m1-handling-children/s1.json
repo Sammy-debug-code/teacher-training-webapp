@@ -386,14 +386,30 @@
       "id": "s1-reflect",
       "type": "reflection",
       "prompt": {
-        "en": "Think of last week. Write one moment when you felt stuck — you could not hit, could not shout, and did not know what else to do. Two or three lines are enough.",
-        "hi": "पिछले हफ़्ते के बारे में सोचिए। एक ऐसा पल लिखिए जब आप फँस गए थे — न मार सकते थे, न चिल्ला सकते थे, और समझ नहीं आया कि और क्या करें। दो-तीन लाइनें काफ़ी हैं।"
+        "en": "Think of one moment last week when a child misbehaved and you felt stuck: you could not hit, could not shout, and did not know what else to do. What happened, and what did you do?",
+        "hi": "पिछले हफ़्ते का एक पल सोचिए जब किसी बच्चे ने शरारत की और आप फँस गए: न मार सकते थे, न चिल्ला सकते थे, और समझ नहीं आया कि क्या करें। क्या हुआ था, और आपने क्या किया?"
       },
       "placeholder": {
-        "en": "On Thursday, during…",
-        "hi": "गुरुवार को, जब…"
+        "en": "Last week, in Class 2, when Riya kept crying and would not sit, I…",
+        "hi": "पिछले हफ़्ते, क्लास 2 में, जब रिया रोती रही और बैठी नहीं, तो मैंने…"
       },
-      "min_chars": 20
+      "min_chars": 50,
+      "starter": {
+        "en": "Last week, in Class ",
+        "hi": "पिछले हफ़्ते, क्लास "
+      }
+    },
+    {
+      "id": "s1-message",
+      "type": "message",
+      "prompt": {
+        "en": "Anything you want to tell the training team about this session? A confusion, a disagreement, a situation we should include.",
+        "hi": "इस सेशन के बारे में ट्रेनिंग टीम को कुछ बताना चाहते हैं? कोई उलझन, कोई असहमति, कोई ऐसी स्थिति जो हमें जोड़नी चाहिए।"
+      },
+      "placeholder": {
+        "en": "Optional",
+        "hi": "वैकल्पिक"
+      }
     },
     {
       "id": "s1-task",

@@ -78,7 +78,7 @@ export default async function Home() {
               </p>
               <h1 className="mt-1 font-serif text-[28px] font-medium leading-[34px] text-plum">Namaste, {first}</h1>
               <div className="mt-4 grid grid-cols-3 gap-2">
-                <Stat value={coins} label="coins" />
+                <Link href="/coins"><Stat value={coins} label="coins ?" /></Link>
                 <Stat value={rhythm.streak} label="day streak" accent />
                 <Stat value={level.current.name} label="level" gold />
               </div>
