@@ -6,6 +6,8 @@ import type { Card, Option, Session, T } from "@/lib/content";
 import Illo, { type IlloName } from "@/components/Illo";
 import GridSort from "@/components/GridSort";
 import SelfPlace from "@/components/SelfPlace";
+import YesNo from "@/components/YesNo";
+import Tiles from "@/components/Tiles";
 import { logEvent, saveReflection, completeSession } from "@/app/m/actions";
 
 type Lang = "en" | "hi";
@@ -427,6 +429,30 @@ function CardView({
           lang={lang}
           onDone={(me, students) => {
             if (!preview) void logEvent(moduleId, sessionId, card.id, "chose", { kind: "selfplace", me, students });
+            onNext();
+          }}
+        />
+      );
+
+    case "yesno":
+      return (
+        <YesNo
+          card={card}
+          lang={lang}
+          onDone={(answers, agree) => {
+            if (!preview) void logEvent(moduleId, sessionId, card.id, "chose", { kind: "yesno", answers, agree });
+            onNext();
+          }}
+        />
+      );
+
+    case "tiles":
+      return (
+        <Tiles
+          card={card}
+          lang={lang}
+          onDone={(picked, score) => {
+            if (!preview) void logEvent(moduleId, sessionId, card.id, "chose", { kind: "tiles", picked, score });
             onNext();
           }}
         />

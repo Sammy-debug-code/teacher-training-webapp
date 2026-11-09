@@ -1,0 +1,219 @@
+{
+  "id": "s6",
+  "n": 6,
+  "title": { "en": "Consequences that teach" },
+  "minutes": 18,
+  "cards": [
+    {
+      "id": "s6-checkin",
+      "type": "choice",
+      "kind": "poll",
+      "question": {
+        "en": "Yesterday's task: a full day using only the four quiet moves. How many times did you reach move 4, the quiet word?",
+        "hi": "कल का काम: पूरा दिन सिर्फ़ चार धीमे क़दम। आप कितनी बार क़दम 4, धीमी बात, तक पहुँचे?"
+      },
+      "options": [
+        { "key": "a", "text": { "en": "Zero to two times. Moves 1 to 3 handled nearly everything.", "hi": "शून्य से दो बार। क़दम 1 से 3 ने लगभग सब संभाल लिया।" }, "rung": null },
+        { "key": "b", "text": { "en": "Three to six times, and it worked each time.", "hi": "तीन से छह बार, और हर बार काम किया।" }, "rung": null },
+        { "key": "c", "text": { "en": "Many times, and once or twice it was not enough.", "hi": "कई बार, और एक-दो बार काफ़ी नहीं था।" }, "rung": null },
+        { "key": "d", "text": { "en": "I corrected someone publicly by name at least once. Old habit.", "hi": "मैंने कम से कम एक बार किसी को नाम लेकर सबके सामने टोका। पुरानी आदत।" }, "rung": null }
+      ]
+    },
+    {
+      "id": "s6-intro",
+      "type": "nugget",
+      "image": "office-bench",
+      "title": { "en": "When the quiet word was not enough", "hi": "जब धीमी बात काफ़ी नहीं थी" },
+      "text": {
+        "en": "Sometimes a child goes past the quiet word. He pushed someone. She tore a page. He kept talking after the named choice. Now something has to happen, and this is the moment most of us reach for the office, the parents, or the letter.\n\nThis session is about step 3 of the ladder: a consequence that teaches. The word matters. A punishment makes the child pay. A consequence makes the child learn. They can look similar from outside; the four tests on the next card tell them apart.",
+        "hi": "कभी-कभी बच्चा धीमी बात से आगे निकल जाता है। उसने किसी को धक्का दिया। उसने पन्ना फाड़ा। नाम लेकर विकल्प देने के बाद भी वो बात करता रहा। अब कुछ होना ही है, और यही वो पल है जब हममें से ज़्यादातर ऑफ़िस, माता-पिता या माफ़ीनामे की ओर हाथ बढ़ाते हैं।\n\nयह सेशन सीढ़ी के क़दम 3 के बारे में है: सिखाने वाला नतीजा। शब्द मायने रखता है। सज़ा बच्चे से क़ीमत वसूलती है। नतीजा बच्चे को सिखाता है। बाहर से दोनों एक जैसे लग सकते हैं; अगले कार्ड की चार जाँच उन्हें अलग करती हैं।"
+      }
+    },
+    {
+      "id": "s6-tests",
+      "type": "why",
+      "title": { "en": "The four tests of a good consequence", "hi": "अच्छे नतीजे की चार जाँच" },
+      "points": [
+        { "en": "Related. It is connected to what the child did. You made a mess, you clean it. You hurt her, you help her. Lines and laps are connected to nothing.", "hi": "जुड़ा हुआ। यह उससे जुड़ा है जो बच्चे ने किया। गंदगी की, तुम साफ़ करो। उसे चोट पहुँचाई, तुम उसकी मदद करो। लाइनें और चक्कर किसी चीज़ से नहीं जुड़े।" },
+        { "en": "Teaches. The child ends up knowing what to do next time, not only what not to do.", "hi": "सिखाता है। बच्चा अंत में जानता है कि अगली बार क्या करना है, सिर्फ़ क्या नहीं करना नहीं।" },
+        { "en": "Today. It happens now or soon, and it is small enough to finish. A seven-year-old cannot connect Friday's punishment to Monday's push.", "hi": "आज। यह अभी या जल्द होता है, और इतना छोटा है कि पूरा हो सके। सात साल का बच्चा शुक्रवार की सज़ा को सोमवार के धक्के से नहीं जोड़ सकता।" },
+        { "en": "Dignity. Given privately, in a calm voice, and then it is over. No audience, no reminding him of it for a week. If you would not do it with his mother at the door, it fails this test.", "hi": "सम्मान। अकेले में, शांत आवाज़ में दिया जाए, और फिर बात ख़त्म। न दर्शक, न हफ़्ते भर याद दिलाना। अगर आप यह उसकी माँ के दरवाज़े पर होते हुए न करें, तो यह जाँच में फ़ेल है।" }
+      ]
+    },
+    {
+      "id": "s6-scene",
+      "type": "scene",
+      "image": "classroom-disturb",
+      "eyebrow": { "en": "Class 4 · after the bell", "hi": "क्लास 4 · घंटी के बाद" },
+      "text": {
+        "en": "Aman pushed Sana off the bench. She fell, her copies went everywhere, and she cried. Aman says she took his space. The usual consequence in this school: Aman writes \"I will never push anyone again\" twenty times, and a note goes home to his parents.",
+        "hi": "अमन ने सना को बेंच से धक्का दिया। वो गिरी, उसकी कॉपियाँ बिखर गईं, और वो रोई। अमन कहता है उसने उसकी जगह ली थी। इस स्कूल में आम नतीजा: अमन बीस बार लिखता है \"मैं फिर कभी किसी को धक्का नहीं दूँगा\", और घर एक नोट जाता है।"
+      },
+      "prompt": { "en": "Let us test the letter.", "hi": "चलिए माफ़ीनामे को जाँचते हैं।" }
+    },
+    {
+      "id": "s6-letter-test",
+      "type": "yesno",
+      "title": { "en": "Twenty lines and a note home", "hi": "बीस लाइनें और घर नोट" },
+      "subject": { "en": "Aman writes \"I will never push anyone again\" twenty times. A note goes to his parents.", "hi": "अमन बीस बार लिखता है \"मैं फिर कभी किसी को धक्का नहीं दूँगा\"। उसके माता-पिता को नोट जाता है।" },
+      "questions": [
+        { "key": "related", "text": { "en": "Is it related to what he did?", "hi": "क्या यह उसके किए से जुड़ा है?" }, "answer": false, "reason": { "en": "Writing lines has nothing to do with Sana, the bench, or the copies on the floor.", "hi": "लाइनें लिखने का सना, बेंच या फ़र्श पर बिखरी कॉपियों से कोई लेना-देना नहीं।" } },
+        { "key": "teaches", "text": { "en": "Does it teach him what to do next time he wants his space back?", "hi": "क्या यह सिखाता है कि अगली बार अपनी जगह चाहिए तो क्या करे?" }, "answer": false, "reason": { "en": "He learns that pushing leads to writing. He still has no idea what to do about a shared bench.", "hi": "वो सीखता है कि धक्के से लिखना पड़ता है। साझा बेंच का क्या करना है, उसे अब भी नहीं पता।" } },
+        { "key": "today", "text": { "en": "Does it happen today, and is it small enough to finish?", "hi": "क्या यह आज होता है, और इतना छोटा है कि पूरा हो?" }, "answer": false, "reason": { "en": "Twenty lines takes a Class 4 child half an hour, and the note home lands tonight, hours after Sana stopped crying.", "hi": "बीस लाइनें क्लास 4 के बच्चे को आधा घंटा लेती हैं, और घर का नोट आज रात पहुँचता है, सना के चुप होने के घंटों बाद।" } },
+        { "key": "dignity", "text": { "en": "Does it keep his dignity?", "hi": "क्या यह उसका सम्मान रखता है?" }, "answer": false, "reason": { "en": "The whole class sees him writing lines, and at home the note may lead to a beating. Neither is private or calm.", "hi": "पूरी क्लास उसे लाइनें लिखते देखती है, और घर पर नोट से मार पड़ सकती है। न अकेले में, न शांत।" } }
+      ]
+    },
+    {
+      "id": "s6-letter-why",
+      "type": "why",
+      "title": { "en": "Zero of four, and we all use it", "hi": "चार में से शून्य, और हम सब इसे इस्तेमाल करते हैं" },
+      "points": [
+        { "en": "The letter survives because it is easy for the adult, not because it works for the child.", "hi": "माफ़ीनामा इसलिए बचा हुआ है क्योंकि यह बड़े के लिए आसान है, बच्चे के लिए काम करता है इसलिए नहीं।" },
+        { "en": "\"I will never do it again\" is a promise no eight-year-old can keep. We are teaching him to write things he does not mean.", "hi": "\"मैं फिर कभी नहीं करूँगा\" ऐसा वादा है जो कोई आठ साल का बच्चा नहीं निभा सकता। हम उसे वो लिखना सिखा रहे हैं जो उसका मतलब नहीं।" },
+        { "en": "The note home outsources the consequence to parents who were not there, do not know what happened, and may hit him for it. Keep it in school, where it can be fair.", "hi": "घर का नोट नतीजे को उन माता-पिता को सौंप देता है जो वहाँ नहीं थे, जिन्हें पता नहीं क्या हुआ, और जो इसके लिए मार सकते हैं। इसे स्कूल में रखिए, जहाँ यह न्यायपूर्ण हो सकता है।" }
+      ]
+    },
+    {
+      "id": "s6-build",
+      "type": "tiles",
+      "title": { "en": "Build a better one for Aman", "hi": "अमन के लिए बेहतर बनाइए" },
+      "intro": { "en": "Pick up to three pieces. Watch the four tests light up as you choose.", "hi": "ज़्यादा से ज़्यादा तीन टुकड़े चुनिए। चुनते हुए देखिए चारों जाँच कैसे जलती हैं।" },
+      "max": 3,
+      "tests": [
+        { "key": "related", "name": { "en": "Related", "hi": "जुड़ा" } },
+        { "key": "teaches", "name": { "en": "Teaches", "hi": "सिखाता" } },
+        { "key": "today", "name": { "en": "Today", "hi": "आज" } },
+        { "key": "dignity", "name": { "en": "Dignity", "hi": "सम्मान" } }
+      ],
+      "tiles": [
+        { "key": "pickup", "text": { "en": "Aman picks up Sana's copies and puts them back on her desk.", "hi": "अमन सना की कॉपियाँ उठाकर उसकी डेस्क पर रखता है।" }, "passes": ["related", "today", "dignity"] },
+        { "key": "lines", "text": { "en": "Aman writes \"I will not push\" ten times instead of twenty.", "hi": "अमन बीस की जगह दस बार लिखता है \"मैं धक्का नहीं दूँगा\"।" }, "passes": ["today"], "breaks": ["dignity"] },
+        { "key": "private", "text": { "en": "At break, privately, Aman tells you in his own words what he will do next time someone takes his space.", "hi": "ब्रेक में, अकेले में, अमन अपने शब्दों में बताता है कि अगली बार कोई उसकी जगह ले तो वो क्या करेगा।" }, "passes": ["teaches", "today", "dignity"] },
+        { "key": "publicsorry", "text": { "en": "Aman stands up and says sorry to Sana in front of the whole class.", "hi": "अमन खड़ा होकर पूरी क्लास के सामने सना से सॉरी कहता है।" }, "passes": ["related", "today"], "breaks": ["dignity"], "note": { "en": "A forced public sorry teaches him to say words he does not feel, and gives the class a show. A private sorry, when he is ready, is a different thing; that is Session 7.", "hi": "ज़बरदस्ती सार्वजनिक सॉरी उसे वो शब्द कहना सिखाता है जो वो महसूस नहीं करता, और क्लास को तमाशा देता है। अकेले में सॉरी, जब वो तैयार हो, अलग बात है; वो सेशन 7 है।" } },
+        { "key": "apart", "text": { "en": "Aman and Sana sit at different benches for the rest of today.", "hi": "अमन और सना आज बाक़ी दिन अलग-अलग बेंच पर बैठते हैं।" }, "passes": ["related", "today", "dignity"] },
+        { "key": "games", "text": { "en": "Aman misses games period on Friday.", "hi": "अमन शुक्रवार को गेम्स पीरियड नहीं जाता।" }, "passes": [], "note": { "en": "Friday is three days away and games has nothing to do with a bench. By Friday he will only remember that you took games away.", "hi": "शुक्रवार तीन दिन दूर है और गेम्स का बेंच से कोई लेना-देना नहीं। शुक्रवार तक उसे सिर्फ़ याद रहेगा कि आपने गेम्स छीन लिया।" } },
+        { "key": "note", "text": { "en": "A note goes home to his parents describing what he did.", "hi": "घर उसके माता-पिता को नोट जाता है कि उसने क्या किया।" }, "passes": [], "breaks": ["dignity"], "note": { "en": "You do not know what happens at home when that note arrives. Keep the consequence where you can see it is fair.", "hi": "आपको नहीं पता वो नोट पहुँचने पर घर में क्या होता है। नतीजे को वहीं रखिए जहाँ आप देख सकें कि यह न्यायपूर्ण है।" } }
+      ]
+    },
+    {
+      "id": "s6-build-why",
+      "type": "why",
+      "title": { "en": "What a good one sounds like", "hi": "अच्छा नतीजा कैसा सुनाई देता है" },
+      "points": [
+        { "en": "Right then, quietly, at the bench: \"Aman, Sana's copies, back on her desk. Then you sit there today. Break time, come and talk to me.\" Twenty seconds.", "hi": "उसी समय, धीरे से, बेंच पर: \"अमन, सना की कॉपियाँ, उसकी डेस्क पर। फिर आज तुम वहाँ बैठो। ब्रेक में मुझसे बात करने आना।\" बीस सेकंड।" },
+        { "en": "At break, two minutes, no lecture: \"What happened? What will you do next time someone takes your space?\" Let him find the words. He will remember his own words; he would not have remembered yours.", "hi": "ब्रेक में, दो मिनट, कोई भाषण नहीं: \"क्या हुआ था? अगली बार कोई तुम्हारी जगह ले तो क्या करोगे?\" उसे शब्द ढूँढने दीजिए। उसे अपने शब्द याद रहेंगे; आपके याद नहीं रहते।" },
+        { "en": "Then it is over. No mentioning it tomorrow. No \"remember what you did on Monday\". The consequence ended; so does your memory of it, as far as he can tell.", "hi": "फिर बात ख़त्म। कल इसका ज़िक्र नहीं। कोई \"याद है सोमवार को क्या किया था\" नहीं। नतीजा ख़त्म हुआ; जहाँ तक उसे दिखे, आपकी याददाश्त भी।" }
+      ]
+    },
+    {
+      "id": "s6-lemov",
+      "type": "nugget",
+      "title": { "en": "The art of the consequence", "hi": "नतीजे की कला" },
+      "text": {
+        "en": "Lemov watched how the best teachers gave consequences and found they all did the same five things.\n\nCalm. The voice does not change. Anger turns a consequence into a fight.\n\nQuick. Given in a sentence, right away. Not after a five-minute speech about respect.\n\nSmall. The smallest consequence that fits. Small ones can be given every time; big ones get saved up and then explode.\n\nConsistent. The same thing for the same behaviour, for every child, every day. Children forgive strict. They do not forgive unfair.\n\nAnd then move on. Give it, and go straight back to teaching, in the same tone as before. Do not hover, do not re-explain, do not wait for him to look sorry.",
+        "hi": "लेमोव ने देखा कि सबसे अच्छे शिक्षक नतीजे कैसे देते हैं और पाया कि सब वही पाँच चीज़ें करते हैं।\n\nशांत। आवाज़ नहीं बदलती। ग़ुस्सा नतीजे को लड़ाई बना देता है।\n\nजल्दी। एक वाक्य में, तुरंत। सम्मान पर पाँच मिनट के भाषण के बाद नहीं।\n\nछोटा। सबसे छोटा नतीजा जो फ़िट हो। छोटे हर बार दिए जा सकते हैं; बड़े जमा होते हैं और फिर फटते हैं।\n\nएक जैसा। वही व्यवहार, वही नतीजा, हर बच्चे के लिए, हर दिन। बच्चे सख़्ती माफ़ कर देते हैं। अन्याय नहीं करते।\n\nऔर फिर आगे बढ़िए। दीजिए, और उसी लहजे में सीधे पढ़ाने पर लौटिए। मँडराइए मत, दोबारा समझाइए मत, उसके शर्मिंदा दिखने का इंतज़ार मत कीजिए।"
+      },
+      "source": "Lemov, Teach Like a Champion: Art of the Consequence"
+    },
+    {
+      "id": "s6-scene2",
+      "type": "scene",
+      "image": "crouch-desk",
+      "eyebrow": { "en": "Class 1 · drawing period", "hi": "क्लास 1 · ड्रॉइंग पीरियड" },
+      "text": {
+        "en": "Six-year-old Zoya has scribbled black crayon across Imran's drawing. Imran is about to cry. You already told Zoya once today to keep her crayons on her own sheet.",
+        "hi": "छह साल की ज़ोया ने इमरान की ड्रॉइंग पर काली क्रेयॉन फेर दी है। इमरान रोने वाला है। आप आज ज़ोया को एक बार कह चुके हैं कि क्रेयॉन अपनी शीट पर रखे।"
+      },
+      "prompt": { "en": "Which consequence passes all four tests?", "hi": "कौन सा नतीजा चारों जाँच पास करता है?" }
+    },
+    {
+      "id": "s6-choice2",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "Pick one.", "hi": "एक चुनिए।" },
+      "options": [
+        { "key": "a", "text": { "en": "Take Zoya's crayons away for the rest of the week so she learns that crayons are a privilege, and tell her she can earn them back with good behaviour.", "hi": "ज़ोया के क्रेयॉन पूरे हफ़्ते के लिए ले लें ताकि वो सीखे कि क्रेयॉन एक सुविधा है, और कहें कि अच्छे व्यवहार से वापस कमा सकती है।" }, "next": "s6-c2-a", "rung": 0 },
+        { "key": "b", "text": { "en": "Quietly: \"Zoya, crayons down. Help Imran get a new sheet, then draw on yours only.\" Sit her beside you for the rest of the period, drawing.", "hi": "धीरे से: \"ज़ोया, क्रेयॉन नीचे। इमरान को नई शीट दिलाओ, फिर सिर्फ़ अपनी पर बनाओ।\" बाक़ी पीरियड उसे अपने पास बैठाकर बनाने दें।" }, "next": "s6-c2-b", "rung": 3 },
+        { "key": "c", "text": { "en": "Hold up Imran's ruined drawing so the class can see what Zoya did, and ask them whether that was kind, so she understands how it feels.", "hi": "इमरान की ख़राब ड्रॉइंग ऊपर उठाकर क्लास को दिखाएँ कि ज़ोया ने क्या किया, और पूछें कि क्या यह अच्छा था, ताकि वो समझे कैसा लगता है।" }, "next": "s6-c2-c", "rung": 0 },
+        { "key": "d", "text": { "en": "Kneel down, hug Zoya, and gently explain for a few minutes that Imran worked very hard and that we must always be kind to our friends, then let her go back to her drawing.", "hi": "घुटनों पर बैठकर ज़ोया को गले लगाएँ, और कुछ मिनट प्यार से समझाएँ कि इमरान ने बहुत मेहनत की और हमें दोस्तों से हमेशा अच्छा रहना चाहिए, फिर उसे अपनी ड्रॉइंग पर जाने दें।" }, "next": "s6-c2-d", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s6-c2-a",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s6-choice2",
+      "text": {
+        "en": "A week is forever at six. By Wednesday she has no idea why she has no crayons, Imran's drawing is still ruined, and \"earn them back\" is a system a six-year-old cannot follow. Fails Related, Teaches and Today.",
+        "hi": "छह साल में एक हफ़्ता हमेशा के बराबर है। बुधवार तक उसे पता ही नहीं कि उसके पास क्रेयॉन क्यों नहीं, इमरान की ड्रॉइंग अब भी ख़राब है, और \"वापस कमाओ\" ऐसा सिस्टम है जो छह साल की बच्ची नहीं समझ सकती। जुड़ा, सिखाता और आज में फ़ेल।"
+      }
+    },
+    {
+      "id": "s6-c2-b",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s6-reflect",
+      "text": {
+        "en": "Related: she repairs what she broke. Teaches: \"on yours only\" says what to do. Today: it is over by the end of the period. Dignity: six words, quietly, and sitting next to the teacher is not a shame at six, it is a place. Four of four.",
+        "hi": "जुड़ा: जो बिगाड़ा वो सुधारती है। सिखाता: \"सिर्फ़ अपनी पर\" बताता है क्या करना है। आज: पीरियड के अंत तक ख़त्म। सम्मान: छह शब्द, धीरे से, और छह साल में टीचर के पास बैठना शर्म नहीं, एक जगह है। चार में से चार।"
+      }
+    },
+    {
+      "id": "s6-c2-c",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s6-choice2",
+      "text": {
+        "en": "Public shaming of a six-year-old. Zoya cries, Imran still has no drawing, and the class has learned that the teacher will hold your mistakes up for everyone to see. This is also mental harassment under the guidelines.",
+        "hi": "छह साल की बच्ची का सार्वजनिक अपमान। ज़ोया रोती है, इमरान के पास अब भी ड्रॉइंग नहीं, और क्लास ने सीखा है कि टीचर तुम्हारी ग़लतियाँ सबको दिखाएगी। दिशानिर्देशों के अनुसार यह मानसिक उत्पीड़न भी है।"
+      }
+    },
+    {
+      "id": "s6-c2-d",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s6-choice2",
+      "text": {
+        "en": "Warm, and nothing happened. Imran watched Zoya get a hug for ruining his drawing. She goes back to her sheet having learned that scribbling on someone brings a cuddle and a story. Warm without a consequence is the soft corner of the grid.",
+        "hi": "अपनापन, और कुछ हुआ ही नहीं। इमरान ने देखा कि ज़ोया को उसकी ड्रॉइंग बिगाड़ने पर गले लगाया गया। वो अपनी शीट पर यह सीखकर लौटती है कि किसी पर लकीरें फेरने से प्यार और कहानी मिलती है। बिना नतीजे का अपनापन ग्रिड का नरम कोना है।"
+      }
+    },
+    {
+      "id": "s6-reflect",
+      "type": "reflection",
+      "prompt": {
+        "en": "What is the most common thing a child does in your class that goes past the quiet word? Design one consequence for it that passes all four tests: related, teaches, today, dignity. Write the exact words you will say.",
+        "hi": "आपकी क्लास में बच्चे सबसे ज़्यादा क्या करते हैं जो धीमी बात से आगे निकल जाता है? उसके लिए एक नतीजा बनाइए जो चारों जाँच पास करे: जुड़ा, सिखाता, आज, सम्मान। जो शब्द आप कहेंगे, ठीक वही लिखिए।"
+      },
+      "starter": { "en": "The problem: ", "hi": "समस्या: " },
+      "placeholder": { "en": "The problem: snatching things from the next desk. My consequence, said quietly: \"Give it back, and ask her properly. Then you sit at the end desk today.\"", "hi": "समस्या: बगल की डेस्क से चीज़ें छीनना। मेरा नतीजा, धीरे से: \"वापस दो, और ठीक से माँगो। फिर आज तुम किनारे वाली डेस्क पर बैठो।\"" },
+      "min_chars": 70
+    },
+    {
+      "id": "s6-message",
+      "type": "message",
+      "prompt": { "en": "Is there a consequence used in this school that you think fails the four tests and should stop? Name it here.", "hi": "क्या इस स्कूल में कोई ऐसा नतीजा इस्तेमाल होता है जो आपको लगता है चारों जाँच में फ़ेल है और बंद होना चाहिए? यहाँ बताइए।" },
+      "placeholder": { "en": "Optional", "hi": "वैकल्पिक" }
+    },
+    {
+      "id": "s6-task",
+      "type": "task",
+      "image": "notebook",
+      "title": { "en": "Tomorrow, in your class", "hi": "कल, आपकी क्लास में" },
+      "text": {
+        "en": "Use the consequence you just designed the first time that problem happens. Say it quietly, in one sentence, and go straight back to teaching. No lines, no note home, no office. Notice how the child reacts in the next ten minutes, and write it down.",
+        "hi": "जो नतीजा आपने अभी बनाया, वो समस्या पहली बार होते ही इस्तेमाल कीजिए। धीरे से, एक वाक्य में कहिए, और सीधे पढ़ाने पर लौटिए। न लाइनें, न घर नोट, न ऑफ़िस। अगले दस मिनट में बच्चे की प्रतिक्रिया देखिए, और लिख लीजिए।"
+      }
+    },
+    {
+      "id": "s6-complete",
+      "type": "complete",
+      "image": "coins",
+      "title": { "en": "Session 6 done", "hi": "सेशन 6 पूरा" },
+      "text": {
+        "en": "Tomorrow: repair. The two-minute conversation after it is over, and why relationship is built from fairness, not friendliness.",
+        "hi": "कल: मरम्मत। सब ख़त्म होने के बाद की दो मिनट की बातचीत, और रिश्ता दोस्ती से नहीं, न्याय से क्यों बनता है।"
+      }
+    }
+  ]
+}

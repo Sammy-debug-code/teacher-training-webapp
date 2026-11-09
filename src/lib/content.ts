@@ -33,6 +33,23 @@ export type Card = { image?: string } & (
       quadrants: Record<"harsh" | "soft" | "absent" | "warmstrict", { name: T; verdict: T }>;
     }
   | { id: string; type: "selfplace"; title: T; prompt: T; second_prompt?: T }
+  | {
+      id: string;
+      type: "yesno";
+      title: T;
+      subject: T;
+      /** Each question: the teacher answers yes/no, then sees the verdict and reason. */
+      questions: { key: string; text: T; answer: boolean; reason: T }[];
+    }
+  | {
+      id: string;
+      type: "tiles";
+      title: T;
+      intro: T;
+      tests: { key: string; name: T }[];
+      max: number;
+      tiles: { key: string; text: T; passes: string[]; breaks?: string[]; note?: T }[];
+    }
   | { id: string; type: "task"; title: T; text: T }
   | { id: string; type: "complete"; title: T; text: T }
 );
