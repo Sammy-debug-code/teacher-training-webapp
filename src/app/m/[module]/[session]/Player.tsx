@@ -133,6 +133,7 @@ export default function Player({
           moduleId={moduleId}
           sessionId={session.id}
           preview={preview}
+          hasHi={hasHi}
           earned={earned}
           alreadyDone={alreadyDone}
           onChoose={choose}
@@ -152,6 +153,15 @@ function cardHasHindi(card: Card | undefined): boolean {
     return Object.values(v as Record<string, unknown>).some(walk);
   };
   return walk(card);
+}
+
+function HindiHint({ show, lang }: { show: boolean; lang: Lang }) {
+  if (!show || lang === "hi") return null;
+  return (
+    <p className="text-sm text-muted">
+      Want this in Hindi? Tap <span className="hi font-semibold text-accent">हिंदी</span> at the top.
+    </p>
+  );
 }
 
 function Primary({ children, onClick, disabled }: { children: React.ReactNode; onClick?: () => void; disabled?: boolean }) {
@@ -175,6 +185,7 @@ function CardView({
   moduleId,
   sessionId,
   preview,
+  hasHi,
   earned,
   alreadyDone,
   onChoose,
@@ -186,6 +197,7 @@ function CardView({
   moduleId: string;
   sessionId: string;
   preview: boolean;
+  hasHi: boolean;
   earned: number | null;
   alreadyDone: boolean;
   onChoose: (c: Extract<Card, { type: "choice" }>, o: Option) => void;
@@ -215,6 +227,7 @@ function CardView({
           )}
           <Txt t={card.text} lang={lang} className="text-[19px] leading-[30px]" />
           {card.prompt && <Txt t={card.prompt} lang={lang} className="font-serif text-[24px] font-semibold text-plum" />}
+          <HindiHint show={hasHi} lang={lang} />
           <Primary onClick={onNext}>{L("See your options", "विकल्प देखें")}</Primary>
         </>
       );
@@ -235,6 +248,7 @@ function CardView({
               </button>
             ))}
           </div>
+          <HindiHint show={hasHi} lang={lang} />
         </>
       );
 
@@ -317,7 +331,7 @@ function CardView({
       );
 
     case "reflection":
-      return <Reflection card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} />;
+      return <Reflection card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} hasHi={hasHi} onNext={onNext} />;
 
     case "message":
       return <Message card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} />;
@@ -352,6 +366,12 @@ function CardView({
               </p>
             )}
             <Txt t={card.text} lang={lang} className="text-muted" />
+            <Link
+              href="/coins"
+              className="relative mt-2 rounded-[20px] bg-mist px-5 py-3 text-[15px] font-semibold text-accent before:absolute before:-bottom-2 before:left-6 before:h-4 before:w-4 before:rounded-full before:bg-mist after:absolute after:-bottom-4 after:left-3 after:h-2 after:w-2 after:rounded-full after:bg-mist"
+            >
+              {L("See what coins can do →", "देखें सिक्के क्या कर सकते हैं →")}
+            </Link>
           </div>
           <Link
             href="/"
@@ -370,6 +390,7 @@ function Reflection({
   moduleId,
   sessionId,
   preview,
+  hasHi,
   onNext,
 }: {
   card: Extract<Card, { type: "reflection" }>;
@@ -377,6 +398,7 @@ function Reflection({
   moduleId: string;
   sessionId: string;
   preview: boolean;
+  hasHi: boolean;
   onNext: () => void;
 }) {
   const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
@@ -394,6 +416,7 @@ function Reflection({
     <>
       <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">{L("Your notebook", "आपकी नोटबुक")}</p>
       <Txt t={card.prompt} lang={lang} className="font-serif text-[22px] font-semibold leading-[30px] text-plum" />
+      <HindiHint show={hasHi} lang={lang} />
       <p className="text-[15px] text-muted">
         {L(
           "Write about your class, not about this training. A few honest lines are enough.",

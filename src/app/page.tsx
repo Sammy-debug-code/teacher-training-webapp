@@ -82,6 +82,9 @@ export default async function Home() {
                 <Stat value={rhythm.streak} label="day streak" accent />
                 <Stat value={level.current.name} label="level" gold />
               </div>
+              <Link href="/notebook" className="mt-3 inline-block text-[15px] font-semibold text-accent">
+                My notebook →
+              </Link>
               {level.next && (
                 <p className="mt-3 text-sm text-muted">
                   {level.next.min - lifetime} more coins to {level.next.name}. Levels only go up — a missed day never takes one away.

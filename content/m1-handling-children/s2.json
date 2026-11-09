@@ -1,7 +1,9 @@
 {
   "id": "s2",
   "n": 2,
-  "title": { "en": "Why the stick never worked" },
+  "title": {
+    "en": "Why the stick never worked"
+  },
   "minutes": 15,
   "cards": [
     {
@@ -9,47 +11,114 @@
       "type": "choice",
       "kind": "poll",
       "question": {
-        "en": "Yesterday's task: notice the moments you felt stuck without the stick. How many did you catch?",
-        "hi": "कल का काम: वो पल पकड़ना जब आप बिना छड़ी के फँसे। कितने पकड़े?"
+        "en": "Yesterday's task: notice the moments when you wanted to use the stick but could not. How many moments can you count?",
+        "hi": "कल का काम: वो पल पकड़ना जब आपका छड़ी उठाने का मन हुआ पर आप नहीं उठा सकते थे। ऐसे कितने पल गिन सकते हैं?"
       },
       "options": [
-        { "key": "a", "text": { "en": "None, it was a quiet day", "hi": "कोई नहीं, दिन शांत था" }, "rung": null },
-        { "key": "b", "text": { "en": "One or two", "hi": "एक या दो" }, "rung": null },
-        { "key": "c", "text": { "en": "Three or more", "hi": "तीन या ज़्यादा" }, "rung": null },
-        { "key": "d", "text": { "en": "I forgot to notice", "hi": "ध्यान देना भूल गया/गई" }, "rung": null }
+        {
+          "key": "a",
+          "text": {
+            "en": "None, it was a quiet day",
+            "hi": "कोई नहीं, दिन शांत था"
+          },
+          "rung": null
+        },
+        {
+          "key": "b",
+          "text": {
+            "en": "One or two",
+            "hi": "एक या दो"
+          },
+          "rung": null
+        },
+        {
+          "key": "c",
+          "text": {
+            "en": "Three or more",
+            "hi": "तीन या ज़्यादा"
+          },
+          "rung": null
+        },
+        {
+          "key": "d",
+          "text": {
+            "en": "I forgot to notice",
+            "hi": "ध्यान देना भूल गया/गई"
+          },
+          "rung": null
+        }
       ]
     },
     {
       "id": "s2-checkin-note",
       "type": "reflection",
       "prompt": {
-        "en": "Write down the clearest one. What did the child do, and what did you feel like doing?",
-        "hi": "सबसे साफ़ वाला लिखिए। बच्चे ने क्या किया, और आपका क्या करने का मन हुआ?"
+        "en": "Write down the clearest one. What did the child do? And if you had full freedom, what would you have done?",
+        "hi": "सबसे साफ़ वाला लिखिए। बच्चे ने क्या किया? और अगर आपको पूरी आज़ादी होती, तो आप क्या करते?"
       },
-      "starter": { "en": "Yesterday, ", "hi": "कल, " },
-      "placeholder": { "en": "Yesterday, during lunch break, Sohail pushed Ayaan off the bench. I felt like…", "hi": "कल, लंच ब्रेक में, सोहेल ने अयान को बेंच से धक्का दिया। मेरा मन हुआ…" },
+      "starter": {
+        "en": "Yesterday, ",
+        "hi": "कल, "
+      },
+      "placeholder": {
+        "en": "Yesterday, during lunch break, Sohail pushed Ayaan off the bench. If I had the freedom, I would have…",
+        "hi": "कल, लंच ब्रेक में, सोहेल ने अयान को बेंच से धक्का दिया। मेरा मन हुआ…"
+      },
       "min_chars": 50
     },
     {
       "id": "s2-scene",
       "type": "scene",
       "image": "classroom-disturb",
-      "eyebrow": { "en": "A thought experiment", "hi": "एक सोच का प्रयोग" },
+      "eyebrow": {
+        "en": "Imagine this",
+        "hi": "एक सोच का प्रयोग"
+      },
       "text": {
-        "en": "Imagine the law changed back tomorrow. Hitting is allowed again. Class 4, after lunch. Mohit has thrown a chalk piece at Priya for the second time this week. You have the stick in the drawer.",
+        "en": "Imagine the law changes back tomorrow. Hitting is allowed again. Class 4, after lunch. Mohit has thrown a piece of chalk at Priya for the second time this week. The stick is in your drawer.",
         "hi": "सोचिए कल क़ानून वापस बदल जाए। मारना फिर से जायज़ हो। क्लास 4, लंच के बाद। मोहित ने इस हफ़्ते दूसरी बार प्रिया पर चॉक फेंकी है। आपकी दराज़ में छड़ी है।"
       },
-      "prompt": { "en": "You hit him on the palm, twice. What happens over the next month?", "hi": "आप उसकी हथेली पर दो बार मारते हैं। अगले एक महीने में क्या होता है?" }
+      "prompt": {
+        "en": "You hit him on the palm, twice. What happens over the next month?",
+        "hi": "आप उसकी हथेली पर दो बार मारते हैं। अगले एक महीने में क्या होता है?"
+      }
     },
     {
       "id": "s2-predict",
       "type": "choice",
       "kind": "poll",
-      "question": { "en": "Your honest prediction:", "hi": "आपका सच्चा अनुमान:" },
+      "question": {
+        "en": "What do you honestly expect?",
+        "hi": "आपका सच्चा अनुमान:"
+      },
       "options": [
-        { "key": "a", "text": { "en": "He stops throwing things. The stick works.", "hi": "वो चीज़ें फेंकना बंद कर देता है। छड़ी काम करती है।" }, "next": "s2-cons-a", "rung": null },
-        { "key": "b", "text": { "en": "He stops when I am looking, and does it when I am not.", "hi": "जब मैं देख रहा/रही हूँ तब रुकता है, और जब नहीं देख रहा/रही, तब करता है।" }, "next": "s2-cons-b", "rung": null },
-        { "key": "c", "text": { "en": "He gets angrier and finds a new way to trouble Priya.", "hi": "वो और ग़ुस्सा होता है और प्रिया को परेशान करने का नया तरीका ढूँढता है।" }, "next": "s2-cons-c", "rung": null }
+        {
+          "key": "a",
+          "text": {
+            "en": "He stops throwing things. The stick works.",
+            "hi": "वो चीज़ें फेंकना बंद कर देता है। छड़ी काम करती है।"
+          },
+          "next": "s2-cons-a",
+          "rung": null
+        },
+        {
+          "key": "b",
+          "text": {
+            "en": "He stops when I am watching, and does it again when I am not.",
+            "hi": "जब मैं देख रहा/रही हूँ तब रुकता है, और जब नहीं देख रहा/रही, तब करता है।"
+          },
+          "next": "s2-cons-b",
+          "rung": null
+        },
+        {
+          "key": "c",
+          "text": {
+            "en": "He becomes angrier and finds a new way to trouble Priya.",
+            "hi": "वो और ग़ुस्सा होता है और प्रिया को परेशान करने का नया तरीका ढूँढता है।"
+          },
+          "next": "s2-cons-c",
+          "rung": null
+        }
       ]
     },
     {
@@ -58,7 +127,7 @@
       "outcome": "continue",
       "next": "s2-evidence",
       "text": {
-        "en": "That is what most of us were taught to expect, and for a day or two it even looks true: Mohit keeps his hands on the desk. The studies that followed thousands of children for years tell a different story about the month after, and the year after. Let us look.",
+        "en": "That is what most of us were taught to expect, and for a day or two it even looks true: Mohit keeps his hands on the desk. But the studies that followed thousands of children for many years tell a different story about the next month, and the next year. Let us look.",
         "hi": "हममें से ज़्यादातर को यही उम्मीद करना सिखाया गया, और एक-दो दिन यह सच भी लगता है: मोहित हाथ डेस्क पर रखता है। लेकिन जिन अध्ययनों ने हज़ारों बच्चों को सालों तक देखा, वे अगले महीने और अगले साल की अलग कहानी बताते हैं। चलिए देखते हैं।"
       }
     },
@@ -68,7 +137,7 @@
       "outcome": "continue",
       "next": "s2-evidence",
       "text": {
-        "en": "You already know the pattern. Mohit learned exactly one thing: do not throw chalk when the teacher is looking. He did not learn why throwing chalk is wrong, or what to do with his anger at Priya. The research agrees with you, and shows why.",
+        "en": "You already know the pattern. Mohit learned exactly one thing: do not throw chalk when the teacher is watching. He did not learn why throwing chalk is wrong, or what to do with his anger at Priya. The research agrees with you, and shows why.",
         "hi": "आप पैटर्न पहले से जानते हैं। मोहित ने सिर्फ़ एक चीज़ सीखी: जब टीचर देख रही हो तब चॉक मत फेंको। उसने यह नहीं सीखा कि चॉक फेंकना ग़लत क्यों है, या प्रिया पर अपने ग़ुस्से का क्या करे। रिसर्च आपसे सहमत है, और बताती है क्यों।"
       }
     },
@@ -78,7 +147,7 @@
       "outcome": "continue",
       "next": "s2-evidence",
       "text": {
-        "en": "This is the outcome the long studies find most often. Being hit teaches a child that the bigger person settles things with force, and Mohit is bigger than Priya. Next time it is a shove behind the toilet block, where no teacher is. The research shows why.",
+        "en": "This is what the long studies find most often. Being hit teaches a child that the bigger person settles things with force, and Mohit is bigger than Priya. Next time it is a push behind the toilet block, where no teacher can see. The research shows why.",
         "hi": "लंबे अध्ययनों में यही नतीजा सबसे ज़्यादा मिलता है। मार खाने से बच्चा सीखता है कि बड़ा आदमी ताक़त से बात निपटाता है, और मोहित प्रिया से बड़ा है। अगली बार टॉयलेट ब्लॉक के पीछे धक्का, जहाँ कोई टीचर नहीं। रिसर्च बताती है क्यों।"
       }
     },
@@ -86,9 +155,12 @@
       "id": "s2-evidence",
       "type": "nugget",
       "image": "map",
-      "title": { "en": "160,000 children, 75 studies, one answer", "hi": "1,60,000 बच्चे, 75 अध्ययन, एक जवाब" },
+      "title": {
+        "en": "160,000 children, 75 studies, one answer",
+        "hi": "1,60,000 बच्चे, 75 अध्ययन, एक जवाब"
+      },
       "text": {
-        "en": "In 2016 two researchers put together every good study on hitting children they could find: 75 studies, about 160,000 children, 13 countries, over 50 years. They were looking for the thing every parent and teacher who hits believes: that it makes children behave.\n\nThey did not find it. Hitting was not linked to better behaviour, not even in the short term. It was linked to more aggression, more defiance, and more anxiety later on. A 2025 review checked whether poorer countries were different. They were not: negative results on 16 of 19 measures, positive on none.\n\nThe stick never did what we thought it did. It produced quiet, not learning.",
+        "en": "In 2016 two researchers collected every good study on hitting children they could find: 75 studies, about 160,000 children, 13 countries, more than 50 years. They were looking for the thing every parent and teacher who hits believes: that it makes children behave.\n\nThey did not find it. Hitting was not connected to better behaviour, not even for a short time. It was connected to more aggression, more defiance, and more anxiety later. In 2025 another review checked whether poorer countries were different. They were not: bad results on 16 of 19 measures, good results on none.\n\nThe stick never did what we thought it did. It produced silence, not learning.",
         "hi": "2016 में दो शोधकर्ताओं ने बच्चों को मारने पर जितने अच्छे अध्ययन मिले, सब इकट्ठे किए: 75 अध्ययन, क़रीब 1,60,000 बच्चे, 13 देश, 50 साल से ज़्यादा। वे वह चीज़ ढूँढ रहे थे जो हर मारने वाला माता-पिता और शिक्षक मानता है: कि इससे बच्चे सुधरते हैं।\n\nवह नहीं मिली। मारने का बेहतर व्यवहार से कोई संबंध नहीं था, थोड़े समय के लिए भी नहीं। संबंध था ज़्यादा आक्रामकता, ज़्यादा ज़िद, और बाद में ज़्यादा घबराहट से। 2025 की एक समीक्षा ने देखा कि क्या ग़रीब देश अलग हैं। नहीं थे: 19 में से 16 पैमानों पर नकारात्मक नतीजे, सकारात्मक किसी पर नहीं।\n\nछड़ी ने कभी वो नहीं किया जो हम सोचते थे। उसने चुप्पी पैदा की, सीख नहीं।"
       },
       "source": "Gershoff & Grogan-Kaylor, Journal of Family Psychology, 2016; Nature Human Behaviour, 2025"
@@ -96,20 +168,38 @@
     {
       "id": "s2-why-fear",
       "type": "why",
-      "title": { "en": "Why fear produces quiet, not learning", "hi": "डर से चुप्पी क्यों आती है, सीख क्यों नहीं" },
+      "title": {
+        "en": "Why fear produces silence, not learning",
+        "hi": "डर से चुप्पी क्यों आती है, सीख क्यों नहीं"
+      },
       "points": [
-        { "en": "A frightened child's brain is busy with one question: how do I not get hit? There is no room left for the question we wanted: why was that wrong?", "hi": "डरे हुए बच्चे का दिमाग़ एक ही सवाल में लगा है: मार कैसे न पड़े? उस सवाल के लिए जगह नहीं बचती जो हम चाहते थे: वो ग़लत क्यों था?" },
-        { "en": "So the lesson he actually learns is about you, not about the behaviour: she hits when she sees it. Solution: do not let her see.", "hi": "तो वह असल में आपके बारे में सीखता है, व्यवहार के बारे में नहीं: वो देखती है तो मारती है। हल: उसे दिखने मत दो।" },
-        { "en": "He also learns a bigger rule: the person with power uses force. He will use that rule on someone smaller than him.", "hi": "वह एक बड़ा नियम भी सीखता है: जिसके पास ताक़त है वो ज़ोर लगाता है। वह यह नियम अपने से छोटे पर इस्तेमाल करेगा।" },
-        { "en": "And some children, you have met them, decide that the beating is the price of the fun, pay it, and come back with a smirk.", "hi": "और कुछ बच्चे, आप उनसे मिले हैं, तय कर लेते हैं कि मार मज़े की क़ीमत है, क़ीमत चुकाते हैं, और मुस्कुराते हुए वापस आते हैं।" }
+        {
+          "en": "A frightened child's mind is busy with one question: how do I avoid being hit? There is no space left for the question we wanted him to ask: why was that wrong?",
+          "hi": "डरे हुए बच्चे का दिमाग़ एक ही सवाल में लगा है: मार कैसे न पड़े? उस सवाल के लिए जगह नहीं बचती जो हम चाहते थे: वो ग़लत क्यों था?"
+        },
+        {
+          "en": "So what he really learns is about you, not about the behaviour: she hits when she sees it. Solution: do not let her see.",
+          "hi": "तो वह असल में आपके बारे में सीखता है, व्यवहार के बारे में नहीं: वो देखती है तो मारती है। हल: उसे दिखने मत दो।"
+        },
+        {
+          "en": "He also learns a bigger rule: the person with power uses force. He will use that rule on someone smaller than himself.",
+          "hi": "वह एक बड़ा नियम भी सीखता है: जिसके पास ताक़त है वो ज़ोर लगाता है। वह यह नियम अपने से छोटे पर इस्तेमाल करेगा।"
+        },
+        {
+          "en": "And some children, you have met them, decide that the beating is the price of the fun. They pay it, and come back smiling.",
+          "hi": "और कुछ बच्चे, आप उनसे मिले हैं, तय कर लेते हैं कि मार मज़े की क़ीमत है, क़ीमत चुकाते हैं, और मुस्कुराते हुए वापस आते हैं।"
+        }
       ]
     },
     {
       "id": "s2-law",
       "type": "nugget",
-      "title": { "en": "What the law actually says", "hi": "क़ानून असल में क्या कहता है" },
+      "title": {
+        "en": "What the law actually says",
+        "hi": "क़ानून असल में क्या कहता है"
+      },
       "text": {
-        "en": "Section 17 of the Right to Education Act, 2009: no child shall be subjected to physical punishment or mental harassment. Both are punishable.\n\nThe part most teachers have not been told is the second half. The government's guidelines define mental harassment to include sarcasm, calling a child names, humiliating a child in front of others, and shaming. So \"I can't hit, but I can still shout and shame\" is not the rule. Shouting across the room and making a child stand as an example are covered too.\n\nThis is not a trap. It is a description of what works, written into law.",
+        "en": "Section 17 of the Right to Education Act, 2009: no child shall be given physical punishment or mental harassment. Both are punishable.\n\nThe part most teachers have not been told is the second half. The government's guidelines say mental harassment includes sarcasm, calling a child names, humiliating a child in front of others, and shaming. So \"I cannot hit, but I can still shout and shame\" is not the rule. Shouting across the room and making a child stand as an example are also covered.\n\nThis is not a trap. It is a description of what works, written into law.",
         "hi": "शिक्षा का अधिकार अधिनियम, 2009 की धारा 17: किसी भी बच्चे को शारीरिक दंड या मानसिक उत्पीड़न नहीं दिया जाएगा। दोनों दंडनीय हैं।\n\nजो हिस्सा ज़्यादातर शिक्षकों को नहीं बताया गया, वो दूसरा आधा है। सरकारी दिशानिर्देशों में मानसिक उत्पीड़न में ताना मारना, बच्चे को नाम से चिढ़ाना, दूसरों के सामने अपमानित करना और शर्मिंदा करना शामिल है। तो \"मार नहीं सकता, पर चिल्ला और शर्मिंदा तो कर सकता हूँ\" नियम नहीं है। पूरी क्लास के सामने चिल्लाना और बच्चे को मिसाल बनाकर खड़ा करना भी इसमें आता है।\n\nयह कोई जाल नहीं है। यह उस चीज़ का विवरण है जो काम करती है, क़ानून में लिखी हुई।"
       },
       "source": "RTE Act 2009, Sec. 17; NCPCR Guidelines for Eliminating Corporal Punishment in Schools; MHRD advisory 2014"
@@ -122,20 +212,47 @@
         "en": "Our hands were never tied. A tool that never worked was taken away. Strictness was not.",
         "hi": "हमारे हाथ कभी बंधे नहीं थे। एक औज़ार जो कभी काम नहीं करता था, वो हटाया गया। सख़्ती नहीं।"
       },
-      "attribution": { "en": "The one idea to carry out of this session", "hi": "इस सेशन से साथ ले जाने वाली एक बात" }
+      "attribution": {
+        "en": "The one idea to carry out of this session",
+        "hi": "इस सेशन से साथ ले जाने वाली एक बात"
+      }
     },
     {
       "id": "s2-sort",
       "type": "choice",
       "kind": "poll",
       "question": {
-        "en": "Quick check. A Class 1 child keeps standing on the bench. Which of these is still allowed, and works?",
+        "en": "Quick check. A Class 1 child keeps standing on the bench. Which of these is still allowed, and also works?",
         "hi": "जल्दी जाँच। क्लास 1 का बच्चा बार-बार बेंच पर खड़ा हो जाता है। इनमें से कौन सा अब भी जायज़ है, और काम करता है?"
       },
       "options": [
-        { "key": "a", "text": { "en": "\"Sit down or I'll tell your father tonight.\"", "hi": "\"बैठ जाओ वरना आज रात तुम्हारे पापा को बताऊँगी।\"" }, "next": "s2-sort-a", "rung": null },
-        { "key": "b", "text": { "en": "Walk over, lift him gently down, say \"Feet on the floor, like this,\" and stand beside him for the next minute.", "hi": "पास जाएँ, उसे धीरे से नीचे उतारें, कहें \"पैर ज़मीन पर, ऐसे,\" और अगले एक मिनट उसके पास खड़े रहें।" }, "next": "s2-sort-b", "rung": 2 },
-        { "key": "c", "text": { "en": "\"Everyone look at Golu, standing like a monkey again.\"", "hi": "\"सब गोलू को देखो, फिर बंदर की तरह खड़ा है।\"" }, "next": "s2-sort-c", "rung": null }
+        {
+          "key": "a",
+          "text": {
+            "en": "\"Sit down or I'll tell your father tonight.\"",
+            "hi": "\"बैठ जाओ वरना आज रात तुम्हारे पापा को बताऊँगी।\""
+          },
+          "next": "s2-sort-a",
+          "rung": null
+        },
+        {
+          "key": "b",
+          "text": {
+            "en": "Walk over, lift him gently down, say \"Feet on the floor, like this,\" and stand beside him for the next minute.",
+            "hi": "पास जाएँ, उसे धीरे से नीचे उतारें, कहें \"पैर ज़मीन पर, ऐसे,\" और अगले एक मिनट उसके पास खड़े रहें।"
+          },
+          "next": "s2-sort-b",
+          "rung": 2
+        },
+        {
+          "key": "c",
+          "text": {
+            "en": "\"Everyone look at Golu, standing like a monkey again.\"",
+            "hi": "\"सब गोलू को देखो, फिर बंदर की तरह खड़ा है।\""
+          },
+          "next": "s2-sort-c",
+          "rung": null
+        }
       ]
     },
     {
@@ -144,7 +261,7 @@
       "outcome": "rewind",
       "back_to": "s2-sort",
       "text": {
-        "en": "Allowed, but it is a loan against the father's belt, and a six-year-old cannot hold tonight in his head for the next four hours. He is back on the bench in ten minutes.",
+        "en": "Allowed, but it works only because of the father's belt at home. And a six-year-old cannot keep \"tonight\" in his mind for the next four hours. In ten minutes he is back on the bench.",
         "hi": "जायज़ है, पर यह पापा की बेल्ट के नाम पर उधार है, और छह साल का बच्चा अगले चार घंटे तक \"आज रात\" को दिमाग़ में नहीं रख सकता। दस मिनट में वो फिर बेंच पर है।"
       }
     },
@@ -155,7 +272,7 @@
       "next": "s2-sort-why",
       "image": "crouch-desk",
       "text": {
-        "en": "Yes. Allowed, calm, shows him what to do instead of what not to do, and your nearness does the rest. At six, proximity is the most powerful tool you own.",
+        "en": "Yes. Allowed, calm, and it shows him what to do instead of only what not to do. Standing close to him does the rest. At age six, standing close is the most powerful tool you have.",
         "hi": "हाँ। जायज़, शांत, उसे बताता है कि क्या करना है बजाय इसके कि क्या नहीं करना, और आपका पास होना बाक़ी काम कर देता है। छह साल की उम्र में, आपका पास होना आपका सबसे ताक़तवर औज़ार है।"
       }
     },
@@ -165,44 +282,71 @@
       "outcome": "rewind",
       "back_to": "s2-sort",
       "text": {
-        "en": "This is mental harassment under the guidelines, and it also fails: the class laughs, Golu has an audience, and tomorrow he climbs the bench to get it again.",
+        "en": "Under the guidelines this is mental harassment, and it also fails: the class laughs, Golu gets an audience, and tomorrow he climbs the bench to get the audience again.",
         "hi": "दिशानिर्देशों के अनुसार यह मानसिक उत्पीड़न है, और यह काम भी नहीं करता: क्लास हँसती है, गोलू को दर्शक मिल जाते हैं, और कल वो फिर दर्शकों के लिए बेंच पर चढ़ता है।"
       }
     },
     {
       "id": "s2-sort-why",
       "type": "why",
-      "title": { "en": "Three tests for anything you do", "hi": "आप जो भी करें, तीन जाँच" },
+      "title": {
+        "en": "Three tests for anything you do",
+        "hi": "आप जो भी करें, तीन जाँच"
+      },
       "points": [
-        { "en": "Does it show the child what to do, not only what to stop?", "hi": "क्या यह बच्चे को बताता है कि क्या करना है, सिर्फ़ क्या रोकना है नहीं?" },
-        { "en": "Does it work when you are not watching?", "hi": "क्या यह तब भी काम करता है जब आप देख नहीं रहे?" },
-        { "en": "Would you be comfortable if the child's mother were standing at the door?", "hi": "अगर बच्चे की माँ दरवाज़े पर खड़ी हो, तो क्या आप सहज रहेंगे?" }
+        {
+          "en": "Does it show the child what to do, not only what to stop doing?",
+          "hi": "क्या यह बच्चे को बताता है कि क्या करना है, सिर्फ़ क्या रोकना है नहीं?"
+        },
+        {
+          "en": "Does it work even when you are not watching?",
+          "hi": "क्या यह तब भी काम करता है जब आप देख नहीं रहे?"
+        },
+        {
+          "en": "Would you be comfortable if the child's mother were standing at the door?",
+          "hi": "अगर बच्चे की माँ दरवाज़े पर खड़ी हो, तो क्या आप सहज रहेंगे?"
+        }
       ]
     },
     {
       "id": "s2-reflect",
       "type": "reflection",
       "prompt": {
-        "en": "Most of us were hit at school ourselves. Think of one time. What did you learn from it at the time, and what do you think of it now?",
+        "en": "Most of us were hit at school ourselves. Remember one time. What did you learn from it then, and what do you think about it now?",
         "hi": "हममें से ज़्यादातर को स्कूल में ख़ुद मार पड़ी है। एक बार याद कीजिए। उस समय आपने उससे क्या सीखा, और अब उसके बारे में क्या सोचते हैं?"
       },
-      "starter": { "en": "When I was in Class ", "hi": "जब मैं क्लास " },
-      "placeholder": { "en": "When I was in Class 6, our maths sir…", "hi": "जब मैं क्लास 6 में था/थी, हमारे मैथ्स सर…" },
+      "starter": {
+        "en": "When I was in Class ",
+        "hi": "जब मैं क्लास "
+      },
+      "placeholder": {
+        "en": "When I was in Class 6, our maths sir…",
+        "hi": "जब मैं क्लास 6 में था/थी, हमारे मैथ्स सर…"
+      },
       "min_chars": 50
     },
     {
       "id": "s2-message",
       "type": "message",
-      "prompt": { "en": "Anything you disagree with in this session, or want to argue about? Say it here.", "hi": "इस सेशन में किसी बात से असहमत हैं, या बहस करना चाहते हैं? यहाँ कहिए।" },
-      "placeholder": { "en": "Optional", "hi": "वैकल्पिक" }
+      "prompt": {
+        "en": "Do you disagree with anything in this session? Say it here.",
+        "hi": "इस सेशन में किसी बात से असहमत हैं? यहाँ कहिए।"
+      },
+      "placeholder": {
+        "en": "Optional",
+        "hi": "वैकल्पिक"
+      }
     },
     {
       "id": "s2-task",
       "type": "task",
       "image": "notebook",
-      "title": { "en": "Today and tomorrow, in your class", "hi": "आज और कल, आपकी क्लास में" },
+      "title": {
+        "en": "Today and tomorrow, in your class",
+        "hi": "आज और कल, आपकी क्लास में"
+      },
       "text": {
-        "en": "Ask one student, privately, at a quiet moment: \"What makes a teacher worth listening to?\" Do not correct the answer. Write it down in one line. Tomorrow's session begins with what they said.",
+        "en": "Ask one student, privately, at a quiet moment: \"What kind of teacher do you feel like listening to?\" Do not correct the answer. Write it down in one line. Tomorrow's session begins with what they said.",
         "hi": "किसी एक बच्चे से, अकेले में, किसी शांत पल में पूछिए: \"कैसी टीचर की बात सुनने का मन करता है?\" जवाब को सुधारिए मत। एक लाइन में लिखिए। कल का सेशन उनके जवाब से शुरू होगा।"
       }
     },
@@ -210,9 +354,12 @@
       "id": "s2-complete",
       "type": "complete",
       "image": "coins",
-      "title": { "en": "Session 2 done", "hi": "सेशन 2 पूरा" },
+      "title": {
+        "en": "Session 2 done",
+        "hi": "सेशन 2 पूरा"
+      },
       "text": {
-        "en": "Tomorrow: the missing middle. Why being soft fails just as surely as the stick, and what sits between them.",
+        "en": "Tomorrow: the missing middle. Why being soft fails just as surely as the stick, and what lies between the two.",
         "hi": "कल: बीच की ग़ायब कड़ी। नरम होना छड़ी जितना ही क्यों नाकाम होता है, और इन दोनों के बीच क्या है।"
       }
     }

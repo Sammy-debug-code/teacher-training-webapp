@@ -72,8 +72,8 @@
       "type": "choice",
       "kind": "poll",
       "question": {
-        "en": "Be honest, only you see this. When a child keeps disturbing the class, what do you usually do first?",
-        "hi": "सच बताइए, यह सिर्फ़ आप देखेंगे। जब कोई बच्चा क्लास में बार-बार परेशान करता है, तो आप आमतौर पर सबसे पहले क्या करते हैं?"
+        "en": "Be honest. When a child keeps disturbing the class, what do you usually do first?",
+        "hi": "सच बताइए। जब कोई बच्चा क्लास में बार-बार परेशान करता है, तो आप आमतौर पर सबसे पहले क्या करते हैं?"
       },
       "options": [
         {
@@ -235,11 +235,11 @@
       },
       "points": [
         {
-          "en": "You moved early and small, before you were angry.",
+          "en": "You acted early, with a small step, before you became angry.",
           "hi": "आप ग़ुस्सा होने से पहले, जल्दी और छोटा क़दम उठाया।"
         },
         {
-          "en": "You corrected him privately, so there was no audience and nothing to perform for.",
+          "en": "You corrected him quietly, so the class was not watching and he had nobody to show off to.",
           "hi": "आपने उसे अकेले में टोका, तो कोई दर्शक नहीं था और दिखाने के लिए कुछ नहीं।"
         },
         {
@@ -247,7 +247,7 @@
           "hi": "आपने वादा किया और निभाया। आठ साल का बच्चा ऐसे ही सीखता है कि आपकी बात का मतलब है।"
         },
         {
-          "en": "Shouting, the back of the class and the office are all bigger moves. Save them; most days you will not need them.",
+          "en": "Shouting, sending him to the back, and the office are all big steps. Keep them for later; most days you will not need them.",
           "hi": "चिल्लाना, क्लास के पीछे खड़ा करना और ऑफ़िस, सब बड़े क़दम हैं। इन्हें बचाकर रखिए; ज़्यादातर दिन इनकी ज़रूरत नहीं पड़ेगी।"
         }
       ]
@@ -256,7 +256,7 @@
       "id": "s1-ladder",
       "type": "ladder",
       "title": {
-        "en": "The ladder",
+        "en": "The ladder: five steps",
         "hi": "सीढ़ी"
       },
       "highlight": 2,
@@ -279,7 +279,7 @@
             "hi": "छोटा जवाब"
           },
           "line": {
-            "en": "A look, a step closer, a quiet word, a choice",
+            "en": "A look, one step closer, a quiet word, a choice",
             "hi": "एक नज़र, एक क़दम पास, एक धीमी बात, एक विकल्प"
           }
         },
@@ -312,7 +312,7 @@
             "hi": "ऊपर भेजो"
           },
           "line": {
-            "en": "Principal or parents — for safety, and for patterns, not for one bad day",
+            "en": "Principal or parents. For safety, and when the same thing keeps happening. Not for one bad day",
             "hi": "प्रिंसिपल या माता-पिता — सुरक्षा के लिए, और बार-बार होने पर, एक बुरे दिन के लिए नहीं"
           }
         }
@@ -322,11 +322,11 @@
       "id": "s1-ladder-nugget",
       "type": "nugget",
       "title": {
-        "en": "Most teachers only own rung 5",
+        "en": "Most teachers use only step 5",
         "hi": "ज़्यादातर शिक्षकों के पास सिर्फ़ पाँचवीं सीढ़ी है"
       },
       "text": {
-        "en": "Think of the ladder as five tools. Right now most of us reach straight for the top one, the office or the parents, because it is the only one we were ever shown. The next seven sessions put the other four in your hands, one at a time.\n\nThe ladder is not soft. A teacher who uses rungs one to four well is stricter than one who shouts, because the children learn that every single time, something predictable happens.",
+        "en": "Think of the ladder as five tools. Right now most of us pick up the top one straight away, the office or the parents, because it is the only one anyone showed us. The next seven sessions put the other four tools in your hands, one at a time.\n\nThe ladder is not soft. A teacher who uses steps one to four well is stricter than a teacher who shouts, because the children learn that every single time, the same thing happens.",
         "hi": "इस सीढ़ी को पाँच औज़ार समझिए। अभी हम में से ज़्यादातर सीधे सबसे ऊपर वाला उठाते हैं, ऑफ़िस या माता-पिता, क्योंकि हमें सिर्फ़ वही दिखाया गया था। अगले सात सेशन बाक़ी चार औज़ार एक-एक करके आपके हाथ में देंगे।\n\nयह सीढ़ी नरम नहीं है। जो शिक्षक पहली से चौथी सीढ़ी अच्छे से इस्तेमाल करता है, वो चिल्लाने वाले से ज़्यादा सख़्त है, क्योंकि बच्चे सीखते हैं कि हर बार कुछ न कुछ तय होकर होता है।"
       },
       "image": "ladder"
@@ -336,7 +336,7 @@
       "type": "choice",
       "kind": "rating",
       "question": {
-        "en": "Right now, how confident do you feel handling misbehaviour without shouting or sending the child out?",
+        "en": "Right now, how confident do you feel about handling misbehaviour without shouting or sending the child out?",
         "hi": "अभी, बिना चिल्लाए या बच्चे को बाहर भेजे, शरारत संभालने में आप कितना आत्मविश्वास महसूस करते हैं?"
       },
       "options": [
@@ -386,7 +386,7 @@
       "id": "s1-reflect",
       "type": "reflection",
       "prompt": {
-        "en": "Think of one moment last week when a child misbehaved and you felt stuck: you could not hit, could not shout, and did not know what else to do. What happened, and what did you do?",
+        "en": "Think of one moment last week when a child misbehaved and you felt stuck: you could not hit, you could not shout, and you did not know what else to do. What happened, and what did you do?",
         "hi": "पिछले हफ़्ते का एक पल सोचिए जब किसी बच्चे ने शरारत की और आप फँस गए: न मार सकते थे, न चिल्ला सकते थे, और समझ नहीं आया कि क्या करें। क्या हुआ था, और आपने क्या किया?"
       },
       "placeholder": {
@@ -419,7 +419,7 @@
         "hi": "इस हफ़्ते, आपकी क्लास में"
       },
       "text": {
-        "en": "Change nothing yet. Just notice. Today and tomorrow, catch one moment where you felt stuck without the stick, and write it in one line in your notebook here. Tomorrow's session starts by asking you about it.",
+        "en": "Do not change anything yet. Just notice. Today and tomorrow, catch one moment when you wanted to use the stick but could not. Write it in one line in your notebook here. Tomorrow's session starts by asking about it.",
         "hi": "अभी कुछ मत बदलिए। बस ध्यान दीजिए। आज और कल, एक ऐसा पल पकड़िए जब आप बिना छड़ी के फँसे हुए महसूस करें, और यहाँ अपनी नोटबुक में एक लाइन में लिखिए। कल का सेशन इसी के बारे में पूछकर शुरू होगा।"
       },
       "image": "notebook"
