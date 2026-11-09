@@ -1,0 +1,184 @@
+{
+  "id": "s7",
+  "n": 7,
+  "title": { "en": "Repair and relationship" },
+  "minutes": 15,
+  "cards": [
+    {
+      "id": "s7-checkin",
+      "type": "reflection",
+      "prompt": {
+        "en": "Yesterday's task: use the consequence you designed, in one quiet sentence. Did the moment come? What did the child do in the ten minutes after?",
+        "hi": "कल का काम: जो नतीजा आपने बनाया, एक धीमे वाक्य में इस्तेमाल करना। क्या वो पल आया? अगले दस मिनट में बच्चे ने क्या किया?"
+      },
+      "starter": { "en": "It happened when ", "hi": "यह तब हुआ जब " },
+      "placeholder": { "en": "It happened when Nitin snatched Pooja's eraser. I said my sentence. He gave it back, sulked for two minutes, then…", "hi": "यह तब हुआ जब नितिन ने पूजा का रबर छीना। मैंने अपना वाक्य कहा। उसने वापस दिया, दो मिनट मुँह फुलाया, फिर…" },
+      "min_chars": 50
+    },
+    {
+      "id": "s7-intro",
+      "type": "nugget",
+      "image": "staffroom",
+      "title": { "en": "The step everyone skips", "hi": "वो क़दम जो सब छोड़ देते हैं" },
+      "text": {
+        "en": "The consequence is over. The child did what was asked. Most of us stop there, and so does the child's memory of it: a teacher who made me do something.\n\nStep 4 of the ladder is the two minutes afterwards. Not a lecture, not a second telling-off, not \"I hope you have learned your lesson\". A short conversation that does one thing: it tells the child that the problem was the behaviour, and that you are still on his side.\n\nThis is where relationship is actually built. Not in the warm moments, which any teacher can have with an easy child, but in the moment after a hard one.",
+        "hi": "नतीजा ख़त्म। बच्चे ने वो किया जो कहा गया। हममें से ज़्यादातर यहीं रुक जाते हैं, और बच्चे की याददाश्त भी: एक टीचर जिसने मुझसे कुछ करवाया।\n\nसीढ़ी का क़दम 4 बाद के दो मिनट हैं। भाषण नहीं, दूसरी डाँट नहीं, \"उम्मीद है सबक़ मिल गया\" नहीं। एक छोटी बातचीत जो एक काम करती है: बच्चे को बताती है कि समस्या व्यवहार था, और आप अब भी उसके साथ हैं।\n\nरिश्ता असल में यहीं बनता है। अपनेपन के पलों में नहीं, जो कोई भी टीचर आसान बच्चे के साथ बिता सकता है, बल्कि कठिन पल के बाद वाले पल में।"
+      }
+    },
+    {
+      "id": "s7-scene",
+      "type": "scene",
+      "image": "crouch-desk",
+      "eyebrow": { "en": "Class 4 · break time · yesterday's Aman", "hi": "क्लास 4 · ब्रेक · कल वाला अमन" },
+      "text": {
+        "en": "Aman put Sana's copies back and sat at the other bench. Now it is break. You said \"come and talk to me\". He is standing at your desk, looking at the floor, waiting for the shouting he thinks is coming.",
+        "hi": "अमन ने सना की कॉपियाँ वापस रखीं और दूसरी बेंच पर बैठा। अब ब्रेक है। आपने कहा था \"मुझसे बात करने आना\"। वो आपकी डेस्क पर खड़ा है, फ़र्श देखता हुआ, उस डाँट का इंतज़ार करता हुआ जो उसे लगता है आने वाली है।"
+      },
+      "prompt": { "en": "What are the first words out of your mouth?", "hi": "आपके मुँह से पहले शब्द क्या निकलते हैं?" }
+    },
+    {
+      "id": "s7-choice",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "Your opening line:", "hi": "आपकी पहली लाइन:" },
+      "options": [
+        { "key": "a", "text": { "en": "\"Do you know how much you hurt Sana? She cried for ten minutes. How would you feel if someone did that to you? I expected better from you.\"", "hi": "\"पता है तुमने सना को कितना दुख पहुँचाया? वो दस मिनट रोई। अगर कोई तुम्हारे साथ ऐसा करे तो कैसा लगेगा? मुझे तुमसे बेहतर की उम्मीद थी।\"" }, "next": "s7-c-a", "rung": 0 },
+        { "key": "b", "text": { "en": "\"Sit. What happened at the bench?\" Then listen, without interrupting, until he has finished.", "hi": "\"बैठो। बेंच पर क्या हुआ था?\" फिर बिना टोके सुनिए, जब तक वो ख़त्म न कर ले।" }, "next": "s7-c-b", "rung": 4 },
+        { "key": "c", "text": { "en": "\"It's okay, Aman, I know you didn't mean it. Just don't do it again, okay? Go and play.\" A pat on the shoulder and let him go.", "hi": "\"कोई बात नहीं अमन, मुझे पता है तुमने जानबूझकर नहीं किया। बस दोबारा मत करना, ठीक है? जाओ खेलो।\" कंधे पर थपकी और उसे जाने दें।" }, "next": "s7-c-c", "rung": 0 },
+        { "key": "d", "text": { "en": "\"You know what you did. I want it written down, in your own words, one page, and signed by your father tomorrow. Go.\"", "hi": "\"तुम्हें पता है तुमने क्या किया। मुझे यह लिखा हुआ चाहिए, तुम्हारे अपने शब्दों में, एक पन्ना, और कल तुम्हारे पापा के दस्तख़त के साथ। जाओ।\"" }, "next": "s7-c-d", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s7-c-a",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s7-choice",
+      "text": {
+        "en": "He says \"sorry Ma'am\" to the floor in the voice children use to make lectures stop. You have told him how he should feel, which never works, and he has learned nothing about shared benches. The consequence already happened; this was a second punishment.",
+        "hi": "वो फ़र्श से उस आवाज़ में \"सॉरी मैम\" कहता है जो बच्चे भाषण रुकवाने के लिए इस्तेमाल करते हैं। आपने उसे बताया कि उसे कैसा महसूस करना चाहिए, जो कभी काम नहीं करता, और उसने साझा बेंच के बारे में कुछ नहीं सीखा। नतीजा हो चुका था; यह दूसरी सज़ा थी।"
+      }
+    },
+    {
+      "id": "s7-c-b",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s7-script",
+      "text": {
+        "en": "He is surprised. Nobody asks. It comes out in pieces: Sana had moved his bag, it was the third time, he had asked her once. Now you know something you did not know, and he knows you wanted to know. The rest of the conversation is two more questions. Next card.",
+        "hi": "वो हैरान है। कोई पूछता नहीं। टुकड़ों में निकलता है: सना ने उसका बैग हटाया था, तीसरी बार था, उसने एक बार कहा था। अब आप कुछ ऐसा जानते हैं जो नहीं जानते थे, और वो जानता है कि आप जानना चाहते थे। बाक़ी बातचीत दो और सवाल हैं। अगला कार्ड।"
+      }
+    },
+    {
+      "id": "s7-c-c",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s7-choice",
+      "text": {
+        "en": "Kind, quick, and empty. He learned that \"come and talk to me\" means nothing, so next time he will not worry about it. Sana's side of it was never heard, his side was never heard, and \"don't do it again\" gave him nothing to do instead.",
+        "hi": "दयालु, जल्दी, और ख़ाली। उसने सीखा कि \"मुझसे बात करने आना\" का कोई मतलब नहीं, तो अगली बार वो इसकी फ़िक्र नहीं करेगा। सना का पक्ष कभी नहीं सुना गया, उसका पक्ष कभी नहीं सुना गया, और \"दोबारा मत करना\" ने उसे करने को कुछ नहीं दिया।"
+      }
+    },
+    {
+      "id": "s7-c-d",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s7-choice",
+      "text": {
+        "en": "This is the letter again, with a father's signature added. It fails all four tests from yesterday, and it tells Aman that the conversation he was called for was a trap.",
+        "hi": "यह फिर वही माफ़ीनामा है, पापा के दस्तख़त के साथ। यह कल की चारों जाँच में फ़ेल है, और अमन को बताता है कि जिस बातचीत के लिए उसे बुलाया गया था, वो एक जाल थी।"
+      }
+    },
+    {
+      "id": "s7-script",
+      "type": "why",
+      "title": { "en": "The two-minute conversation, three questions", "hi": "दो मिनट की बातचीत, तीन सवाल" },
+      "points": [
+        { "en": "\"What happened?\" Then silence. Let him tell it. You are not deciding guilt; you already gave the consequence. You are listening.", "hi": "\"क्या हुआ था?\" फिर चुप्पी। उसे बताने दीजिए। आप दोष तय नहीं कर रहे; नतीजा आप दे चुके। आप सुन रहे हैं।" },
+        { "en": "\"What will you do next time she moves your bag?\" Wait for a real answer. \"Tell you, Ma'am\" is a real answer. Help him find a second one: \"Or move it back and say, this is mine.\"", "hi": "\"अगली बार वो तुम्हारा बैग हटाए तो क्या करोगे?\" असली जवाब का इंतज़ार कीजिए। \"आपको बताऊँगा, मैम\" असली जवाब है। दूसरा ढूँढने में मदद कीजिए: \"या वापस रख देना और कहना, यह मेरा है।\"" },
+        { "en": "\"Good. Go and play.\" That is the end. No summary, no warning, no \"I'm watching you\". The last thing he hears from you is good.", "hi": "\"अच्छा। जाओ खेलो।\" यही अंत है। कोई सारांश नहीं, कोई चेतावनी नहीं, कोई \"मैं देख रही हूँ\" नहीं। आपसे उसे जो आख़िरी बात सुनाई देती है, वो अच्छा है।" }
+      ]
+    },
+    {
+      "id": "s7-sorry",
+      "type": "nugget",
+      "title": { "en": "About saying sorry", "hi": "सॉरी कहने के बारे में" },
+      "text": {
+        "en": "Notice that nobody made Aman say sorry. A forced sorry is a lie we make children tell. It teaches them that the word ends trouble, not that anything is repaired.\n\nWhat works better is giving him the chance. At the end of the conversation: \"Sana's still upset. Is there anything you want to do about that?\" Some children will go and say it, in their own words, and mean it. Some will fix it another way: a shared pencil, sitting next to her again tomorrow. Some will do nothing today. All three are better than a sorry said to the floor on command.\n\nFor the youngest children, Nursery to Class 2, saying sorry with you beside them, holding their hand, is fine. They are learning the word. Above that age, they are learning whether it means anything.",
+        "hi": "ध्यान दीजिए कि किसी ने अमन से सॉरी नहीं कहलवाया। ज़बरदस्ती का सॉरी एक झूठ है जो हम बच्चों से बुलवाते हैं। यह उन्हें सिखाता है कि यह शब्द परेशानी ख़त्म करता है, यह नहीं कि कुछ सुधरा है।\n\nबेहतर है उसे मौक़ा देना। बातचीत के अंत में: \"सना अभी भी दुखी है। इस बारे में कुछ करना चाहते हो?\" कुछ बच्चे जाकर कहेंगे, अपने शब्दों में, और सच में मतलब रखेंगे। कुछ दूसरे तरीके से ठीक करेंगे: एक साझा पेंसिल, कल फिर उसके पास बैठना। कुछ आज कुछ नहीं करेंगे। तीनों उस सॉरी से बेहतर हैं जो हुक्म पर फ़र्श को कहा जाए।\n\nसबसे छोटे बच्चों के लिए, नर्सरी से क्लास 2 तक, आपके पास खड़े होकर, हाथ थामे सॉरी कहना ठीक है। वे शब्द सीख रहे हैं। उससे ऊपर, वे सीख रहे हैं कि इसका कोई मतलब है या नहीं।"
+      }
+    },
+    {
+      "id": "s7-relationship",
+      "type": "nugget",
+      "image": "map",
+      "title": { "en": "Relationship is not friendliness", "hi": "रिश्ता दोस्ती नहीं है" },
+      "text": {
+        "en": "When teachers hear \"build a relationship with the child\", most of us think: be nicer. Chat with him. Let a few things go. And then, as the volleyball story showed, the child pushes harder, and we conclude that relationship does not work with children like him.\n\nIt was never friendliness. A child trusts the teacher whose reactions he can predict. The same rule every day. The same calm voice when he breaks it. The consequence that fits, and then it is over. And, underneath all of it, the clear sense that she wants me to do well, and notices when I do.\n\nThat last part is the piece we forget. Lemov calls it Precise Praise: not \"good boy\", but \"Aman, you asked Sana before you moved her bag. That is exactly it.\" Said quietly, the day after, when he did not expect you to be looking. One sentence like that is worth ten consequences.",
+        "hi": "जब शिक्षक सुनते हैं \"बच्चे से रिश्ता बनाओ\", तो हममें से ज़्यादातर सोचते हैं: और अच्छे बनो। उससे बातें करो। कुछ चीज़ें जाने दो। और फिर, जैसा वॉलीबॉल की कहानी ने दिखाया, बच्चा और ज़ोर से धक्का देता है, और हम नतीजा निकालते हैं कि ऐसे बच्चों के साथ रिश्ता काम नहीं करता।\n\nयह कभी दोस्ती थी ही नहीं। बच्चा उस टीचर पर भरोसा करता है जिसकी प्रतिक्रिया वो पहले से जान सकता है। हर दिन वही नियम। तोड़ने पर वही शांत आवाज़। नतीजा जो फ़िट हो, और फिर बात ख़त्म। और इन सबके नीचे, यह साफ़ एहसास कि वो चाहती है मैं अच्छा करूँ, और ध्यान देती है जब मैं करता हूँ।\n\nवो आख़िरी हिस्सा हम भूल जाते हैं। लेमोव इसे Precise Praise कहते हैं: \"गुड बॉय\" नहीं, बल्कि \"अमन, तुमने सना का बैग हटाने से पहले उससे पूछा। बिल्कुल यही।\" धीरे से, अगले दिन, जब उसे उम्मीद नहीं थी कि आप देख रहे हैं। ऐसा एक वाक्य दस नतीजों के बराबर है।"
+      },
+      "source": "Lemov, Teach Like a Champion: Precise Praise, Positive Framing"
+    },
+    {
+      "id": "s7-ratio",
+      "type": "choice",
+      "kind": "poll",
+      "question": {
+        "en": "Think of the child in your class you correct most often. In a normal day, how many times do you say something positive to that child, by name, for something specific?",
+        "hi": "अपनी क्लास के उस बच्चे के बारे में सोचिए जिसे आप सबसे ज़्यादा टोकते हैं। एक सामान्य दिन में, आप उस बच्चे से नाम लेकर, किसी ख़ास चीज़ के लिए, कितनी बार कुछ अच्छा कहते हैं?"
+      },
+      "options": [
+        { "key": "a", "text": { "en": "Honestly, almost never. He gives me no reason.", "hi": "सच कहूँ तो लगभग कभी नहीं। वो मुझे कोई वजह नहीं देता।" }, "rung": null },
+        { "key": "b", "text": { "en": "Once or twice, when I remember.", "hi": "एक-दो बार, जब याद रहे।" }, "rung": null },
+        { "key": "c", "text": { "en": "A few times. I try to catch him doing something right.", "hi": "कुछ बार। मैं उसे कुछ सही करते पकड़ने की कोशिश करती/करता हूँ।" }, "rung": null },
+        { "key": "d", "text": { "en": "I had not thought about it until now.", "hi": "अब तक इस बारे में सोचा ही नहीं था।" }, "rung": null }
+      ]
+    },
+    {
+      "id": "s7-ratio-why",
+      "type": "why",
+      "title": { "en": "The child you correct most hears you least", "hi": "जिस बच्चे को आप सबसे ज़्यादा टोकते हैं, वो आपको सबसे कम सुनता है" },
+      "points": [
+        { "en": "For the hardest child in the room, almost every sentence from you is a correction. From his side, you are the person who only notices what he does wrong.", "hi": "कमरे के सबसे कठिन बच्चे के लिए, आपका लगभग हर वाक्य टोक है। उसकी तरफ़ से, आप वो इंसान हैं जो सिर्फ़ उसकी ग़लतियाँ देखता है।" },
+        { "en": "Teachers who turn such children around do one thing differently: they look for the moment he gets it right and name it, specifically, more often than they correct him. Researchers put the working ratio at about four to one.", "hi": "जो शिक्षक ऐसे बच्चों को बदल देते हैं, वे एक चीज़ अलग करते हैं: वे उस पल को ढूँढते हैं जब वो सही करता है और उसे ख़ास तौर पर नाम देते हैं, टोकने से ज़्यादा बार। शोधकर्ता काम करने वाला अनुपात क़रीब चार और एक बताते हैं।" },
+        { "en": "\"He gives me no reason\" is never true for a whole day. He sat down once without being told. He shared something. He was quiet for four minutes. Start there.", "hi": "\"वो कोई वजह नहीं देता\" पूरे दिन के लिए कभी सच नहीं होता। वो एक बार बिना कहे बैठा। उसने कुछ बाँटा। वो चार मिनट चुप रहा। वहीं से शुरू कीजिए।" }
+      ]
+    },
+    {
+      "id": "s7-reflect",
+      "type": "reflection",
+      "prompt": {
+        "en": "Name the child you correct most often. Write two specific things that child did right in the last week, however small. Then write the exact sentence you will say to him or her tomorrow about one of them.",
+        "hi": "उस बच्चे का नाम लिखिए जिसे आप सबसे ज़्यादा टोकते हैं। पिछले हफ़्ते उसने जो दो ख़ास चीज़ें सही कीं, लिखिए, चाहे कितनी छोटी हों। फिर वो वाक्य ठीक-ठीक लिखिए जो आप कल उनमें से एक के बारे में उससे कहेंगे।"
+      },
+      "starter": { "en": "The child: ", "hi": "बच्चा: " },
+      "placeholder": { "en": "The child: Faizan. He helped carry the charts on Thursday. He finished his Do Now on Friday without being told. Tomorrow: \"Faizan, Friday you started your Do Now by yourself. I noticed.\"", "hi": "बच्चा: फ़ैज़ान। गुरुवार को उसने चार्ट उठाने में मदद की। शुक्रवार को बिना कहे Do Now पूरा किया। कल: \"फ़ैज़ान, शुक्रवार को तुमने Do Now ख़ुद शुरू किया। मैंने देखा।\"" },
+      "min_chars": 70
+    },
+    {
+      "id": "s7-message",
+      "type": "message",
+      "prompt": { "en": "Anything you want to tell the training team? Tomorrow is the last session.", "hi": "ट्रेनिंग टीम को कुछ बताना है? कल आख़िरी सेशन है।" },
+      "placeholder": { "en": "Optional", "hi": "वैकल्पिक" }
+    },
+    {
+      "id": "s7-task",
+      "type": "task",
+      "image": "notebook",
+      "title": { "en": "Tomorrow, two things", "hi": "कल, दो चीज़ें" },
+      "text": {
+        "en": "First: say the sentence you just wrote to that child, quietly, at a moment he does not expect it. Second: have one repair conversation with any child you had friction with this week: what happened, what next time, go and play. Two minutes. The last session begins with how both went.",
+        "hi": "पहली: जो वाक्य आपने अभी लिखा, वो उस बच्चे से धीरे से, ऐसे पल में कहिए जिसकी उसे उम्मीद न हो। दूसरी: इस हफ़्ते जिस किसी बच्चे से खटपट हुई, उससे एक मरम्मत की बातचीत कीजिए: क्या हुआ था, अगली बार क्या, जाओ खेलो। दो मिनट। आख़िरी सेशन इसी से शुरू होगा कि दोनों कैसे गए।"
+      }
+    },
+    {
+      "id": "s7-complete",
+      "type": "complete",
+      "image": "coins",
+      "title": { "en": "Session 7 done", "hi": "सेशन 7 पूरा" },
+      "text": {
+        "en": "Tomorrow, the last one: Bethel's ladder. The five steps as this school's shared way of working, and two commitments from you.",
+        "hi": "कल, आख़िरी: बेथेल की सीढ़ी। पाँच क़दम इस स्कूल के साझा तरीके के रूप में, और आपकी ओर से दो वादे।"
+      }
+    }
+  ]
+}

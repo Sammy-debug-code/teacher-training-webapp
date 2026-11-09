@@ -1,0 +1,195 @@
+{
+  "id": "s8",
+  "n": 8,
+  "title": { "en": "Bethel's ladder" },
+  "minutes": 15,
+  "cards": [
+    {
+      "id": "s8-checkin",
+      "type": "reflection",
+      "prompt": {
+        "en": "Yesterday's two tasks: the specific praise, and one repair conversation. How did each go? What did the child's face do?",
+        "hi": "कल के दो काम: ख़ास तारीफ़, और एक मरम्मत की बातचीत। दोनों कैसे गए? बच्चे के चेहरे पर क्या आया?"
+      },
+      "starter": { "en": "The praise: ", "hi": "तारीफ़: " },
+      "placeholder": { "en": "The praise: I told Faizan I noticed his Do Now. He looked confused, then smiled and looked away. The repair conversation…", "hi": "तारीफ़: मैंने फ़ैज़ान से कहा कि मैंने उसका Do Now देखा। वो पहले उलझा, फिर मुस्कुराकर नज़र हटा ली। मरम्मत की बातचीत…" },
+      "min_chars": 60
+    },
+    {
+      "id": "s8-recap",
+      "type": "ladder",
+      "title": { "en": "The whole ladder, one more time", "hi": "पूरी सीढ़ी, एक बार फिर" },
+      "rungs": [
+        { "n": 1, "name": { "en": "Prevent", "hi": "रोकथाम" }, "line": { "en": "Routines for the gaps. Do Now. Be seen looking. Most trouble never starts.", "hi": "ख़ाली जगहों के लिए दिनचर्या। Do Now। देखते हुए दिखना। ज़्यादातर परेशानी शुरू ही नहीं होती।" } },
+        { "n": 2, "name": { "en": "Respond small", "hi": "छोटा जवाब" }, "line": { "en": "The look, walk closer, whole-class reminder, the quiet word, the named choice. No audience.", "hi": "नज़र, पास जाना, पूरी क्लास को याद दिलाना, धीमी बात, नाम लेकर विकल्प। कोई दर्शक नहीं।" } },
+        { "n": 3, "name": { "en": "A consequence that teaches", "hi": "सिखाने वाला नतीजा" }, "line": { "en": "Related, teaches, today, dignity. Calm, quick, small, consistent, then move on.", "hi": "जुड़ा, सिखाता, आज, सम्मान। शांत, जल्दी, छोटा, एक जैसा, फिर आगे।" } },
+        { "n": 4, "name": { "en": "Repair", "hi": "मरम्मत" }, "line": { "en": "What happened? What next time? Go and play. And catch them doing it right, four to one.", "hi": "क्या हुआ था? अगली बार क्या? जाओ खेलो। और उन्हें सही करते पकड़िए, चार और एक।" } },
+        { "n": 5, "name": { "en": "Escalate", "hi": "ऊपर भेजो" }, "line": { "en": "Principal or parents. For safety, and for patterns that steps 1 to 4 have not shifted in two weeks.", "hi": "प्रिंसिपल या माता-पिता। सुरक्षा के लिए, और उन पैटर्न के लिए जिन्हें क़दम 1 से 4 ने दो हफ़्ते में नहीं बदला।" } }
+      ]
+    },
+    {
+      "id": "s8-step5",
+      "type": "nugget",
+      "image": "office-bench",
+      "title": { "en": "When step 5 is right", "hi": "जब क़दम 5 सही है" },
+      "text": {
+        "en": "Step 5 is not a failure. There are two times it is exactly right.\n\nSafety. A child is hurt, or about to be, or something has happened that the school must know about. Go to the office now, calmly, and say what happened. This is not a punishment for the child; it is the school doing its job.\n\nPatterns. You have used steps 1 to 4 well, every day, for two weeks, and the same child is still doing the same thing. Then the principal and the parents need to be part of the plan, because something bigger is going on than your classroom can hold.\n\nWhat step 5 is not for: a single bad day, a child who answered back once, or a teacher who is tired. Those are steps 2 and 3, and a cup of tea.",
+        "hi": "क़दम 5 कोई हार नहीं है। दो मौक़े हैं जब यह बिल्कुल सही है।\n\nसुरक्षा। किसी बच्चे को चोट लगी है, या लगने वाली है, या कुछ ऐसा हुआ है जो स्कूल को पता होना चाहिए। अभी, शांति से ऑफ़िस जाइए और बताइए क्या हुआ। यह बच्चे की सज़ा नहीं है; यह स्कूल अपना काम कर रहा है।\n\nपैटर्न। आपने क़दम 1 से 4 अच्छे से, हर दिन, दो हफ़्ते इस्तेमाल किए, और वही बच्चा अब भी वही कर रहा है। तब प्रिंसिपल और माता-पिता को योजना का हिस्सा होना चाहिए, क्योंकि कुछ ऐसा बड़ा हो रहा है जो आपकी क्लास अकेले नहीं संभाल सकती।\n\nक़दम 5 किसके लिए नहीं है: एक बुरा दिन, एक बच्चा जिसने एक बार पलटकर जवाब दिया, या एक थकी हुई टीचर। वे क़दम 2 और 3 हैं, और एक कप चाय।"
+      }
+    },
+    {
+      "id": "s8-office",
+      "type": "nugget",
+      "title": { "en": "What happens at the office now", "hi": "अब ऑफ़िस में क्या होता है" },
+      "text": {
+        "en": "The principal and management have agreed to this ladder. That changes what happens when a child does arrive at the office.\n\nThe first question will be: which steps have been tried? Not to catch anyone out, but because the answer decides what the office does. A child sent after steps 1 to 4 have been tried for two weeks gets a plan: a meeting with the parents, a daily check-in, perhaps a seat change across classes. A child sent on a single bad day will be walked back to class, and the teacher will be asked what step 2 looks like for that child.\n\nThis is the part that makes the ladder real. One teacher using it alone is a brave teacher. Nineteen teachers and the office using it together is a school.",
+        "hi": "प्रिंसिपल और प्रबंधन इस सीढ़ी पर सहमत हैं। इससे बदलता है कि जब बच्चा ऑफ़िस पहुँचता है तो क्या होता है।\n\nपहला सवाल होगा: कौन से क़दम आज़माए गए? किसी को पकड़ने के लिए नहीं, बल्कि क्योंकि जवाब तय करता है कि ऑफ़िस क्या करेगा। जो बच्चा दो हफ़्ते क़दम 1 से 4 आज़माने के बाद भेजा गया, उसे योजना मिलती है: माता-पिता से मीटिंग, रोज़ की जाँच, शायद दूसरी क्लास में सीट। जो बच्चा एक बुरे दिन पर भेजा गया, उसे वापस क्लास ले जाया जाएगा, और टीचर से पूछा जाएगा कि उस बच्चे के लिए क़दम 2 कैसा दिखता है।\n\nयही वो हिस्सा है जो सीढ़ी को असली बनाता है। अकेले इसे इस्तेमाल करने वाली एक टीचर बहादुर टीचर है। उन्नीस शिक्षक और ऑफ़िस मिलकर इसे इस्तेमाल करें, तो वो स्कूल है।"
+      }
+    },
+    {
+      "id": "s8-final-scene",
+      "type": "scene",
+      "image": "classroom-disturb",
+      "eyebrow": { "en": "Class 3 · Monday · second period · once more", "hi": "क्लास 3 · सोमवार · दूसरा पीरियड · एक बार फिर" },
+      "text": {
+        "en": "Eight days ago you met Aarav: out of his seat for the third time, pulling Sana's notebook, three children giggling, the class watching to see what you do. Here he is again. Same bench, same notebook, same grin.",
+        "hi": "आठ दिन पहले आप आरव से मिले थे: तीसरी बार सीट से उठा हुआ, सना की कॉपी खींचता हुआ, तीन बच्चे हँसते हुए, क्लास देखती हुई कि आप क्या करेंगे। वो फिर यहाँ है। वही बेंच, वही कॉपी, वही मुस्कान।"
+      },
+      "prompt": { "en": "Walk through it. What is your first move, and what comes after if it does not work?", "hi": "इसे चलकर देखिए। आपका पहला क़दम क्या है, और अगर काम न करे तो उसके बाद क्या?" }
+    },
+    {
+      "id": "s8-final-choice",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "Your sequence:", "hi": "आपका क्रम:" },
+      "options": [
+        { "key": "a", "text": { "en": "Look at him for two seconds while teaching. If not, walk and teach from beside his desk. If not, at his desk, quietly: \"Aarav, seat, book. Thanks.\" Walk away. Check back in a minute with a nod.", "hi": "पढ़ाते हुए दो सेकंड उसे देखिए। न माने तो उसकी डेस्क के पास से पढ़ाइए। न माने तो उसकी डेस्क पर, धीरे से: \"आरव, सीट, किताब। शुक्रिया।\" चले जाइए। एक मिनट में सिर हिलाकर देखिए।" }, "next": "s8-final-a", "rung": 2 },
+        { "key": "b", "text": { "en": "Crouch at his desk straight away and have a warm, quiet two-minute talk about why he keeps doing this and what is going on at home, so that he feels understood and stops.", "hi": "सीधे उसकी डेस्क पर झुकिए और दो मिनट धीरे से, अपनेपन से बात कीजिए कि वो यह क्यों करता रहता है और घर पर क्या चल रहा है, ताकि वो समझा हुआ महसूस करे और रुक जाए।" }, "next": "s8-final-b", "rung": 0 },
+        { "key": "c", "text": { "en": "\"Aarav, seat.\" from the front, in a firm voice. If he smiles, \"Aarav, I said seat.\" If he still does not, send him to stand outside until he is ready to behave.", "hi": "सामने से, सख़्त आवाज़ में, \"आरव, सीट।\" अगर मुस्कुराए, \"आरव, मैंने कहा सीट।\" फिर भी न माने तो बाहर खड़ा कर दीजिए जब तक सही व्यवहार के लिए तैयार न हो।" }, "next": "s8-final-c", "rung": 0 },
+        { "key": "d", "text": { "en": "Nothing yet. He is the kind of child who needs attention; the less you give, the sooner he stops. Deal with it after class if it continues.", "hi": "अभी कुछ नहीं। वो ऐसा बच्चा है जिसे ध्यान चाहिए; जितना कम देंगे, उतनी जल्दी रुकेगा। जारी रहे तो क्लास के बाद देखिए।" }, "next": "s8-final-d", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s8-final-a",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s8-final-why",
+      "image": "crouch-desk",
+      "text": {
+        "en": "Eight days ago this was one choice among four. Today it is a sequence you can run without thinking, each step smaller than what you used to do and more effective. And if the quiet word fails, you know what step 3 looks like, and what you will say at break. That is the whole module in one bench.",
+        "hi": "आठ दिन पहले यह चार में से एक विकल्प था। आज यह एक क्रम है जो आप बिना सोचे चला सकते हैं, हर क़दम उससे छोटा जो आप पहले करते थे और ज़्यादा असरदार। और अगर धीमी बात नाकाम हो, तो आप जानते हैं क़दम 3 कैसा दिखता है, और ब्रेक में क्या कहेंगे। यही पूरा मॉड्यूल है, एक बेंच में।"
+      }
+    },
+    {
+      "id": "s8-final-b",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s8-final-choice",
+      "text": {
+        "en": "The lesson stops for two minutes, thirty children watch Aarav get the teacher's full attention for pulling a notebook, and the home question is not one to ask at a bench. Warmth is right; this is the wrong moment and the wrong size. Start smaller.",
+        "hi": "पाठ दो मिनट रुकता है, तीस बच्चे देखते हैं कि आरव को कॉपी खींचने पर टीचर का पूरा ध्यान मिला, और घर वाला सवाल बेंच पर पूछने वाला नहीं है। अपनापन सही है; यह ग़लत पल और ग़लत साइज़ है। छोटे से शुरू कीजिए।"
+      }
+    },
+    {
+      "id": "s8-final-c",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s8-final-choice",
+      "text": {
+        "en": "Public, then more public, then the corridor. Each step gave him a bigger audience, and \"until he is ready to behave\" is not a consequence with an end. This is the old ladder with one rung.",
+        "hi": "सार्वजनिक, फिर और सार्वजनिक, फिर गलियारा। हर क़दम ने उसे बड़े दर्शक दिए, और \"जब तक सही व्यवहार के लिए तैयार न हो\" ऐसा नतीजा नहीं है जिसका कोई अंत हो। यह एक सीढ़ी वाली पुरानी सीढ़ी है।"
+      }
+    },
+    {
+      "id": "s8-final-d",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s8-final-choice",
+      "text": {
+        "en": "Not responding is not step 1. Within a minute Sana's notebook is on the floor and two more children are up. Ignoring reads as permission to the whole class, not only to Aarav.",
+        "hi": "जवाब न देना क़दम 1 नहीं है। एक मिनट में सना की कॉपी फ़र्श पर है और दो और बच्चे उठ गए हैं। नज़रअंदाज़ करना पूरी क्लास को इजाज़त लगता है, सिर्फ़ आरव को नहीं।"
+      }
+    },
+    {
+      "id": "s8-final-why",
+      "type": "why",
+      "title": { "en": "What changed in eight days", "hi": "आठ दिन में क्या बदला" },
+      "points": [
+        { "en": "Not Aarav. He is the same boy. What changed is that you have five tools instead of one, and the first four are quiet.", "hi": "आरव नहीं। वो वही लड़का है। जो बदला वो यह कि आपके पास एक की जगह पाँच औज़ार हैं, और पहले चार धीमे हैं।" },
+        { "en": "You will still have bad days. The ladder does not remove them. It gives you something to do on them other than shout.", "hi": "आपके बुरे दिन फिर भी आएँगे। सीढ़ी उन्हें हटाती नहीं। वो आपको उन दिनों चिल्लाने के अलावा कुछ करने को देती है।" },
+        { "en": "In a month, if you keep using it, the children will have learned something too: that in your class, the same thing happens every time. That is what they call a strict teacher. It is also what they call a fair one.", "hi": "एक महीने में, अगर आप इसे इस्तेमाल करते रहे, तो बच्चों ने भी कुछ सीखा होगा: कि आपकी क्लास में हर बार वही होता है। इसी को वे सख़्त टीचर कहते हैं। इसी को वे न्यायप्रिय टीचर भी कहते हैं।" }
+      ]
+    },
+    {
+      "id": "s8-confidence",
+      "type": "choice",
+      "kind": "rating",
+      "question": {
+        "en": "Same question as the first day. Right now, how confident do you feel about handling misbehaviour without shouting or sending the child out?",
+        "hi": "पहले दिन वाला सवाल। अभी, बिना चिल्लाए या बच्चे को बाहर भेजे, शरारत संभालने में आप कितना आत्मविश्वास महसूस करते हैं?"
+      },
+      "options": [
+        { "key": "1", "text": { "en": "1 — Not at all", "hi": "1 — बिल्कुल नहीं" }, "rung": null },
+        { "key": "2", "text": { "en": "2", "hi": "2" }, "rung": null },
+        { "key": "3", "text": { "en": "3 — Somewhat", "hi": "3 — कुछ हद तक" }, "rung": null },
+        { "key": "4", "text": { "en": "4", "hi": "4" }, "rung": null },
+        { "key": "5", "text": { "en": "5 — Very", "hi": "5 — बहुत" }, "rung": null }
+      ]
+    },
+    {
+      "id": "s8-commit",
+      "type": "reflection",
+      "prompt": {
+        "en": "Two commitments, in your own words. One thing you will keep doing every day from the ladder. One thing you used to do that you are stopping. Write them as promises to your class, not to us.",
+        "hi": "दो वादे, अपने शब्दों में। सीढ़ी से एक चीज़ जो आप हर दिन करते रहेंगे। एक चीज़ जो आप पहले करते थे और अब बंद कर रहे हैं। इन्हें अपनी क्लास से वादे की तरह लिखिए, हमसे नहीं।"
+      },
+      "starter": { "en": "I will keep ", "hi": "मैं करती/करता रहूँगी/रहूँगा " },
+      "placeholder": { "en": "I will keep using the quiet word at the desk instead of calling names across the room. I am stopping the apology letter; nobody in my class writes \"I will never\" again.", "hi": "मैं पूरे कमरे में नाम पुकारने की जगह डेस्क पर धीमी बात करती रहूँगी। मैं माफ़ीनामा बंद कर रही हूँ; मेरी क्लास में अब कोई \"मैं फिर कभी नहीं\" नहीं लिखेगा।" },
+      "min_chars": 80
+    },
+    {
+      "id": "s8-feedback",
+      "type": "choice",
+      "kind": "poll",
+      "question": { "en": "Last question about the training itself. Which session was the most useful to you?", "hi": "ट्रेनिंग के बारे में आख़िरी सवाल। आपके लिए कौन सा सेशन सबसे उपयोगी था?" },
+      "options": [
+        { "key": "s1", "text": { "en": "1 · \"He knows I can't beat him\"", "hi": "1 · \"वो जानता है मैं मार नहीं सकती\"" }, "rung": null },
+        { "key": "s2", "text": { "en": "2 · Why the stick never worked", "hi": "2 · छड़ी ने कभी काम क्यों नहीं किया" }, "rung": null },
+        { "key": "s3", "text": { "en": "3 · Warm and strict", "hi": "3 · अपनापन और सख़्ती" }, "rung": null },
+        { "key": "s4", "text": { "en": "4 · Prevent: routines", "hi": "4 · रोकथाम: दिनचर्या" }, "rung": null },
+        { "key": "s5", "text": { "en": "5 · Respond small", "hi": "5 · छोटा जवाब" }, "rung": null },
+        { "key": "s6", "text": { "en": "6 · Consequences that teach", "hi": "6 · सिखाने वाले नतीजे" }, "rung": null },
+        { "key": "s7", "text": { "en": "7 · Repair and relationship", "hi": "7 · मरम्मत और रिश्ता" }, "rung": null }
+      ]
+    },
+    {
+      "id": "s8-message",
+      "type": "message",
+      "prompt": {
+        "en": "Anything at all for the team that built this: what was missing, what was wrong for Bethel, what the next training should be about.",
+        "hi": "इसे बनाने वाली टीम के लिए कुछ भी: क्या कमी थी, बेथेल के लिए क्या ग़लत था, अगली ट्रेनिंग किस बारे में होनी चाहिए।"
+      },
+      "placeholder": { "en": "Optional, but this one we really want.", "hi": "वैकल्पिक, पर यह वाला हम सच में चाहते हैं।" }
+    },
+    {
+      "id": "s8-task",
+      "type": "task",
+      "image": "map",
+      "title": { "en": "From tomorrow, and every day after", "hi": "कल से, और उसके बाद हर दिन" },
+      "text": {
+        "en": "There is no next session to report to. Keep the two promises. Keep the one rule from Session 3 and the routine from Session 4. In two weeks the app will ask you one question: how is it going. Answer honestly; it is how the next training gets built.",
+        "hi": "अब रिपोर्ट करने के लिए कोई अगला सेशन नहीं है। दोनों वादे निभाइए। सेशन 3 का नियम और सेशन 4 की दिनचर्या जारी रखिए। दो हफ़्ते में ऐप आपसे एक सवाल पूछेगा: कैसा चल रहा है। सच बताइए; अगली ट्रेनिंग ऐसे ही बनती है।"
+      }
+    },
+    {
+      "id": "s8-complete",
+      "type": "complete",
+      "image": "coins",
+      "title": { "en": "Module complete", "hi": "मॉड्यूल पूरा" },
+      "text": {
+        "en": "Eight sessions, eight school days. Your certificate tier is on your home screen. Thank you for doing the work; the children will not know why their teacher changed, and that is exactly how it should be.",
+        "hi": "आठ सेशन, आठ स्कूल-दिन। आपका सर्टिफ़िकेट स्तर आपकी होम स्क्रीन पर है। यह काम करने के लिए शुक्रिया; बच्चों को पता नहीं चलेगा कि उनकी टीचर क्यों बदलीं, और ऐसा ही होना चाहिए।"
+      }
+    }
+  ]
+}
