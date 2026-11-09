@@ -107,6 +107,14 @@ export default function Player({
 
   function rewind(c: Extract<Card, { type: "consequence" }>) {
     if (!preview) void logEvent(moduleId, session.id, c.id, "rewound");
+    if (c.back_to) {
+      // A rewind re-opens the question; the back arrow does not.
+      setChosen((m) => {
+        const copy = { ...m };
+        delete copy[c.back_to!];
+        return copy;
+      });
+    }
     goTo(c.back_to);
   }
 
