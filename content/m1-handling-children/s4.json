@@ -1,0 +1,216 @@
+{
+  "id": "s4",
+  "n": 4,
+  "title": { "en": "Prevent: the first ten minutes" },
+  "minutes": 18,
+  "cards": [
+    {
+      "id": "s4-checkin",
+      "type": "choice",
+      "kind": "poll",
+      "question": {
+        "en": "Yesterday's task: one rule, enforced every time, calmly. How many times did you have to enforce it?",
+        "hi": "कल का काम: एक नियम, हर बार, शांति से लागू करना। आपको कितनी बार लागू करना पड़ा?"
+      },
+      "options": [
+        { "key": "a", "text": { "en": "Many times in the morning, fewer by afternoon", "hi": "सुबह कई बार, दोपहर तक कम" }, "rung": null },
+        { "key": "b", "text": { "en": "Many times, all day. No change yet.", "hi": "पूरे दिन कई बार। अभी कोई बदलाव नहीं।" }, "rung": null },
+        { "key": "c", "text": { "en": "Only a few times. The children picked it up quickly.", "hi": "बस कुछ ही बार। बच्चों ने जल्दी समझ लिया।" }, "rung": null },
+        { "key": "d", "text": { "en": "I slipped and shouted, or let it go once", "hi": "मुझसे चूक हुई, चिल्ला दिया या एक बार जाने दिया" }, "rung": null }
+      ]
+    },
+    {
+      "id": "s4-checkin-why",
+      "type": "why",
+      "title": { "en": "Whatever you answered, this is normal", "hi": "आपने जो भी चुना, यह सामान्य है" },
+      "points": [
+        { "en": "Children test a new rule hardest on day one and two. Many times in the morning, fewer by afternoon, is exactly what it looks like when it is working.", "hi": "बच्चे नए नियम को पहले-दूसरे दिन सबसे ज़्यादा आज़माते हैं। सुबह कई बार, दोपहर तक कम — काम करते समय यह ऐसा ही दिखता है।" },
+        { "en": "If nothing changed all day, check two things: was the rule said in words a six-year-old understands, and did every child see the same thing happen every time?", "hi": "अगर पूरे दिन कुछ नहीं बदला, तो दो चीज़ें देखिए: क्या नियम ऐसे शब्दों में कहा गया जो छह साल का बच्चा समझे, और क्या हर बच्चे ने हर बार एक ही चीज़ होते देखी?" },
+        { "en": "If you slipped once, you are a teacher, not a machine. One slip does not undo it. Three days of it does.", "hi": "अगर एक बार चूक हुई, तो आप शिक्षक हैं, मशीन नहीं। एक चूक से यह ख़त्म नहीं होता। तीन दिन की चूक से होता है।" }
+      ]
+    },
+    {
+      "id": "s4-scene",
+      "type": "scene",
+      "image": "seats-empty",
+      "eyebrow": { "en": "Class 2 · first period · Monday", "hi": "क्लास 2 · पहला पीरियड · सोमवार" },
+      "text": {
+        "en": "The bell rang four minutes ago. You walk in with the register and a pile of copies. Half the class is standing. Two girls are at the window. Sahil is under a desk looking for something. Three children run up to you at once: \"Ma'am, he took my pencil\", \"Ma'am, can I go to the toilet\", \"Ma'am, I forgot my copy\". You have not said a word yet, and you already feel the day going wrong.",
+        "hi": "घंटी चार मिनट पहले बजी थी। आप रजिस्टर और कॉपियों का ढेर लेकर अंदर आते हैं। आधी क्लास खड़ी है। दो लड़कियाँ खिड़की पर हैं। साहिल डेस्क के नीचे कुछ ढूँढ रहा है। तीन बच्चे एक साथ आपके पास दौड़े आते हैं: \"मैम, इसने मेरी पेंसिल ले ली\", \"मैम, टॉयलेट जाऊँ?\", \"मैम, मैं कॉपी भूल गया\"। आपने अभी एक शब्द नहीं कहा, और आपको पहले से लग रहा है कि दिन बिगड़ रहा है।"
+      },
+      "prompt": { "en": "What do you do in the next sixty seconds?", "hi": "अगले साठ सेकंड में आप क्या करते हैं?" }
+    },
+    {
+      "id": "s4-choice",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "What do you do?", "hi": "आप क्या करते हैं?" },
+      "options": [
+        { "key": "a", "text": { "en": "\"SIT DOWN, ALL OF YOU! Is this a fish market?\" Then deal with the three children.", "hi": "\"सब बैठ जाओ! यह मछली बाज़ार है क्या?\" फिर तीनों बच्चों से निपटें।" }, "next": "s4-cons-a", "rung": 0 },
+        { "key": "b", "text": { "en": "Put the copies down. Stand still at the front and wait, silently, until they notice and settle.", "hi": "कॉपियाँ रख दें। सामने चुपचाप खड़े होकर इंतज़ार करें, जब तक वे ध्यान दें और शांत हो जाएँ।" }, "next": "s4-cons-b", "rung": 1 },
+        { "key": "c", "text": { "en": "Start the lesson loudly from the board; the ones who want to learn will listen.", "hi": "बोर्ड से ज़ोर से पाठ शुरू कर दें; जिन्हें सीखना है वे सुनेंगे।" }, "next": "s4-cons-c", "rung": 0 },
+        { "key": "d", "text": { "en": "Say the same thing you say every day, in the same voice: \"Good morning Class 2. Bags down, bottoms on seats, eyes on me.\" Count down slowly from five on your fingers. Praise the first row that is ready.", "hi": "वही बात कहें जो हर दिन कहते हैं, उसी आवाज़ में: \"गुड मॉर्निंग क्लास 2। बैग नीचे, सीट पर बैठो, आँखें मुझ पर।\" उँगलियों पर धीरे-धीरे पाँच से उल्टी गिनती गिनें। जो पंक्ति सबसे पहले तैयार हो, उसकी तारीफ़ करें।" }, "next": "s4-cons-d", "rung": 1 }
+      ]
+    },
+    {
+      "id": "s4-cons-a",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s4-choice",
+      "text": {
+        "en": "It works for forty seconds. Then the noise returns, a little louder, because now the loudest voice in the room is yours and the children match it. You will shout again at 9:20, and 9:40. By lunch your throat hurts and the class has learned that nothing happens until Ma'am shouts.",
+        "hi": "यह चालीस सेकंड काम करता है। फिर शोर लौट आता है, थोड़ा और ज़ोर से, क्योंकि अब कमरे में सबसे ऊँची आवाज़ आपकी है और बच्चे उसकी बराबरी करते हैं। आप 9:20 पर फिर चिल्लाएँगे, और 9:40 पर। लंच तक आपका गला दुखता है और क्लास ने सीख लिया है कि जब तक मैम चिल्लाती नहीं, कुछ नहीं होता।"
+      }
+    },
+    {
+      "id": "s4-cons-b",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s4-why",
+      "text": {
+        "en": "Better than shouting, and with a class that already knows you, it works. With seven-year-olds on a Monday it takes two or three long minutes, and the three children at your knee do not know what the silence means. It is a good tool. It needs one thing added: a routine they have been taught, so they know what \"settled\" looks like.",
+        "hi": "चिल्लाने से बेहतर, और जो क्लास आपको पहले से जानती है, उसके साथ यह काम करता है। सोमवार को सात साल के बच्चों के साथ इसमें दो-तीन लंबे मिनट लगते हैं, और आपके घुटने के पास खड़े तीन बच्चे नहीं जानते कि चुप्पी का मतलब क्या है। यह अच्छा औज़ार है। इसमें एक चीज़ जोड़नी है: एक सिखाई हुई दिनचर्या, ताकि वे जानें कि \"शांत\" दिखता कैसा है।"
+      }
+    },
+    {
+      "id": "s4-cons-c",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s4-choice",
+      "text": {
+        "en": "Six children listen. Twenty-four do not, and the six soon give up because they cannot hear you. You have taught a lesson to nobody and spent your energy competing with a room.",
+        "hi": "छह बच्चे सुनते हैं। चौबीस नहीं, और छह भी जल्द हार मान लेते हैं क्योंकि उन्हें आपकी आवाज़ सुनाई नहीं देती। आपने किसी को पाठ नहीं पढ़ाया और अपनी ऊर्जा कमरे से मुक़ाबला करने में ख़र्च की।"
+      }
+    },
+    {
+      "id": "s4-cons-d",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s4-why",
+      "image": "crouch-desk",
+      "text": {
+        "en": "By \"three\" most are seated, because they have heard this every day and know what comes next. \"Row two is ready. Row four, nearly.\" By \"one\" the room is quiet. Total time: twenty-five seconds, in a normal voice. The three children at your knee get one sentence: \"Pencil and copy after the Do Now. Toilet in two minutes.\" The lesson starts at 9:05, not 9:15.",
+        "hi": "\"तीन\" तक ज़्यादातर बैठ चुके हैं, क्योंकि उन्होंने यह हर दिन सुना है और जानते हैं कि आगे क्या है। \"पंक्ति दो तैयार है। पंक्ति चार, लगभग।\" \"एक\" तक कमरा शांत है। कुल समय: पच्चीस सेकंड, सामान्य आवाज़ में। घुटने के पास खड़े तीन बच्चों को एक वाक्य: \"पेंसिल और कॉपी Do Now के बाद। टॉयलेट दो मिनट में।\" पाठ 9:05 पर शुरू होता है, 9:15 पर नहीं।"
+      }
+    },
+    {
+      "id": "s4-why",
+      "type": "why",
+      "title": { "en": "Most misbehaviour happens in the gaps", "hi": "ज़्यादातर शरारत ख़ाली जगहों में होती है" },
+      "points": [
+        { "en": "The first five minutes, the last five minutes, and every time the class waits for you: these are where most trouble starts. Children are not bad in those moments. They are unoccupied.", "hi": "पहले पाँच मिनट, आख़िरी पाँच मिनट, और हर बार जब क्लास आपका इंतज़ार करती है: ज़्यादातर परेशानी यहीं शुरू होती है। उन पलों में बच्चे बुरे नहीं होते। वे ख़ाली होते हैं।" },
+        { "en": "A routine is a set of steps the children know so well they do it without you. It is taught like a lesson, practised like a lesson, and praised like a lesson.", "hi": "दिनचर्या क़दमों का ऐसा समूह है जो बच्चे इतनी अच्छी तरह जानते हैं कि आपके बिना कर लेते हैं। इसे पाठ की तरह सिखाया जाता है, पाठ की तरह अभ्यास कराया जाता है, और पाठ की तरह सराहा जाता है।" },
+        { "en": "Shouting fills the gap with noise. A routine removes the gap.", "hi": "चिल्लाना ख़ाली जगह को शोर से भरता है। दिनचर्या ख़ाली जगह को हटा देती है।" }
+      ]
+    },
+    {
+      "id": "s4-routines",
+      "type": "nugget",
+      "image": "classroom-disturb",
+      "title": { "en": "Three routines that remove most of your problems", "hi": "तीन दिनचर्याएँ जो आपकी ज़्यादातर समस्याएँ हटा देती हैं" },
+      "text": {
+        "en": "1. Entering. Bag on the hook or under the desk, sit, take out the one thing needed. Same words from you every day. For Nursery and KG, a song does the job; for Class 3 to 5, a countdown.\n\n2. The Do Now. Something on the board the moment they sit: two sums, one sentence to copy, a picture to label. It must need no help from you. While they do it, you take attendance and deal with the pencil and the toilet. The lesson has started before you say a word.\n\n3. Getting your attention. One signal, taught and practised: a hand raised, a clap pattern, \"Class 2?\" and they answer \"Yes Ma'am\" and look up. Practise it five times on the first day as a game. Then use it, never your voice, every time.",
+        "hi": "1. अंदर आना। बैग खूँटी पर या डेस्क के नीचे, बैठो, सिर्फ़ ज़रूरी चीज़ निकालो। आपकी ओर से हर दिन वही शब्द। नर्सरी और KG के लिए एक गाना काम करता है; क्लास 3 से 5 के लिए उल्टी गिनती।\n\n2. Do Now। जैसे ही वे बैठें, बोर्ड पर कुछ हो: दो सवाल, एक वाक्य नक़ल करने को, एक चित्र जिस पर नाम लिखना है। इसमें आपकी मदद की ज़रूरत न हो। जब वे इसे करते हैं, आप हाज़िरी लेते हैं और पेंसिल और टॉयलेट निपटाते हैं। आपके एक शब्द कहने से पहले पाठ शुरू हो चुका है।\n\n3. ध्यान खींचना। एक संकेत, सिखाया और अभ्यास किया हुआ: हाथ ऊपर, ताली का एक पैटर्न, \"क्लास 2?\" और वे जवाब दें \"यस मैम\" और ऊपर देखें। पहले दिन इसे खेल की तरह पाँच बार अभ्यास कराइए। फिर हर बार इसी का इस्तेमाल कीजिए, कभी अपनी आवाज़ का नहीं।"
+      },
+      "source": "Routines adapted from Harry Wong, The First Days of School, and Lemov's Do Now / Strong Voice"
+    },
+    {
+      "id": "s4-seen",
+      "type": "nugget",
+      "title": { "en": "Be seen looking", "hi": "देखते हुए दिखिए" },
+      "text": {
+        "en": "A small move from Lemov's book. When you give an instruction, do not turn to the board. Stay facing the class for five seconds and let them see you check: a slow look across the room, a nod to a child who is ready, a raised eyebrow at one who is not.\n\nChildren decide whether to follow an instruction in the three seconds after it is given, based on one question: is she watching? Five seconds of visibly watching answers that question for the whole lesson. It costs nothing and replaces a great deal of correcting later.",
+        "hi": "लेमोव की किताब से एक छोटी सी चाल। जब आप निर्देश दें, तो बोर्ड की ओर मत मुड़िए। पाँच सेकंड क्लास की ओर मुँह करके खड़े रहिए और उन्हें देखने दीजिए कि आप जाँच रहे हैं: कमरे में एक धीमी नज़र, जो बच्चा तैयार है उसे सिर हिलाना, जो नहीं है उस पर उठी हुई भौंह।\n\nबच्चे निर्देश मिलने के तीन सेकंड के अंदर तय करते हैं कि मानना है या नहीं, एक ही सवाल पर: क्या मैम देख रही हैं? पाँच सेकंड साफ़ दिखते हुए देखना पूरे पाठ के लिए उस सवाल का जवाब दे देता है। इसकी कोई क़ीमत नहीं और यह बाद की बहुत सी टोका-टाकी बचा देता है।"
+      },
+      "source": "Lemov, Teach Like a Champion: Radar / Be Seen Looking"
+    },
+    {
+      "id": "s4-kg",
+      "type": "scene",
+      "eyebrow": { "en": "UKG · after lunch", "hi": "UKG · लंच के बाद" },
+      "text": {
+        "en": "Twenty-eight five-year-olds come back from lunch. Some are still chewing. Two are crying because of something that happened on the swing. Four are chasing each other between the mats. Your next activity is a story on the carpet.",
+        "hi": "अट्ठाईस पाँच साल के बच्चे लंच से वापस आते हैं। कुछ अभी भी चबा रहे हैं। दो रो रहे हैं क्योंकि झूले पर कुछ हुआ था। चार चटाइयों के बीच एक-दूसरे के पीछे भाग रहे हैं। आपकी अगली गतिविधि कालीन पर कहानी है।"
+      },
+      "prompt": { "en": "Which routine gets them to the carpet without a single raised voice?", "hi": "कौन सी दिनचर्या उन्हें बिना आवाज़ ऊँची किए कालीन तक लाती है?" }
+    },
+    {
+      "id": "s4-kg-choice",
+      "type": "choice",
+      "kind": "ladder",
+      "question": { "en": "Pick the one you would build.", "hi": "वो चुनिए जो आप बनाएँगे।" },
+      "options": [
+        { "key": "a", "text": { "en": "Tell them firmly to sit on the carpet, and send the crying ones to the corner until they stop.", "hi": "उन्हें सख़्ती से कालीन पर बैठने को कहें, और रोने वालों को कोने में भेज दें जब तक चुप न हों।" }, "next": "s4-kg-a", "rung": 0 },
+        { "key": "b", "text": { "en": "The same song every day after lunch. By the second line, they walk to the carpet; by the end, they are sitting. You sit with the two crying ones on the edge of the carpet and hold their hands through the first page.", "hi": "हर दिन लंच के बाद वही गाना। दूसरी पंक्ति तक वे कालीन की ओर चलते हैं; अंत तक बैठ जाते हैं। आप दोनों रोने वालों के साथ कालीन के किनारे बैठते हैं और पहले पन्ने तक उनका हाथ थामे रहते हैं।" }, "next": "s4-kg-b", "rung": 1 },
+        { "key": "c", "text": { "en": "Wait for them to calm down by themselves, then start.", "hi": "उनके ख़ुद शांत होने का इंतज़ार करें, फिर शुरू करें।" }, "next": "s4-kg-c", "rung": 0 }
+      ]
+    },
+    {
+      "id": "s4-kg-a",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s4-kg-choice",
+      "text": {
+        "en": "A crying five-year-old sent to a corner cries louder, and now two others start. Firmness is right; a corner for a sad child is not. At this age, calm comes from you being close, not from being sent away.",
+        "hi": "कोने में भेजा गया रोता हुआ पाँच साल का बच्चा और ज़ोर से रोता है, और अब दो और शुरू हो जाते हैं। सख़्ती सही है; उदास बच्चे के लिए कोना नहीं। इस उम्र में शांति आपके पास होने से आती है, दूर भेजे जाने से नहीं।"
+      }
+    },
+    {
+      "id": "s4-kg-b",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s4-reflect",
+      "text": {
+        "en": "Yes. The song is the routine; it does the work your voice used to do. The two crying children get exactly what they need, your nearness, without the story stopping for anyone. Nobody was shouted at. Nobody was sent away. Twenty-eight children are on the carpet in ninety seconds.",
+        "hi": "हाँ। गाना दिनचर्या है; यह वो काम करता है जो पहले आपकी आवाज़ करती थी। दोनों रोते बच्चों को ठीक वही मिलता है जो उन्हें चाहिए, आपका पास होना, और कहानी किसी के लिए नहीं रुकती। किसी पर चिल्लाया नहीं गया। किसी को दूर नहीं भेजा गया। अट्ठाईस बच्चे नब्बे सेकंड में कालीन पर हैं।"
+      }
+    },
+    {
+      "id": "s4-kg-c",
+      "type": "consequence",
+      "outcome": "rewind",
+      "back_to": "s4-kg-choice",
+      "text": {
+        "en": "Five-year-olds do not calm down by themselves after lunch; they speed up. Ten minutes later it is louder, someone has fallen, and you have lost the story time.",
+        "hi": "पाँच साल के बच्चे लंच के बाद ख़ुद शांत नहीं होते; वे और तेज़ हो जाते हैं। दस मिनट बाद शोर और बढ़ गया है, कोई गिर गया है, और कहानी का समय चला गया।"
+      }
+    },
+    {
+      "id": "s4-reflect",
+      "type": "reflection",
+      "prompt": {
+        "en": "Think about your own class. Where are the gaps in your day: the moments when children have nothing to do and trouble starts? Name the two biggest.",
+        "hi": "अपनी क्लास के बारे में सोचिए। आपके दिन में ख़ाली जगहें कहाँ हैं: वे पल जब बच्चों के पास करने को कुछ नहीं होता और परेशानी शुरू होती है? दो सबसे बड़ी बताइए।"
+      },
+      "starter": { "en": "The biggest gap is ", "hi": "सबसे बड़ी ख़ाली जगह है " },
+      "placeholder": { "en": "The biggest gap is the first five minutes after assembly, when I am collecting diaries. The second is…", "hi": "सबसे बड़ी ख़ाली जगह असेंबली के बाद के पहले पाँच मिनट हैं, जब मैं डायरी इकट्ठा करती हूँ। दूसरी है…" },
+      "min_chars": 60
+    },
+    {
+      "id": "s4-message",
+      "type": "message",
+      "prompt": { "en": "Is there a routine that already works in your class that other teachers should know about?", "hi": "क्या आपकी क्लास में कोई दिनचर्या पहले से काम करती है जिसके बारे में दूसरे शिक्षकों को पता होना चाहिए?" },
+      "placeholder": { "en": "Optional", "hi": "वैकल्पिक" }
+    },
+    {
+      "id": "s4-task",
+      "type": "task",
+      "image": "notebook",
+      "title": { "en": "Tomorrow morning, in your class", "hi": "कल सुबह, आपकी क्लास में" },
+      "text": {
+        "en": "Build one routine for the biggest gap you just named. Write the steps in three short lines a child can repeat. Tomorrow, teach it like a lesson: explain, show, practise it twice as a game, praise the row that does it best. Then use it. Keep the rule from yesterday going too.",
+        "hi": "जो सबसे बड़ी ख़ाली जगह आपने अभी बताई, उसके लिए एक दिनचर्या बनाइए। क़दम तीन छोटी लाइनों में लिखिए जो बच्चा दोहरा सके। कल, इसे पाठ की तरह सिखाइए: समझाइए, दिखाइए, खेल की तरह दो बार अभ्यास कराइए, जो पंक्ति सबसे अच्छा करे उसकी तारीफ़ कीजिए। फिर इस्तेमाल कीजिए। कल का नियम भी जारी रखिए।"
+      }
+    },
+    {
+      "id": "s4-complete",
+      "type": "complete",
+      "image": "coins",
+      "title": { "en": "Session 4 done", "hi": "सेशन 4 पूरा" },
+      "text": {
+        "en": "Halfway. Tomorrow: Respond small. What to do in the moment, when prevention was not enough, without giving the child an audience.",
+        "hi": "आधा रास्ता। कल: छोटा जवाब। उस पल में क्या करें, जब रोकथाम काफ़ी नहीं थी, बिना बच्चे को दर्शक दिए।"
+      }
+    }
+  ]
+}
