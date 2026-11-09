@@ -23,6 +23,16 @@ export type Card = { image?: string } & (
   | { id: string; type: "ladder"; title: T; rungs: { n: number; name: T; line: T }[]; highlight?: number }
   | { id: string; type: "reflection"; prompt: T; starter?: T; placeholder?: T; min_chars?: number }
   | { id: string; type: "message"; prompt: T; placeholder?: T }
+  | {
+      id: string;
+      type: "grid";
+      title: T;
+      intro?: T;
+      /** Statements the teacher sorts into one of four quadrants. */
+      items: { key: string; text: T; answer: "harsh" | "soft" | "absent" | "warmstrict" }[];
+      quadrants: Record<"harsh" | "soft" | "absent" | "warmstrict", { name: T; verdict: T }>;
+    }
+  | { id: string; type: "selfplace"; title: T; prompt: T; second_prompt?: T }
   | { id: string; type: "task"; title: T; text: T }
   | { id: string; type: "complete"; title: T; text: T }
 );

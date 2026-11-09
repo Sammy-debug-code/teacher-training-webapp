@@ -1,0 +1,185 @@
+{
+  "id": "s3",
+  "n": 3,
+  "title": { "en": "The missing middle: warm and strict" },
+  "minutes": 18,
+  "cards": [
+    {
+      "id": "s3-checkin",
+      "type": "reflection",
+      "prompt": {
+        "en": "Yesterday's task: you asked one student what kind of teacher they feel like listening to. What did they say?",
+        "hi": "कल का काम: आपने एक बच्चे से पूछा कि कैसी टीचर की बात सुनने का मन करता है। उसने क्या कहा?"
+      },
+      "starter": { "en": "I asked ", "hi": "मैंने " },
+      "placeholder": { "en": "I asked Farhan from Class 4. He said: a teacher who does not shout, but who…", "hi": "मैंने क्लास 4 के फ़रहान से पूछा। उसने कहा: जो टीचर चिल्लाती नहीं, पर जो…" },
+      "min_chars": 40
+    },
+    {
+      "id": "s3-what-kids-say",
+      "type": "nugget",
+      "image": "staffroom",
+      "title": { "en": "What children say, everywhere", "hi": "बच्चे हर जगह क्या कहते हैं" },
+      "text": {
+        "en": "When researchers ask children which teachers they respect, the answers are the same in every country, every school, every age. Not the softest teacher. Not the strictest. They name the teacher who is fair, who means what she says, who does not shout, and who they believe actually likes them.\n\nRead that list again. It is two things at once: a teacher who holds the line, and a teacher who is on their side. Children do not see those as opposites. Only adults do.",
+        "hi": "जब शोधकर्ता बच्चों से पूछते हैं कि वे किस टीचर की इज़्ज़त करते हैं, तो जवाब हर देश, हर स्कूल, हर उम्र में एक जैसे होते हैं। सबसे नरम टीचर नहीं। सबसे सख़्त नहीं। वे उस टीचर का नाम लेते हैं जो न्याय करती है, जो जो कहती है वो करती है, जो चिल्लाती नहीं, और जिसके बारे में उन्हें लगता है कि वो सच में उन्हें पसंद करती है।\n\nयह सूची फिर पढ़िए। यह एक साथ दो चीज़ें हैं: एक टीचर जो नियम पर टिकी रहती है, और एक टीचर जो उनके साथ है। बच्चे इन्हें विपरीत नहीं देखते। सिर्फ़ बड़े देखते हैं।"
+      }
+    },
+    {
+      "id": "s3-sam",
+      "type": "scene",
+      "image": "office-bench",
+      "eyebrow": { "en": "A true story from this school", "hi": "इसी स्कूल की एक सच्ची कहानी" },
+      "text": {
+        "en": "A few years ago, a young man on our campus played volleyball with the hostel boys and got on well with them. One boy kept disturbing the study hour every evening, with a smirk that said: what can you do to me? For three evenings he was sent to sit alone in the corridor. On the fourth evening the young man took him for a walk, put an arm around his shoulder, and told him warmly that he should not do this.\n\nThe next day, in front of twenty-five boys, that same boy argued back at him, loudly. The young man said later: if I had not put my arm around him the evening before, he would not have had the courage.",
+        "hi": "कुछ साल पहले, हमारे कैंपस का एक युवक हॉस्टल के लड़कों के साथ वॉलीबॉल खेलता था और उनसे अच्छे से घुल-मिल गया था। एक लड़का हर शाम स्टडी ऑवर में परेशान करता था, उस मुस्कान के साथ जो कहती थी: तुम मेरा क्या कर लोगे? तीन शाम उसे गलियारे में अकेले बैठाया गया। चौथी शाम युवक उसे टहलाने ले गया, कंधे पर हाथ रखा, और प्यार से समझाया कि ऐसा नहीं करना चाहिए।\n\nअगले दिन, पच्चीस लड़कों के सामने, उसी लड़के ने ज़ोर से पलटकर बहस की। युवक ने बाद में कहा: अगर मैंने एक शाम पहले उसके कंधे पर हाथ न रखा होता, तो उसमें यह हिम्मत न होती।"
+      },
+      "prompt": { "en": "Was the walk the mistake?", "hi": "क्या टहलाना ग़लती थी?" }
+    },
+    {
+      "id": "s3-sam-choice",
+      "type": "choice",
+      "kind": "poll",
+      "question": { "en": "What do you think went wrong?", "hi": "आपको क्या लगता है, क्या ग़लत हुआ?" },
+      "options": [
+        { "key": "a", "text": { "en": "The walk. Being warm with a boy like that is a mistake; he took it as weakness.", "hi": "टहलाना। ऐसे लड़के से अपनापन दिखाना ग़लती है; उसने इसे कमज़ोरी समझा।" }, "next": "s3-sam-a", "rung": null },
+        { "key": "b", "text": { "en": "The corridor. Three evenings of punishment made him angry, and the walk came too late.", "hi": "गलियारा। तीन शाम की सज़ा ने उसे ग़ुस्सा दिलाया, और टहलाना बहुत देर से आया।" }, "next": "s3-sam-b", "rung": null },
+        { "key": "c", "text": { "en": "Neither by itself. The walk had warmth but no expectation in it. Punishment, then warmth with no rule attached, read to him as: he backed down.", "hi": "अकेले कोई नहीं। टहलने में अपनापन था पर कोई उम्मीद नहीं। सज़ा, फिर बिना किसी नियम के अपनापन, उसे ऐसा लगा: ये पीछे हट गए।" }, "next": "s3-sam-c", "rung": null }
+      ]
+    },
+    {
+      "id": "s3-sam-a",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s3-sam-why",
+      "text": {
+        "en": "That is what the young man himself concluded at the time, and it is half right. But look at what the walk contained: \"you should not do this, you should do that\", and an arm around the shoulder. No clear expectation for tomorrow. No clear consequence. The warmth was not the problem. Warmth with nothing attached to it was.",
+        "hi": "उस समय युवक ने ख़ुद यही नतीजा निकाला था, और यह आधा सही है। पर देखिए टहलने में क्या था: \"ऐसा मत करो, वैसा करो\", और कंधे पर हाथ। कल के लिए कोई साफ़ उम्मीद नहीं। कोई साफ़ नतीजा नहीं। अपनापन समस्या नहीं थी। बिना किसी चीज़ के जुड़े अपनापन समस्या थी।"
+      }
+    },
+    {
+      "id": "s3-sam-b",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s3-sam-why",
+      "text": {
+        "en": "Partly. Three evenings alone in a corridor, with nothing said, teaches a boy nothing except that the adult is annoyed. But the bigger problem came after: warmth with no expectation attached, right after punishment. To him it looked like the adult had given up and was now trying to be friends.",
+        "hi": "कुछ हद तक। गलियारे में तीन शाम अकेले, बिना कुछ कहे, लड़के को सिर्फ़ यह सिखाता है कि बड़ा परेशान है। पर बड़ी समस्या बाद में आई: सज़ा के तुरंत बाद बिना किसी उम्मीद के अपनापन। उसे लगा कि बड़े ने हार मान ली है और अब दोस्ती करने की कोशिश कर रहा है।"
+      }
+    },
+    {
+      "id": "s3-sam-c",
+      "type": "consequence",
+      "outcome": "continue",
+      "next": "s3-sam-why",
+      "text": {
+        "en": "Yes. The same walk, with two sentences added, would have worked: \"Tomorrow in study hour I expect you to work for the full hour. If you disturb it, you will sit with me in the office and do it there.\" Then the arm around the shoulder, then one question about him. Warm and strict in the same two minutes.",
+        "hi": "हाँ। वही टहलना, दो वाक्य जोड़कर, काम कर जाता: \"कल स्टडी ऑवर में मुझे उम्मीद है कि तुम पूरा घंटा काम करोगे। अगर परेशान किया, तो मेरे साथ ऑफ़िस में बैठकर वहीं करोगे।\" फिर कंधे पर हाथ, फिर उसके बारे में एक सवाल। उन्हीं दो मिनटों में अपनापन और सख़्ती।"
+      }
+    },
+    {
+      "id": "s3-sam-why",
+      "type": "why",
+      "title": { "en": "The rule hiding in this story", "hi": "इस कहानी में छिपा नियम" },
+      "points": [
+        { "en": "Warmth without a clear expectation reads as weakness. The child tests it, and it breaks.", "hi": "बिना साफ़ उम्मीद का अपनापन कमज़ोरी लगता है। बच्चा उसे आज़माता है, और वो टूट जाता है।" },
+        { "en": "Strictness without warmth reads as an enemy. The child fights it, or goes underground.", "hi": "बिना अपनेपन की सख़्ती दुश्मन लगती है। बच्चा उससे लड़ता है, या छिपकर करता है।" },
+        { "en": "Both together, in the same breath, is the only thing children of every age respect. The research calls it \"authoritative\". A teacher we will meet next calls it \"warm/strict\".", "hi": "दोनों साथ, एक ही साँस में, वही एकमात्र चीज़ है जिसकी हर उम्र के बच्चे इज़्ज़त करते हैं। रिसर्च इसे \"authoritative\" कहती है। एक शिक्षक जिनसे हम अभी मिलेंगे, इसे \"warm/strict\" कहते हैं।" }
+      ]
+    },
+    {
+      "id": "s3-lemov",
+      "type": "nugget",
+      "image": "map",
+      "title": { "en": "Who is Doug Lemov?", "hi": "डग लेमोव कौन हैं?" },
+      "text": {
+        "en": "An American teacher who spent years doing something simple: he found teachers whose students did far better than anyone expected, often in the poorest schools in the country, filmed them, and wrote down exactly what they did. Not their philosophy. Their moves.\n\nHis book Teach Like a Champion lists 63 of those moves. The one this module borrows most is called Warm/Strict. His description: be caring, funny, warm and concerned, and at the same time be by-the-book and relentless about expectations. Not a balance between the two. Both, at full strength, at the same time.\n\nMany of his teachers say the strictest thing they do is also the warmest: refusing to accept less than a child can do.",
+        "hi": "एक अमेरिकी शिक्षक जिन्होंने सालों तक एक सीधी सी चीज़ की: उन्होंने ऐसे शिक्षक ढूँढे जिनके बच्चे उम्मीद से कहीं बेहतर कर रहे थे, अक्सर देश के सबसे ग़रीब स्कूलों में, उन्हें फ़िल्माया, और ठीक-ठीक लिखा कि वे क्या करते हैं। उनका दर्शन नहीं। उनकी चालें।\n\nउनकी किताब Teach Like a Champion में ऐसी 63 चालें हैं। जो यह मॉड्यूल सबसे ज़्यादा उधार लेता है, उसका नाम है Warm/Strict। उनका विवरण: देखभाल करने वाले, मज़ाकिया, अपनेपन वाले और फ़िक्रमंद बनिए, और उसी समय नियम के पक्के और उम्मीदों पर अडिग रहिए। दोनों के बीच संतुलन नहीं। दोनों, पूरी ताक़त से, एक ही समय पर।\n\nउनके कई शिक्षक कहते हैं कि सबसे सख़्त चीज़ जो वे करते हैं, वही सबसे ज़्यादा अपनेपन वाली भी है: बच्चे से उसकी क्षमता से कम स्वीकार न करना।"
+      },
+      "source": "Doug Lemov, Teach Like a Champion 3.0, 2021"
+    },
+    {
+      "id": "s3-grid",
+      "type": "grid",
+      "title": { "en": "Two teachers in every staff room", "hi": "हर स्टाफ़ रूम में दो टीचर" },
+      "intro": {
+        "en": "Twelve things teachers say. Put each one where it belongs: more or less warmth, more or less structure. There is no score to protect; this is for you.",
+        "hi": "बारह बातें जो टीचर कहते हैं। हर एक को वहाँ रखिए जहाँ वो है: कम या ज़्यादा अपनापन, कम या ज़्यादा नियम। कोई स्कोर बचाना नहीं है; यह आपके लिए है।"
+      },
+      "quadrants": {
+        "harsh": { "name": { "en": "Harsh", "hi": "कठोर" }, "verdict": { "en": "Rules without warmth. Children obey while watched and resent you.", "hi": "बिना अपनेपन के नियम। बच्चे देखे जाने पर मानते हैं और आपसे नाराज़ रहते हैं।" } },
+        "soft": { "name": { "en": "Soft", "hi": "नरम" }, "verdict": { "en": "Warmth without rules. This is where children take advantage of you.", "hi": "बिना नियम का अपनापन। यहीं बच्चे आपका फ़ायदा उठाते हैं।" } },
+        "absent": { "name": { "en": "Absent", "hi": "ग़ायब" }, "verdict": { "en": "Neither. The class runs itself, badly.", "hi": "कुछ भी नहीं। क्लास ख़ुद चलती है, बुरी तरह।" } },
+        "warmstrict": { "name": { "en": "Warm & strict", "hi": "अपनापन और सख़्ती" }, "verdict": { "en": "Both, at once. The only quadrant children of every age respect.", "hi": "दोनों, एक साथ। एकमात्र हिस्सा जिसकी हर उम्र के बच्चे इज़्ज़त करते हैं।" } }
+      },
+      "items": [
+        { "key": "1", "text": { "en": "I don't care if you like me. You will finish this work.", "hi": "मुझे फ़र्क़ नहीं पड़ता तुम मुझे पसंद करते हो या नहीं। यह काम पूरा करोगे।" }, "answer": "harsh" },
+        { "key": "2", "text": { "en": "Fine, no homework today, you all look tired.", "hi": "ठीक है, आज होमवर्क नहीं, तुम सब थके लग रहे हो।" }, "answer": "soft" },
+        { "key": "3", "text": { "en": "I know you can do this. Sit here, show me the first step.", "hi": "मुझे पता है तुम कर सकते हो। यहाँ बैठो, पहला स्टेप दिखाओ।" }, "answer": "warmstrict" },
+        { "key": "4", "text": { "en": "Ask your parents why you are like this.", "hi": "अपने माँ-बाप से पूछो तुम ऐसे क्यों हो।" }, "answer": "harsh" },
+        { "key": "5", "text": { "en": "Do what you want, just don't make noise.", "hi": "जो करना है करो, बस शोर मत करो।" }, "answer": "absent" },
+        { "key": "6", "text": { "en": "The rule is the same for everyone, including you, Rohan. Bag on the hook, then sit.", "hi": "नियम सबके लिए एक है, तुम्हारे लिए भी, रोहन। बैग खूँटी पर, फिर बैठो।" }, "answer": "warmstrict" },
+        { "key": "7", "text": { "en": "Please, children, please sit down, please?", "hi": "प्लीज़ बच्चों, प्लीज़ बैठ जाओ, प्लीज़?" }, "answer": "soft" },
+        { "key": "8", "text": { "en": "Stand on the bench for the whole period. Everyone look at him.", "hi": "पूरे पीरियड बेंच पर खड़े रहो। सब इसे देखो।" }, "answer": "harsh" },
+        { "key": "9", "text": { "en": "You were angry and you pushed him. Anger is fine. Pushing is not. Come, let's fix it.", "hi": "तुम ग़ुस्से में थे और तुमने धक्का दिया। ग़ुस्सा ठीक है। धक्का नहीं। चलो, ठीक करते हैं।" }, "answer": "warmstrict" },
+        { "key": "10", "text": { "en": "I'm on my phone, do the worksheet, don't disturb me.", "hi": "मैं फ़ोन पर हूँ, वर्कशीट करो, मुझे परेशान मत करो।" }, "answer": "absent" },
+        { "key": "11", "text": { "en": "Okay okay, sit anywhere you like today.", "hi": "ठीक है ठीक है, आज जहाँ मन करे बैठो।" }, "answer": "soft" },
+        { "key": "12", "text": { "en": "Finished early? Good. Go help Priya with hers.", "hi": "जल्दी हो गया? अच्छा। जाओ, प्रिया की मदद करो।" }, "answer": "warmstrict" }
+      ]
+    },
+    {
+      "id": "s3-self",
+      "type": "selfplace",
+      "title": { "en": "Where are you?", "hi": "आप कहाँ हैं?" },
+      "prompt": { "en": "Tap the grid where you are on most days. Be honest; nobody is grading this.", "hi": "ग्रिड पर वहाँ टैप कीजिए जहाँ आप ज़्यादातर दिन होते हैं। सच बताइए; कोई नंबर नहीं दे रहा।" },
+      "second_prompt": { "en": "Now tap where your students would put you.", "hi": "अब वहाँ टैप कीजिए जहाँ आपके बच्चे आपको रखते।" }
+    },
+    {
+      "id": "s3-gap",
+      "type": "why",
+      "title": { "en": "About that gap", "hi": "उस फ़ासले के बारे में" },
+      "points": [
+        { "en": "Most teachers put themselves further right than their students would. We feel strict; they experience inconsistent.", "hi": "ज़्यादातर शिक्षक ख़ुद को उससे ज़्यादा दाईं ओर रखते हैं जहाँ बच्चे रखते। हमें लगता है हम सख़्त हैं; उन्हें लगता है हम कभी ऐसे, कभी वैसे।" },
+        { "en": "Moving right does not mean more shouting. It means the same rule, enforced the same calm way, every single time.", "hi": "दाईं ओर जाने का मतलब ज़्यादा चिल्लाना नहीं। मतलब है वही नियम, उसी शांत तरीके से, हर बार।" },
+        { "en": "Moving up does not mean being friends. It means the child believes you want them to do well, and sees you notice when they do.", "hi": "ऊपर जाने का मतलब दोस्त बनना नहीं। मतलब है बच्चे को यक़ीन हो कि आप चाहते हैं वो अच्छा करे, और वो देखे कि आप ध्यान देते हैं जब वो करता है।" }
+      ]
+    },
+    {
+      "id": "s3-rule-pick",
+      "type": "reflection",
+      "prompt": {
+        "en": "Pick one rule in your class that you will enforce every single time this week, calmly, with no exceptions and no shouting. Write the rule, and what you will do each time it is broken.",
+        "hi": "अपनी क्लास का एक नियम चुनिए जिसे आप इस हफ़्ते हर बार, शांति से, बिना किसी छूट और बिना चिल्लाए लागू करेंगे। नियम लिखिए, और हर बार टूटने पर आप क्या करेंगे।"
+      },
+      "starter": { "en": "The rule: ", "hi": "नियम: " },
+      "placeholder": { "en": "The rule: nobody leaves their seat without asking. Each time: I walk over, point to the seat, wait until they sit, then continue.", "hi": "नियम: बिना पूछे कोई सीट नहीं छोड़ेगा। हर बार: मैं पास जाऊँगी, सीट की ओर इशारा करूँगी, बैठने तक रुकूँगी, फिर आगे बढ़ूँगी।" },
+      "min_chars": 60
+    },
+    {
+      "id": "s3-message",
+      "type": "message",
+      "prompt": { "en": "Anything to tell the training team about this session?", "hi": "इस सेशन के बारे में ट्रेनिंग टीम को कुछ बताना है?" },
+      "placeholder": { "en": "Optional", "hi": "वैकल्पिक" }
+    },
+    {
+      "id": "s3-task",
+      "type": "task",
+      "image": "notebook",
+      "title": { "en": "This week, in your class", "hi": "इस हफ़्ते, आपकी क्लास में" },
+      "text": {
+        "en": "Enforce the one rule you just wrote, every single time, in the same calm way. No shouting, no exceptions, no \"last warning\". Tomorrow the session starts by asking how many times you had to do it, and what changed by the end of the day.",
+        "hi": "जो एक नियम आपने अभी लिखा, उसे हर बार, उसी शांत तरीके से लागू कीजिए। न चिल्लाना, न छूट, न \"आख़िरी चेतावनी\"। कल सेशन इसी से शुरू होगा कि आपको कितनी बार करना पड़ा, और दिन के अंत तक क्या बदला।"
+      }
+    },
+    {
+      "id": "s3-complete",
+      "type": "complete",
+      "image": "coins",
+      "title": { "en": "Session 3 done", "hi": "सेशन 3 पूरा" },
+      "text": {
+        "en": "Tomorrow: Prevent. The first ten minutes of a lesson decide the other thirty.",
+        "hi": "कल: रोकथाम। पाठ के पहले दस मिनट बाक़ी तीस का फ़ैसला करते हैं।"
+      }
+    }
+  ]
+}

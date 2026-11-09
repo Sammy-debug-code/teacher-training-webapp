@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Card, Option, Session, T } from "@/lib/content";
 import Illo, { type IlloName } from "@/components/Illo";
+import GridSort from "@/components/GridSort";
+import SelfPlace from "@/components/SelfPlace";
 import { logEvent, saveReflection, completeSession } from "@/app/m/actions";
 
 type Lang = "en" | "hi";
@@ -389,6 +391,30 @@ function CardView({
           hasHi={hasHi}
           onNext={onNext}
           onWritten={(text) => onWritten(card.id, text)}
+        />
+      );
+
+    case "grid":
+      return (
+        <GridSort
+          card={card}
+          lang={lang}
+          onDone={(placements, correct) => {
+            if (!preview) void logEvent(moduleId, sessionId, card.id, "chose", { kind: "grid", placements, correct, total: card.items.length });
+            onNext();
+          }}
+        />
+      );
+
+    case "selfplace":
+      return (
+        <SelfPlace
+          card={card}
+          lang={lang}
+          onDone={(me, students) => {
+            if (!preview) void logEvent(moduleId, sessionId, card.id, "chose", { kind: "selfplace", me, students });
+            onNext();
+          }}
         />
       );
 
