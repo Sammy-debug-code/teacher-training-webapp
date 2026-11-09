@@ -57,6 +57,9 @@ export default function Player({
   const [i, setI] = useState(0);
   const [lang, setLang] = useLang();
   const [attempts, setAttempts] = useState<Record<string, number>>({});
+  const [history, setHistory] = useState<number[]>([]);
+  const [chosen, setChosen] = useState<Record<string, string>>({});
+  const [written, setWritten] = useState<Record<string, string>>({});
   const [earned, setEarned] = useState<number | null>(null);
   const viewed = useRef(new Set<string>());
 
@@ -72,16 +75,30 @@ export default function Player({
 
   const goTo = useCallback(
     (id?: string) => {
-      if (id && index.has(id)) setI(index.get(id)!);
-      else setI((x) => Math.min(x + 1, cards.length - 1));
+      setI((cur) => {
+        const nxt = id && index.has(id) ? index.get(id)! : Math.min(cur + 1, cards.length - 1);
+        if (nxt !== cur) setHistory((h) => [...h, cur]);
+        return nxt;
+      });
       window.scrollTo({ top: 0 });
     },
     [index, cards.length],
   );
 
+  const goBack = useCallback(() => {
+    setHistory((h) => {
+      if (h.length === 0) return h;
+      const prev = h[h.length - 1];
+      setI(prev);
+      return h.slice(0, -1);
+    });
+    window.scrollTo({ top: 0 });
+  }, []);
+
   async function choose(c: Extract<Card, { type: "choice" }>, o: Option) {
     const attempt = (attempts[c.id] ?? 0) + 1;
     setAttempts((a) => ({ ...a, [c.id]: attempt }));
+    setChosen((m) => ({ ...m, [c.id]: o.key }));
     if (!preview) void logEvent(moduleId, session.id, c.id, "chose", { key: o.key, rung: o.rung ?? null, attempt, kind: c.kind ?? "ladder" });
     goTo(o.next);
   }
@@ -106,9 +123,15 @@ export default function Player({
     <div className="mx-auto flex w-full max-w-md flex-1 flex-col">
       {/* top bar */}
       <div className="sticky top-14 z-10 flex items-center gap-3 bg-surface px-4 py-2">
-        <Link href="/" aria-label="Back to home" className="text-sm text-muted">
-          ✕
-        </Link>
+        {history.length > 0 ? (
+          <button type="button" onClick={goBack} aria-label="Previous card" className="px-1 text-[18px] leading-none text-accent">
+            ←
+          </button>
+        ) : (
+          <Link href="/" aria-label="Back to home" className="px-1 text-sm text-muted">
+            ✕
+          </Link>
+        )}
         <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-mist">
           <div className="h-full bg-purple transition-all" style={{ width: `${pct}%` }} />
         </div>
@@ -134,6 +157,9 @@ export default function Player({
           sessionId={session.id}
           preview={preview}
           hasHi={hasHi}
+          chosenKey={chosen[card.id]}
+          writtenText={written[card.id]}
+          onWritten={(id, text) => setWritten((m) => ({ ...m, [id]: text }))}
           earned={earned}
           alreadyDone={alreadyDone}
           onChoose={choose}
@@ -186,6 +212,9 @@ function CardView({
   sessionId,
   preview,
   hasHi,
+  chosenKey,
+  writtenText,
+  onWritten,
   earned,
   alreadyDone,
   onChoose,
@@ -198,6 +227,9 @@ function CardView({
   sessionId: string;
   preview: boolean;
   hasHi: boolean;
+  chosenKey?: string;
+  writtenText?: string;
+  onWritten: (id: string, text: string) => void;
   earned: number | null;
   alreadyDone: boolean;
   onChoose: (c: Extract<Card, { type: "choice" }>, o: Option) => void;
@@ -232,25 +264,39 @@ function CardView({
         </>
       );
 
-    case "choice":
+    case "choice": {
+      const picked = chosenKey ? card.options.find((o) => o.key === chosenKey) : undefined;
       return (
         <>
           <Txt t={card.question} lang={lang} className="font-serif text-[24px] font-semibold leading-[30px] text-plum" />
           <div className="flex flex-col gap-3">
-            {card.options.map((o) => (
-              <button
-                key={o.key}
-                type="button"
-                onClick={() => onChoose(card, o)}
-                className="rounded-lg border border-line-strong bg-raised p-4 text-left text-[16px] leading-[24px] active:bg-mist"
-              >
-                <Txt t={o.text} lang={lang} />
-              </button>
-            ))}
+            {card.options.map((o) => {
+              const isPicked = picked?.key === o.key;
+              return (
+                <button
+                  key={o.key}
+                  type="button"
+                  disabled={!!picked}
+                  onClick={() => onChoose(card, o)}
+                  className={`rounded-lg border p-4 text-left text-[16px] leading-[24px] ${
+                    isPicked
+                      ? "border-purple bg-mist"
+                      : picked
+                        ? "border-line bg-raised text-muted"
+                        : "border-line-strong bg-raised active:bg-mist"
+                  }`}
+                >
+                  {isPicked && <span className="mb-1 block text-[12px] font-semibold uppercase tracking-wider text-accent">{L("Your answer", "आपका जवाब")}</span>}
+                  <Txt t={o.text} lang={lang} />
+                </button>
+              );
+            })}
           </div>
           <HindiHint show={hasHi} lang={lang} />
+          {picked && <Primary onClick={() => onChoose(card, picked)}>{L("Continue", "आगे")}</Primary>}
         </>
       );
+    }
 
     case "consequence":
       return (
@@ -331,10 +377,25 @@ function CardView({
       );
 
     case "reflection":
-      return <Reflection card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} hasHi={hasHi} onNext={onNext} />;
+      if (writtenText !== undefined)
+        return <Written label={L("Your notebook", "आपकी नोटबुक")} prompt={card.prompt} text={writtenText} lang={lang} onNext={onNext} />;
+      return (
+        <Reflection
+          card={card}
+          lang={lang}
+          moduleId={moduleId}
+          sessionId={sessionId}
+          preview={preview}
+          hasHi={hasHi}
+          onNext={onNext}
+          onWritten={(text) => onWritten(card.id, text)}
+        />
+      );
 
     case "message":
-      return <Message card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} />;
+      if (writtenText !== undefined)
+        return <Written label={L("Optional", "वैकल्पिक")} prompt={card.prompt} text={writtenText || L("(skipped)", "(छोड़ा)")} lang={lang} onNext={onNext} />;
+      return <Message card={card} lang={lang} moduleId={moduleId} sessionId={sessionId} preview={preview} onNext={onNext} onWritten={(text) => onWritten(card.id, text)} />;
 
     case "task":
       return (
@@ -392,6 +453,7 @@ function Reflection({
   preview,
   hasHi,
   onNext,
+  onWritten,
 }: {
   card: Extract<Card, { type: "reflection" }>;
   lang: Lang;
@@ -400,6 +462,7 @@ function Reflection({
   preview: boolean;
   hasHi: boolean;
   onNext: () => void;
+  onWritten: (text: string) => void;
 }) {
   const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
   const starter = (lang === "hi" && card.starter?.hi) || card.starter?.en || "";
@@ -410,6 +473,7 @@ function Reflection({
     setSaving(true);
     if (!preview) await saveReflection(moduleId, sessionId, card.id, text);
     setSaving(false);
+    onWritten(text);
     onNext();
   }
   return (
@@ -447,6 +511,7 @@ function Message({
   sessionId,
   preview,
   onNext,
+  onWritten,
 }: {
   card: Extract<Card, { type: "message" }>;
   lang: Lang;
@@ -454,6 +519,7 @@ function Message({
   sessionId: string;
   preview: boolean;
   onNext: () => void;
+  onWritten: (text: string) => void;
 }) {
   const L = (en: string, hi: string) => (lang === "hi" ? hi : en);
   const [text, setText] = useState("");
@@ -462,6 +528,7 @@ function Message({
     setSaving(true);
     if (!preview && text.trim()) await saveReflection(moduleId, sessionId, card.id, text);
     setSaving(false);
+    onWritten(text.trim());
     onNext();
   }
   return (
@@ -481,6 +548,17 @@ function Message({
       <Primary onClick={send} disabled={saving}>
         {text.trim() ? L("Send and continue", "भेजें और आगे बढ़ें") : L("Skip", "छोड़ें")}
       </Primary>
+    </>
+  );
+}
+
+function Written({ label, prompt, text, lang, onNext }: { label: string; prompt: T; text: string; lang: Lang; onNext: () => void }) {
+  return (
+    <>
+      <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent">{label}</p>
+      <Txt t={prompt} lang={lang} className="font-serif text-[22px] font-semibold leading-[30px] text-plum" />
+      <div className="whitespace-pre-wrap rounded-md border border-line bg-cream p-3 text-base leading-relaxed">{text}</div>
+      <Primary onClick={onNext}>{lang === "hi" ? "आगे" : "Continue"}</Primary>
     </>
   );
 }
