@@ -64,6 +64,7 @@ export default function Player({
   const [written, setWritten] = useState<Record<string, string>>({});
   const [earned, setEarned] = useState<number | null>(null);
   const viewed = useRef(new Set<string>());
+  const [shuffleSeed] = useState(() => Math.random().toString(36).slice(2));
 
   const card = cards[i];
   const hasHi = useMemo(() => cardHasHindi(card), [card]);
@@ -167,6 +168,7 @@ export default function Player({
           sessionId={session.id}
           preview={preview}
           hasHi={hasHi}
+          shuffleSeed={shuffleSeed}
           chosenKey={chosen[card.id]}
           writtenText={written[card.id]}
           onWritten={(id, text) => setWritten((m) => ({ ...m, [id]: text }))}
@@ -222,6 +224,7 @@ function CardView({
   sessionId,
   preview,
   hasHi,
+  shuffleSeed,
   chosenKey,
   writtenText,
   onWritten,
@@ -237,6 +240,7 @@ function CardView({
   sessionId: string;
   preview: boolean;
   hasHi: boolean;
+  shuffleSeed: string;
   chosenKey?: string;
   writtenText?: string;
   onWritten: (id: string, text: string) => void;
@@ -276,11 +280,13 @@ function CardView({
 
     case "choice": {
       const picked = chosenKey ? card.options.find((o) => o.key === chosenKey) : undefined;
+      // Rating scales keep their order; everything else is shuffled so position cannot be learned.
+      const options = card.kind === "rating" ? card.options : shuffled(card.options, card.id + shuffleSeed);
       return (
         <>
           <Txt t={card.question} lang={lang} className="font-serif text-[24px] font-semibold leading-[30px] text-plum" />
           <div className="flex flex-col gap-3">
-            {card.options.map((o) => {
+            {options.map((o) => {
               const isPicked = picked?.key === o.key;
               return (
                 <button
@@ -595,4 +601,20 @@ function Written({ label, prompt, text, lang, onNext }: { label: string; prompt:
       <Primary onClick={onNext}>{lang === "hi" ? "आगे" : "Continue"}</Primary>
     </>
   );
+}
+
+/** Deterministic shuffle from a string seed, so an option list keeps its order while the card is on screen. */
+function shuffled<T>(arr: T[], seed: string): T[] {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619);
+  const rnd = () => {
+    h ^= h << 13; h ^= h >>> 17; h ^= h << 5;
+    return ((h >>> 0) % 100000) / 100000;
+  };
+  const out = [...arr];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(rnd() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
 }

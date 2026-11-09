@@ -229,8 +229,8 @@
         {
           "key": "a",
           "text": {
-            "en": "\"Sit down or I'll tell your father tonight.\"",
-            "hi": "\"बैठ जाओ वरना आज रात तुम्हारे पापा को बताऊँगी।\""
+            "en": "Look at him seriously and say, in a low voice so only he hears: \"Golu, sit down right now, or I am telling your father tonight when he comes to pick you up.\"",
+            "hi": "उसे गंभीरता से देखें और धीमी आवाज़ में, ताकि सिर्फ़ वो सुने, कहें: \"गोलू, अभी बैठ जाओ, वरना आज शाम जब तुम्हारे पापा लेने आएँगे, मैं उन्हें बता दूँगी।\""
           },
           "next": "s2-sort-a",
           "rung": null
@@ -238,8 +238,8 @@
         {
           "key": "b",
           "text": {
-            "en": "Walk over, lift him gently down, say \"Feet on the floor, like this,\" and stand beside him for the next minute.",
-            "hi": "पास जाएँ, उसे धीरे से नीचे उतारें, कहें \"पैर ज़मीन पर, ऐसे,\" और अगले एक मिनट उसके पास खड़े रहें।"
+            "en": "Walk over, lift him gently down, say \"Feet on the floor, like this,\" and stand beside him for a minute.",
+            "hi": "पास जाएँ, उसे धीरे से नीचे उतारें, कहें \"पैर ज़मीन पर, ऐसे,\" और एक मिनट उसके पास खड़े रहें।"
           },
           "next": "s2-sort-b",
           "rung": 2
@@ -247,8 +247,8 @@
         {
           "key": "c",
           "text": {
-            "en": "\"Everyone look at Golu, standing like a monkey again.\"",
-            "hi": "\"सब गोलू को देखो, फिर बंदर की तरह खड़ा है।\""
+            "en": "Use humour to defuse it. Smile and say to the class, \"Everyone look at Golu, standing like a monkey again,\" so they laugh and he feels silly and climbs down.",
+            "hi": "हँसी से माहौल हल्का करें। मुस्कुराकर क्लास से कहें, \"सब गोलू को देखो, फिर बंदर की तरह खड़ा है,\" ताकि वे हँसें और वो शर्मिंदा होकर उतर आए।"
           },
           "next": "s2-sort-c",
           "rung": null

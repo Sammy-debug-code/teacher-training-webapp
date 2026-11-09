@@ -147,8 +147,8 @@
         {
           "key": "a",
           "text": {
-            "en": "\"AARAV! Enough. Go and stand at the back for the rest of the period.\"",
-            "hi": "\"आरव! बस। जाओ, पूरे पीरियड पीछे खड़े रहो।\""
+            "en": "Stop the lesson. \"AARAV! Enough. Leave Sana's book, go and stand at the back, and stay there till the bell. The rest of you, eyes on the board.\"",
+            "hi": "पाठ रोकें। \"आरव! बस। सना की कॉपी छोड़ो, पीछे जाकर खड़े हो जाओ, और घंटी तक वहीं रहो। बाक़ी सब, आँखें बोर्ड पर।\""
           },
           "next": "s1-cons-a",
           "rung": 0
@@ -156,8 +156,8 @@
         {
           "key": "b",
           "text": {
-            "en": "Send him to the principal's office with a monitor.",
-            "hi": "मॉनिटर के साथ उसे प्रिंसिपल के ऑफ़िस भेज दें।"
+            "en": "Call the monitor. \"Take Aarav to the principal's office and tell her he has disturbed the class three times today.\" Carry on with the sums once he has left.",
+            "hi": "मॉनिटर को बुलाएँ। \"आरव को प्रिंसिपल के ऑफ़िस ले जाओ और बताओ कि इसने आज तीन बार क्लास में परेशान किया है।\" उसके जाने के बाद सवाल जारी रखें।"
           },
           "next": "s1-cons-b",
           "rung": 5
@@ -165,8 +165,8 @@
         {
           "key": "c",
           "text": {
-            "en": "Keep the class working on two sums. Walk to Aarav, crouch to his level, and say quietly: \"Aarav, seat. I'm coming to see your book in two minutes.\" Then actually go in two minutes.",
-            "hi": "क्लास को दो सवाल दे दें। आरव के पास जाएँ, उसकी ऊँचाई तक झुकें, और धीरे से कहें: \"आरव, सीट पर। दो मिनट में तुम्हारी कॉपी देखने आ रही हूँ।\" और सच में दो मिनट में जाएँ।"
+            "en": "Give the class two sums. Walk to Aarav, crouch, and say quietly: \"Seat. I'm coming to see your book in two minutes.\" Go back in two minutes.",
+            "hi": "क्लास को दो सवाल दें। आरव के पास जाएँ, झुकें, धीरे से कहें: \"सीट पर। दो मिनट में तुम्हारी कॉपी देखने आ रही हूँ।\" दो मिनट में वापस जाएँ।"
           },
           "next": "s1-cons-c",
           "rung": 2
@@ -174,8 +174,8 @@
         {
           "key": "d",
           "text": {
-            "en": "Ignore him and carry on with the board.",
-            "hi": "उसे नज़रअंदाज़ करें और बोर्ड पर पढ़ाते रहें।"
+            "en": "Keep teaching from the board without looking at him. He wants attention; if nobody gives it, he will get bored and sit down on his own in a few minutes.",
+            "hi": "उसकी ओर देखे बिना बोर्ड से पढ़ाते रहें। उसे ध्यान चाहिए; अगर कोई नहीं देगा, तो वो बोर होकर कुछ मिनट में ख़ुद बैठ जाएगा।"
           },
           "next": "s1-cons-d",
           "rung": 0
