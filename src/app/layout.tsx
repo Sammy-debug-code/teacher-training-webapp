@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "@fontsource-variable/source-sans-3";
 import "@fontsource-variable/playfair-display";
 import "@fontsource/mukta/400.css";
@@ -24,7 +25,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="flex min-h-full flex-col bg-surface text-ink">{children}</body>
+      <body className="flex min-h-full flex-col bg-surface text-ink">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
